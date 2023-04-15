@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>How to migrate multiple static websites from GitHub pages to Codeberg.</title>
+  <meta name="title" content="How to migrate multiple static websites from GitHub pages to Codeberg.">
+  <meta name="description" content="The official documentation can be found on https://codeberg.page, but I think it is confusing and incomplete if you want multiple pages and are using a custom domain name.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="keywords" content="">
+  <meta name="author" content="Angelino Desmet">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cynicusrex.com/file/codeberg.html">
+  <meta property="og:title" content="How to migrate multiple static websites from GitHub pages to Codeberg.">
+  <meta property="og:description" content="The official documentation can be found on https://codeberg.page, but I think it is confusing and incomplete if you want multiple pages and are using a custom domain name.">
+  <meta property="og:image" content="https://www.cynicusrex.com/img/crown.png">
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="128" />
+  <meta property="og:image:height" content="128" />
+
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://www.cynicusrex.com/file/codeberg.html">
+  <meta property="twitter:title" content="How to migrate multiple static websites from GitHub pages to Codeberg.">
+  <meta property="twitter:description" content="The official documentation can be found on https://codeberg.page, but I think it is confusing and incomplete if you want multiple pages and are using a custom domain name.">
+  <meta property="twitter:image" content="https://www.cynicusrex.com/img/crown.png">
+
+  <link rel="icon" type="image/png" href="../img/favicon_128.png">
+  <link rel="canonical" href="https://www.cynicusrex.com/file/codeberg.html">
+  <link rel="stylesheet" type='text/css' media='screen' href="../css/style.css">
+</head>
+
+<!-- &nbsp;<span class="source">[]</span> -->
+<!-- <p class="footnote">– – – – – –</p>
+<p class="footnote">*†‡</p> -->
+<!-- <span class="dagger">†</span> -->
+
+<body>
+  <div class="readability">
+    <h1>How to migrate multiple static websites from <del>GitHub</del> pages to <a href="https://codeberg.org">Codeberg</a>.</h1>
+    <p class="sub-title">The official documentation can be found on <a href="https://codeberg.page">https://codeberg.page</a>, but I think it is confusing and incomplete if you want multiple pages and are using a custom domain name.</p>
+
+    <hr class="hr-long">
+
+    <h2>Getting your repository on Codeberg.</h2>
+    <p>So, on the official documentation they say one has to create a repository named “pages” for the static website, but then what if one has multiple websites? It's also plain annoying to have such a name for a repository. Anyway, the following steps allow you to have multiple static pages on Codeberg without having to name them “pages”, ugh.</p>
+
+    <ol>
+      <li>Create an account on Codeberg: <a href="https://codeberg.org/user/sing_up">https://codeberg.org/user/sing_up</a>. Then via the top right button click “+ New Repository”. Choose whatever repository name, and as “Default Branch” replace main with <em>pages</em>. Click “Create Repository”.</li>
+      <li>Go to the directory on your local machine of which you want the content into your newly created Codeberg repository. For me that was “/home/…/project/quitfacebook.org/public/”</li>
+      <li>Assuming you still have the hidden .git folder, rename it to .git_BAK or whatever, or delete it.</li>
+      <li>Open the terminal in that directory and run: <code>git init</code> It will probably show you the following message: “hint: Using 'master' as the name for the initial branch. This default branch name […] The just-created branch can be renamed via this command: git branch -m &lt;name&gt;”</li>
+      <li>Run: <code>git branch -m pages</code> You see, the repository needn't be named pages, but the branch does. Which is great because now we can have multiple pages with distinct names. The official documentation makes it seem as if one is limited to one page.</li>
+      <li>Run: <code>git add .</code> <code>git commit -m "first commit"</code> <code>git remote add origin https://codeberg.org/CynicusRex/quitfacebook.git</code> <code>git push -u origin pages</code></li>
+    </ol>
+
+    <h2>Domain configurations.</h2>
+    <p>Assuming you have a custom domain name, do the following. If you don't, then the official documentation probably suffices.</p>
+
+    <ol>
+      <li>Add the file “.domains” to your local repository with the following content, obviously adjusted to your own domain name, and push it to Codeberg: <code>quitfacebook.org</code><code>www.quitfacebook.org</code><code>pages.quitfacebook.cynicusrex.codeberg.page</code></li>
+      <li>Go to your registrar website, and configure the “Advanced DNS” “host records” as follows:
+        <code>Type: A Record, Host: @, Value: 217.197.91.145, TTL: Automatic</code>
+        <code>Type: AAAA Record, Host: @, Value: 2001:67c:1401:20f0::1, TTL: Automatic</code>
+        <code>Type: CNAME Record, Host: www, Value: quitfacebook.cynicusrex.codeberg.page., TTL: Automatic</code>
+        <code>Type: TXT Record, Host: @, Value: quitfacebook.cynicusrex.codeberg.page., TTL: Automatic</code>
+      </li>
+    </ol>
+
+    <p>All is done. Now you might have to wait for a couple of hours until the domain configurations get updated. Also, don't forget to unpublish your page on <del>GitHub</del>.</p>
+
+    <p>Enjoy your day.</p>
+    
+    <div class="align-right">—Angelino Desmet; 15 April 2023.</div>
+    <!-- <div class="align-right edit-list" 
+    title="Edit log:
+    d/d/d: ">Edited: d D d.</div> -->
+
+    <p class="end-crown">♔</p>
+
+    <h2>Comments.</h2>
+    <p>Reply with <a href="">[matrix]</a>.</p>
+    
+    <hr class="hr-long">
+    <p class="button-return"><a href="../essay.html">← Return</a> | <a href="/">⌂ Home</a> | <a href="../support.html">€ Support</a> | <a href="../feed.rss">☑ RSS</a></p>
+  </div>
+
+  <script src="../js/sources.js"></script>
+</body>
+
+</html>
