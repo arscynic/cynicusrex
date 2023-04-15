@@ -46,13 +46,16 @@
     <p>So, on the official documentation they say one has to create a repository named “pages” for the static website, but then what if one has multiple websites? It's also plain annoying to have such a name for a repository. Anyway, the following steps allow you to have multiple static pages on Codeberg without having to name them “pages”, ugh.</p>
 
     <ol>
-      <li>Create an account on Codeberg: <a href="https://codeberg.org/user/sing_up">https://codeberg.org/user/sing_up</a>. Then via the top right button click “+ New Repository”. Choose whatever repository name, and as “Default Branch” replace main with <em>pages</em>. Click “Create Repository”.</li>
+      <li>Create an account on Codeberg: <a href="https://codeberg.org/user/sing_up">https://codeberg.org/user/sing_up</a>*. Then via the top right button click “+ New Repository”. Choose whatever repository name, and as “Default Branch” replace main with <em>pages</em>. Click “Create Repository”.</li>
       <li>Go to the directory on your local machine of which you want the content into your newly created Codeberg repository. For me that was “/home/…/project/quitfacebook.org/public/”</li>
       <li>Assuming you still have the hidden .git folder, rename it to .git_BAK or whatever, or delete it.</li>
       <li>Open the terminal in that directory and run: <code>git init</code> It will probably show you the following message: “hint: Using 'master' as the name for the initial branch. This default branch name […] The just-created branch can be renamed via this command: git branch -m &lt;name&gt;”</li>
       <li>Run: <code>git branch -m pages</code> You see, the repository needn't be named pages, but the branch does. Which is great because now we can have multiple pages with distinct names. The official documentation makes it seem as if one is limited to one page.</li>
       <li>Run: <code>git add .</code> <code>git commit -m "first commit"</code> <code>git remote add origin https://codeberg.org/CynicusRex/quitfacebook.git</code> <code>git push -u origin pages</code></li>
     </ol>
+
+    <p class="footnote">– – – – – –</p>
+    <p class="footnote">* <a href="https://matrix.to/#/!wkyjxWeAOBpKMvHbno:matrix.org/$geAD9QFJhURrQ57ov4GvOPh3wuTmZLC28MB5uTv6mY8?via=freeyourgadget.org&via=matrix.org&via=tchncs.de">This typo is intentional, apparently</a>.</p>
 
     <h2>Domain configurations*.</h2>
     <p>Assuming you have a custom domain name, do the following. If you don't, then the official documentation probably suffices.</p>
