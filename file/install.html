@@ -783,10 +783,12 @@ authWarningSlack:   20</code></pre>
       }</code></p> -->
     
     <h2>Clean.</h2>
-    <p>The command below respectively removes cache and orphaned packages.</p>
+    <p>The command below respectively removes cache and orphaned packages [<a href="https://averagelinuxuser.com/clean-arch-linux/">source</a>]:</p>
     <p><code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code></p>
 
-    <p>Source: <a href="https://averagelinuxuser.com/clean-arch-linux/">https://averagelinuxuser.com/clean-arch-linux</a>.</p>
+    <h2>Other useful commands.</h2>
+    <p>Check when the network connection has disconnected/connected [thanks <a href="https://forum.manjaro.org/t/monitoring-ethernet-connection-failures/142985/10?u=cynicusrex">nikgnomic</a>]:</p>
+    <p><code>journalctl -b0 -u NetworkManager | grep -e DISCONNECTED -e CONNECTING</code></p>
 
     <h2>Change the default browser for Telegram.</h2>
     <p>Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium. To work around this problem:</p>
