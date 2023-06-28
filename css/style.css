@@ -2,6 +2,9 @@
 :root {
   --bg-color: antiquewhite;
   --border-color: rgba(0, 0, 0, 0.25);
+  --b-col-back-light: rgba(255, 255, 255, 0.384);
+  --b-col-primary:grey;
+  --b-col-back-semi-light: transparent;
 }
 
 /*———————————————————————————————————————————————————————————————*/
@@ -550,5 +553,145 @@ li ul li {
 }
 
 .footnote {
+  margin: 0;
+}
+
+/* Mastodon comments. */
+
+.select-all-span {
+  user-select: all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  cursor: grab;
+}
+
+.select-all-span:hover {
+  outline: 1px dotted black;
+}
+
+/* Mastodon comment CSS below is all copy-pasted from Veronica Berglyd Olsen: https://berglyd.net/blog/2023/03/mastodon-comments/, but slightly tweaked by me */
+
+#mastodon-comments-list button {
+  background-color: var(--b-col-back-light);
+  border: 1px solid var(--b-col-primary);
+  border-radius: 0.5rem;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Wrapper */
+
+#article-comments div.mastodon-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+#article-comments div.reply-original {
+  display: none;
+}
+
+#article-comments div.reply-child {
+  display: block;
+  flex: 0 0 1.75rem;
+  text-align: right;
+}
+
+.comment-level {
+  font-size: 1.5rem;
+  opacity: 0.75;
+}
+
+/* Comment */
+
+#article-comments div.mastodon-comment {
+  background-color: var(--b-col-back-light);
+  border: 1px solid var(--b-col-primary);
+  border-radius: 0.5rem;
+  display: block;
+  flex: 1 1 auto;
+  font-size: 1rem;
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+}
+
+#article-comments div.comment-meta {
+  background-color: var(--b-col-back-semi-light);
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.75rem;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+}
+
+#article-comments div.comment-avatar {
+  display: block;
+  flex: 0 0 4rem;
+}
+
+#article-comments div.comment-avatar img {
+  width: 4rem;
+  border-radius: 10%;
+  margin-top: 0.15rem;
+}
+
+#article-comments div.comment-author {
+  display: block;
+  flex: 1 1 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  width: 0;
+}
+
+#article-comments div.comment-author-name {
+  font-weight: 700;
+  margin: 0;
+}
+
+#article-comments div.comment-author-name a {
+  color: var(--b-col-text);
+  text-decoration: none;
+}
+
+#article-comments div.comment-author-reply,
+#article-comments div.comment-date {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+#article-comments div.comment-author-reply a,
+#article-comments div.comment-date a {
+  color: var(--b-col-text-dim);
+  text-decoration: none;
+}
+
+#article-comments div.comment-author-reply a:hover,
+#article-comments div.comment-date a:hover {
+  color: var(--b-col-text-dim);
+  text-decoration: underline;
+}
+
+#article-comments div.comment-content {
+  display: block;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+  margin: 0;
+}
+
+#article-comments img.comment-emoji {
+  height: 0.75rem;
+  vertical-align: baseline;
+}
+
+#article-comments div.comment-content p {
+  margin: 0.7rem 0 0 0;
+}
+
+#article-comments div.comment-content p:first-of-type {
   margin: 0;
 }
