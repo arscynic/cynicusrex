@@ -573,12 +573,13 @@ li ul li {
 
 #mastodon-comments-list button {
   background-color: var(--b-col-back-light);
-  border: 1px solid var(--b-col-primary);
+  border: 0.063rem solid var(--b-col-primary);
   border-radius: 0.5rem;
   display: block;
   padding: 0.25rem 0.5rem;
-  font-size: 1rem;
   cursor: pointer;
+  font-family: monospace;
+  text-transform: lowercase;
 }
 
 /* Wrapper */
@@ -608,7 +609,7 @@ li ul li {
 
 #article-comments div.mastodon-comment {
   background-color: var(--b-col-back-light);
-  border: 1px solid var(--b-col-primary);
+  border: 0.063rem solid var(--b-col-primary);
   border-radius: 0.5rem;
   display: block;
   flex: 1 1 auto;
@@ -686,6 +687,7 @@ li ul li {
 #article-comments img.comment-emoji {
   height: 0.75rem;
   vertical-align: baseline;
+  display: inline; /* ensures custom icons are next to the name, not below */
 }
 
 #article-comments div.comment-content p {
