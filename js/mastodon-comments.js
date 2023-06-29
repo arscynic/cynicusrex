@@ -36,7 +36,7 @@ document.getElementById("load-comment").addEventListener("click", function () {
           reply.account.display_name = escapeHtml(reply.account.display_name);
           reply.account.reply_class = reply.in_reply_to_id == mastodonPostId ? "reply-original" : "reply-child";
           reply.created_date = new Date(reply.created_at);
-          if (reply.account.acct == mastodonUser) reply.account.acct = mastodonUser + mastodonDomain;
+          if (reply.account.acct == mastodonUser) reply.account.acct = mastodonUser + '@' + mastodonDomain;
           reply.account.emojis.forEach(emoji => {
             reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
               `<img class="comment-emoji" src="${escapeHtml(emoji.static_url)}" alt="Emoji ${emoji.shortcode}" />`
