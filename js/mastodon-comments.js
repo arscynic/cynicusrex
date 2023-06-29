@@ -1,3 +1,5 @@
+// Credits to Carl Schwan: https://berglyd.net/blog/2023/03/mastodon-comments/, and Veronica Berglyd Olsen: https://berglyd.net/blog/2023/03/mastodon-comments/ 
+
 const mastodonUser = "stardust";
 const mastodonDomain = "fosstodon.org";
 const mastodonPostId = document.getElementById("mastodon-url").href.replace(/[^0-9]/g, '');
