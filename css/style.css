@@ -494,12 +494,12 @@ ol > li > ul > li {
   width: 100%;
 }
 
-.button-return {
+#bottom-nav {
   margin-top: 1rem;
   text-align: center;
 }
 
-.button-return a {
+#bottom-nav a {
   text-decoration: none;
 }
 
