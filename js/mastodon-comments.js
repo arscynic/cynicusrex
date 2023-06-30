@@ -51,7 +51,7 @@ document.getElementById("load-comment").addEventListener("click", function () {
   <div class="comment-author">
     <div class="comment-author-name"><a href="${reply.account.url}" rel="nofollow">${reply.account.display_name}</a></div>
     <div class="comment-author-reply"><a href="${reply.account.url}" rel="nofollow">${escapeHtml(reply.account.acct)}</a></div>
-    <div class="comment-date"><a href="${reply.url}" rel="nofollow">Posted on ${reply.created_date.toLocaleString(navigator.language, dateOptions)}</a></div>
+    <div class="comment-date" title="Date: year/month/day, 24-hour format."><a href="${reply.url}" rel="nofollow">Posted on ${reply.created_date.toLocaleString(/* navigator.language */"en-ZA", dateOptions)}</a></div>
   </div>
 </div>
 <div class="comment-content">${reply.content}</div> 
