@@ -4,7 +4,7 @@
 <channel>
   <title>Cynicus Rex</title>
   <link>https://www.cynicusrex.com</link>
-  <description>My musings on nothing and everything, frequently influenced by Cynicism, which I interpret as the pursuit of modernity in proportion to nature 🌳.</description>
+  <description>My musings on nothing and everything, frequently influenced by Cynicism, which I interpret as the pursuit of modernity in proportion to nature.</description>
   <language>en-gb</language>
   <image>
     <title>Cynicus Rex</title>
@@ -23,34 +23,34 @@
     <description>The harm of religion is historically evident whereas the presence or absence of gods is not. Ultimately, the continued existence of religion is predicated on the indoctrination of children and suppression of rational thought. Therefore I am against religion but not necessarily against the idea of gods. For all we know gods are computer scientists and we are in their video game.</description>
     <guid>https://www.cynicusrex.com/file/antireligion.html</guid>
     <pubDate>Thur, 27 Jun 2023 10:19:00 +0200</pubDate>
-    <comments>https://matrix.to/#/%23arscynica%3Amatrix.org/%247UMpKFBTQmr_XRCzIIAeUuj1u6A7ID0bWsmPFs0ms30?via=matrix.org</comments>
+    <comments>https://fosstodon.org/@stardust/110616665089000189</comments>
   <item>
     <title>Temperature temperance wins wars.</title>
     <description>Not using heating shortens the war, and all one needs is a onesie and hot tea.</description>
     <guid>https://www.cynicusrex.com/file/onesie.html</guid>
     <pubDate>Thur, 26 Jan 2023 20:44:00 +0200</pubDate>
-    <comments>https://matrix.to/#/!fjGHYoUxYoYWSzZXEG:matrix.org/$lkrUnE9M_0ZzkpZIgjtxfO_PkSZK8-UU9HoA-8nt4N4?via=matrix.org</comments>
+    <comments>https://fosstodon.org/@stardust/109773115546026587</comments>
   </item>
   <item>
     <title>“Is it okay to live with my parents at age n?”</title>
     <description>If you're regularly asking “should I move out?”, chances are your life will improve significantly after doing so. I've convinced myself for years that it wasn't worth it, but living alone has been nothing but nourishing.</description>
     <guid>https://www.cynicusrex.com/file/moveout.html</guid>
     <pubDate>Mon, 16 Jan 2023 22:42:00 +0200</pubDate>
-    <comments>https://matrix.to/#/!fjGHYoUxYoYWSzZXEG:matrix.org/$pQ8H6N9DizwEJYjEMyz5-k8YqIrtiw7XJ25PL0k_ft4?via=matrix.org</comments>
+    <comments>https://fosstodon.org/@stardust/110627369275851990</comments>
   </item>
   <item>
     <title>“Belgium's little Einstein”, isn't, yet.</title>
     <description>In response to “‘Belgium’s little Einstein’: The 11 year old boy who is the world’s youngest science graduate”, The Brussels Times, Monday, 14 March 2022.</description>
     <guid>https://www.cynicusrex.com/file/noteinsteinyet.html</guid>
     <pubDate>Fri, 18 Mar 2022 23:15:00 +0200</pubDate>
-    <comments>https://t.me/cynicusrex/30</comments>
+    <comments>https://fosstodon.org/@stardust/107981961471749412</comments>
   </item>
   <item>
     <title>Einstein's theory of antiwork.</title>
     <description>From antiwork in the USA to “tang ping” (躺平) or “lying flat” in China, people are fed up with the grind. Could it be that we shouldn't live to work, but work to live? That we shouldn't serve the economy, but the economy should serve us?</description>
     <guid>https://www.cynicusrex.com/file/antiwork.html</guid>
     <pubDate>Fri, 18 Feb 2022 18:01:00 +0200</pubDate>
-    <comments>https://t.me/cynicusrex/28</comments>
+    <comments>https://fosstodon.org/@stardust/107829352657241828</comments>
   </item>
   <item>
     <title>Ode to 889.</title>
@@ -63,7 +63,7 @@
     <description>Divisible only by itself and one. Remarkably simple, but simply amazing.</description>
     <guid>https://www.cynicusrex.com/file/997.html</guid>
     <pubDate>Fri, 21 Jan 2022 00:00:00 +0200</pubDate>
-    <comments>https://t.me/cynicusrex/26</comments>
+    <comments>https://fosstodon.org/@stardust/110627332909606539</comments>
   </item>
   <item>
     <title>Web4 should run on LaTeX.</title>
@@ -77,53 +77,57 @@
     <description>Winning necessarily comes down to luck or the defeat of an inferior. Both are nothing to be proud of. Therefore, we should not compete for the sake of being better than others, but only to improve ourselves and help others do the same.</description>
     <guid>https://www.cynicusrex.com/file/pride.html</guid>
     <pubDate>Wed, 4 Aug 2021 00:00:00 +0200</pubDate>
-    <comments>https://t.me/cynicusrex/18</comments>
+    <comments>https://fosstodon.org/@stardust/106698294403376152</comments>
   </item>
   <item>
     <title>Running shirtless at -3°C.</title>
     <description>On curing sadness with cold showers, excess with Cynicism, and madness with veganism. And if you can't go vegan, eat the rich.</description>
     <guid>https://www.cynicusrex.com/file/cynic.html</guid>
     <pubDate>Thu, 8 Apr 2021 00:00:00 +0200</pubDate>
-    <comments>https://t.me/cynicusrex/8</comments>
+    <comments>https://fosstodon.org/@stardust/106031967977711902</comments>
   </item>
   <item>
     <title>Money corrupts; bitcoin corrupts absolutely.</title>
     <description>Disregarding all of bitcoin's shortcomings, a financial instrument that brings out the worst in people—greed—won't change the world for the better.</description>
     <guid>https://www.cynicusrex.com/file/cryptocultscience.html</guid>
     <pubDate>Fri, 12 Mar 2021 00:00:00 +0200</pubDate>
-    <comments>https://t.me/cynicusrex/7</comments>
+    <comments>https://fosstodon.org/@stardust/110180733543856920</comments>
   </item>
   <item>
     <title>Google couldn't sign me in, so I signed out, indefinitely.</title>
     <description>How Google's insidious behavior led me to find superior alternatives.</description>
     <guid>https://www.cynicusrex.com/file/google.html</guid>
     <pubDate>Wed, 3 Feb 2021 00:00:00 +0200</pubDate>
-    <comments>https://t.me/cynicusrex/12</comments>
+    <comments>https://fosstodon.org/@stardust/105684092262236408</comments>
   </item>
   <item>
     <title>I wish I never bought bitcoin.</title>
     <description>Bitcoin incentivizes greed. It robbed me from my childlike curiosity and fascination for science. Bitcoin is the biggest inadvertent pyramid scheme ever and blockchain is snake oil. Take your spam elsewhere.</description>
     <guid>https://www.cynicusrex.com/file/greed.html</guid>
     <pubDate>Mon, 1 Jun 2020 00:00:00 +0200</pubDate>
+    <comments>https://fosstodon.org/@stardust/110627265810865568</comments>
   </item>
   <item>
     <title>Ad blocking, or how to use the Web properly.</title>
     <description>Because marketing and advertising has ruined the World Wide Web.</description>
     <guid>https://www.cynicusrex.com/file/adblocking.html</guid>
     <pubDate>Mon, 18 May 2020 00:00:00 +0200</pubDate> <!-- month unknown -->
-    <comments>https://t.me/cynicusrex/19</comments>
+    <comments>https://fosstodon.org/@stardust/105690339548575644</comments>
   </item>
   <item>
     <title>Work less, play more!</title>
     <description>People should do less buying, working, littering, and more reading, exercising, enjoying nature. We all demand change, but we aren't prepared to change ourselves. An article originally written for the magazine Zoeklicht. I omitted one paragraph about bitcoin because I now strongly oppose crypto“currencies”.</description>
     <guid>https://www.cynicusrex.com/file/play.html</guid>
     <pubDate>Mon, 15 Apr 2019 00:00:00 +0200</pubDate> <!-- day unknown -->
+    <comments>https://fosstodon.org/@stardust/110627251673397382</comments>
   </item>
   <item>
     <title>Wasted my life on distractions.</title>
     <description>This struck me at the age of 28 while attending my lifelong friend’s public doctoral defense. What follows is a mishmash of events that got me here.</description>
     <guid>https://www.cynicusrex.com/file/distractions.html</guid>
     <pubDate>Wed, 20 Mar 2019 00:00:00 +0200</pubDate>
+    <comments>https://fosstodon.org/@stardust/110627235238693594</comments>
+
   </item>
 </channel>
 
