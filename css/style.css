@@ -23,6 +23,10 @@ h1 {
   text-align: center;
 }
 
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
 code {
   display: block;
   font-family: monospace;
@@ -52,10 +56,6 @@ ol > li > ul > li {
 
 /*———————————————————————————————————————————————————————————————*/
 /* Index */
-
-#cr-title {
-  font-weight: normal;
-}
 
 #cr-sub-title, #navbar {
   text-align: center;
