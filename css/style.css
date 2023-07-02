@@ -28,7 +28,7 @@ code {
   font-family: monospace;
   margin-left: 1rem;
   margin-bottom: 0.5rem;
-  word-break: keep-all;
+  word-break: break-all; /* Find other solution because it breaks important names */
 }
 
 summary {
