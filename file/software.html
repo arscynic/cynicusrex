@@ -64,7 +64,7 @@
       <ul>
         <li>Browser: <a href="https://vivaldi.com">Vivaldi</a><br>
           ↳&#xFE0E; <strong>Ad blocking</strong>: <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a><br>
-          ↳&#xFE0E; Convenience: <a href="https://www.mrfdev.com/enhancer-for-youtube">Enhancer for YouTube™</a>, <a href="https://languagetoolplus.com/#firefox_chrome">LanguageTool Plus</a>, 
+          ↳&#xFE0E; Convenience: <a href="https://inzk.dev/tweaks-for-youtube/">Tweaks for YouTube</a>, <a href="https://languagetoolplus.com/#firefox_chrome">LanguageTool Plus</a>, 
           <a href="https://chrome.google.com/webstore/detail/transover/aggiiclaiamajehmlfpkjmlbadmkledi">TransOver</a>, <a href="https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm">Web Scrobbler</a></li>
         <li><strong>Ad blocking</strong>: <!-- <a href="https://adguard.com/en/adguard-dns/overview.html" title="https://wiki.archlinux.org/index.php/Openresolv#Defining_multiple_values_for_options">AdGuard DNS</a>,  --><a href="https://github.com/hectorm/hblock">hBlock</a></li>
         <li>Chat: <a href="https://nheko-reborn.github.io">nheko</a> <a href="https://matrix.org">[matrix]</a></li>
@@ -207,8 +207,6 @@
   <div class="readability">
     <h1>Linux installation checklist.</h1>
     <p class="sub-title">Installation checklist of my preferred Arch based Linux operating system <a href="https://manjaro.org">Manjaro</a>. Need help? Use the remarkably extensive <a href="https://archlinux.org"> ArchWiki</a>.</p>
-
-    <hr class="hr-long">
     
     <ol>
       <li>Are you a first timer? Backup what you don’t want to lose on a separate medium. It helps if you have a second PC in case something breaks and renders your current PC temporarily unusable.</li>
@@ -218,7 +216,7 @@
       <li><strong><a href="#:~:text=Dual%2Dboot%20and%20sharing%20a%20drive%20between%20Linux%20and%20Windows.">Disable fast startup</a> when dual-booting Windows!</strong></li>
     </ol>
 
-    <hr class="hr-long">
+    <p class="fleuron">❦</p>
 
     <h2>Packages.</h2>
     <p>I have certain set of software I install on every new machine. Here follows a list I copy paste so I don't have to install everything individually each time.</p>
@@ -240,9 +238,12 @@
 
     <p>Place <a href="https://github.com/davidde/mpv-autosub">autosub.lua</a> and <a href="https://github.com/Eisa01/mpv-scripts#smarthistory-script">SimpleHistory.lua</a> in …/.config/mpv/scripts/, and <a href="https://github.com/joaquintorres/autosubsync-mpv#configuration">autosubsync.lua</a> in …/.config/mpv/script-opts/</p> -->
 
-    <hr class="hr-long">
+    <p class="fleuron">❦</p>
 
     <h2>To configure.</h2>
+
+    <h3>Dual-boot and sharing a drive between Linux and Windows.</h3>
+    <p>To share a drive between Linux and Windows (11?) on a dual-boot setup and ensure Microsoft's incompetence doesn't delete your files, disable Windows' enabled by default fast startup: Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span>.</p>
 
     <h3>AutoKey.</h3>
 
@@ -254,7 +255,11 @@
     <code>alias gimps="cd .GIMPS/p95v308b17.linux64/ && ./mprime -m"</code>
 
     <h3>Shortcuts.</h3>
-    <p>Keyboard → Application Shortcuts: playerctl play-pause/next/previous, xscreensaver-command -activate, amixer set Master 10%+, xfce4-terminal -e btop</p>
+    <p>Keyboard → Application Shortcuts:</p>
+    <code>playerctl play-pause/next/previous</code>
+    <code>xscreensaver-command -activate</code>
+    <code>amixer set Master 10%+</code>
+    <code>xfce4-terminal -e btop</code>
 
 <!--     <h3>gvim.</h3>
 
@@ -267,23 +272,25 @@
       <a href="https://github.com/tpope/vim-commentary">commentary.vim</a>)
     </li></ol> -->
 	  
-
     <h3>uBlock Origin.</h3>
     <ul>
       <li>☐ “Hide placeholders of blocked elements”.</li>
       <li>☑ “Enable cloud storage support”. And don't forget to import from cloud storage the “Filter lists” and “My rules”. Subsequently export to cloud storage all future additions.</li>
-      <li>☑ “Block media elements larger than 512 KB”.</li>
+      <li>☑ “Block media elements larger than 3000 KB”.</li>
       <li>☑ “Block remote fonts”.</li>
       <li>☑ “Disable JavaScript”.</li>
       <li>☑ “I am an advanced user”.</li>
-      <li>Globally block 3rd-party scripts and 3rd-party frames.</li>
     </ul>
-    
-    <h3>Enhancer for YouTube.</h3>
+
+    <p>Globally block 3rd-party scripts and 3rd-party frames.</p>
+    <code>* * 3p-frame block</code>
+    <code>* * 3p-script block</code>
+
+    <!-- <h3>Enhancer for YouTube.</h3>
     <details>
       <summary>Click to expand the exported backup content.</summary>
       <code>{"version":"2.0.118","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":85,"blackbars":false,"blockads":false,"blockadsexceptforsubs":false,"blockautoplay":true,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":false,"cinemamodewideplayer":true,"controlbar":{"active":true,"autohide":false,"centered":true,"position":"absolute"},"controls":["size","pop-up-player","speed","screenshot","options"],"controlsvisible":false,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":true,"controlvolumemousebutton":false,"convertshorts":true,"customcolors":{"--main-color":"#00adee","--main-background":"#111111","--second-background":"#181818","--hover-background":"#232323","--main-text":"#eff0f1","--dimmer-text":"#cccccc","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":false,"date":1687771133142,"defaultvolume":false,"disableautoplay":false,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":false,"ignoreplaylists":true,"ignorepopupplayer":true,"localecode":"en_GB","localedir":"ltr","message":false,"miniplayer":true,"miniplayerposition":"_top-left","miniplayersize":"_400x225","newestcomments":false,"overridespeeds":true,"pauseforegroundtab":false,"pausevideos":true,"popuplayersize":"640x360","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd720","qualityplaylistsfullscreen":"hd1080","qualityvideos":"hd720","qualityvideosfullscreen":"hd1080","reload":false,"reversemousewheeldirection":false,"selectquality":false,"selectqualityfullscreenoff":false,"selectqualityfullscreenon":false,"speed":1,"speedvariation":0.1,"stopvideos":false,"theatermode":false,"theme":"default-dark","themevariant":"youtube-deep-dark.css","update":0,"volume":50,"volumemultiplier":3,"volumevariation":5,"whitelist":"","wideplayer":false,"wideplayerviewport":false}}</code>
-    </details>
+    </details> -->
     
     <h3>Reddit Enhancement Suite.</h3>
     <p>☑ “Hide All Child Comments”.</p>
@@ -300,9 +307,6 @@
     <p>Lastly, right click on the network icon → open “Network Connections” by clicking “Edit Connections…” → select a connection and click the ⚙️ (cog); <br>
     ↳ IPv4 Settings → Method: “Automatic (DHCP) addresses only”,  “DNS servers”: 9.9.9.9, 149.112.112.112 <br>
     ↳ IPv6 Settings → Method: “Automatic”,  “Additional DNS servers”: 2620:fe::fe, 2620:fe::9</p> -->
-
-    <h3>Dual-boot and sharing a drive between Linux and Windows.</h3>
-    <p>To share a drive between Linux and Windows (11?) on a dual-boot setup and ensure Microsoft's incompetence doesn't delete your files, disable Windows' enabled by default fast startup: Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span>.</p>
 
   <h3>IMWheel.</h3>
   <p>Save the following config to “/home/x/.imwheelrc”:</p>
@@ -913,7 +917,7 @@ authWarningSlack:   20</code></pre>
     <!-- <h2>Login commands.</h2>
     <p>Add the following line to .profile in home directory [doesn't always work for some reason]: <code>sudo msi-keyboard -m normal -c left,off,low -c middle,off,low -c right,off,low</code></p> -->
 
-    <hr class="hr-long">
+    <p class="fleuron">❦</p>
 
     <h2>Steps to reinitialize git folder after format.</h2>
     <p>[Probably not the right way to do it any more.]</p>
@@ -941,7 +945,7 @@ authWarningSlack:   20</code></pre>
       git push -u origin main
     </code></p>
 
-    <hr class="hr-long">
+    <p class="fleuron">❦</p>
 
     <!-- <h2>Extensions in VSCodium.</h2>
     <p>Create <a href="https://github.com/VSCodium/vscodium/blob/master/DOCS.md#extensions-marketplace">project.json</a> at ~/.config/VSCodium containing:<br>
