@@ -53,12 +53,12 @@ ol > li > ul > li {
 /*———————————————————————————————————————————————————————————————*/
 /* Index */
 
-#cr-sub-title, #navbar {
-  text-align: center;
+#cr-title {
+  font-weight: normal;
 }
 
-#navbar {
-  font-weight: bold;
+#cr-sub-title, #navbar {
+  text-align: center;
 }
 
 #index-together, #index-invites, #footer {
