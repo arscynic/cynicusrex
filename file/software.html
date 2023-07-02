@@ -30,177 +30,947 @@
   <link rel="stylesheet" type='text/css' media='screen' href="../css/style.css">
 </head>
 
-<body id="setup-page">
-  <h1>Excellent free software.</h1>
-  <p>Last update: 2 July 2023.</p>
+<body>
+  <div id="setup-page">
+    <h1>Excellent free software. <sup>[2023/07/2]</sup></h1>
+    
+      <!-- <div>
+      <h2>Laptop</h2>
+      <ul>
+        <li>Model: MSI GT70 0NC (2012).</li>
+        <li>OS: <a href="https://endeavouros.com">EndeavourOS</a> (Arch).</li>
+        <li>CPU: Intel Core i7-3610QM @ 2.30㎓.</li>
+        <li>GPU: NVIDIA GTX 670M 3㎇ GDDR5.</li>
+        <li>RAM: 16㎇ (2 x 8㎇ DDR3).</li>
+        <li>SSD: 64㎇.</li>
+        <li>HDD: 750㎇ 7200 RPM.</li>
+        <li>Keyboard: Dragon War: Dark Sector.</li>
+        <li>Mouse: Razer Deathadder V2<br>
+      </ul>
+    </div>  -->
+    
+    <div><h2>Linux</h2>
+      <ul>
+        <li>Distro: <a href="https://manjaro.org">Manjaro</a></li>
+        <li>Desktop: <a href="https://xfce.org">Xfce</a></li>
+        <li>Firewall: <a href="https://wiki.archlinux.org/title/Uncomplicated_Firewall#Gufw:~:text=GUI%20frontends-,Gufw,-gufw%20is%20a">gufw</a></li>
+        <li>Proces viewer: <a href="https://github.com/aristocratos/btop">btop</a></li>
+        <li>Screensaver: <a href="https://www.jwz.org/xscreensaver/">XScreenSaver</a></li>
+        <li>Terminal: <a href="https://wiki.archlinux.org/title/Yakuake">Yakuake</a></li>
+      </ul>  
+    </div>
+    <div>
+      <h2>Internet</h2>
+      <ul>
+        <li>Browser: <a href="https://vivaldi.com">Vivaldi</a><br>
+          ↳&#xFE0E; <strong>Ad blocking</strong>: <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a><br>
+          ↳&#xFE0E; Convenience: <a href="https://www.mrfdev.com/enhancer-for-youtube">Enhancer for YouTube™</a>, <a href="https://languagetoolplus.com/#firefox_chrome">LanguageTool Plus</a>, 
+          <a href="https://chrome.google.com/webstore/detail/transover/aggiiclaiamajehmlfpkjmlbadmkledi">TransOver</a>, <a href="https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm">Web Scrobbler</a></li>
+        <li><strong>Ad blocking</strong>: <!-- <a href="https://adguard.com/en/adguard-dns/overview.html" title="https://wiki.archlinux.org/index.php/Openresolv#Defining_multiple_values_for_options">AdGuard DNS</a>,  --><a href="https://github.com/hectorm/hblock">hBlock</a></li>
+        <li>Chat: <a href="https://nheko-reborn.github.io">nheko</a> <a href="https://matrix.org">[matrix]</a></li>
+        <li>Cloud storage: <a href="https://mega.nz/">MEGA</a></li>
+        <li>Email: <a href="https://webmail.vivaldi.net">Vivaldi Webmail</a><!-- , <a href="https://www.thunderbird.net">Thunderbird</a>, <a href="https://github.com/gyunaev/birdtray">Birdtray</a> --></li>
+        <!-- <li>Handwritten notes [handy PDF editor]: <a href="https://xournalpp.github.io">Xournal++</a></li> -->
+        <li>Password manager: <a href="https://bitwarden.com">bitwarden</a></li>
+        <li>P2P: <!-- <a href="https://www.slsknet.org">Soulseek</a>,  --><a href="https://www.deluge-torrent.org">Deluge</a></li>
+        <li>Remote control: <a href="https://kdeconnect.kde.org">KDE Connect</a></li>
+        <!-- <li>RSS: <a href="https://github.com/martinrotter/rssguard">RSS Guard</a></li> -->
+        <li>Search: <a href="https://kagi.com">Kagi Search</a>, <a href="https://www.startpage.com">Startpage</a>, <a href="https://duckduckgo.com">DuckDuckGo</a></li>
+        <li>Translate: <a href="https://translate.google.com">Google Translate</a>, <a href="https://www.deepl.com/translator">Deepl Translate</a></li>
+        <li>YouTube: <a href="https://invidio.us">invidio.us</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h2>Utilities</h2>
+      <ul>
+        <li>Calculator: <a href="https://qalculate.github.io/downloads.html">Qalculate!</a>, <a href="https://www.geogebra.org">GeoGebra</a>, <a href="https://www.wolframalpha.com">WolframAlpha</a>, <a href="https://www.symbolab.com">Symbolab</a>, (<a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>)</li>
+        <li>Code: <a href="https://vscodium.com">VSCodium</a></li>
+        <li>Disk usage analyser: <a href="https://wiki.gnome.org/Apps/DiskUsageAnalyzer">baobab</a></li>
+        <li>Eye health: <a href="http://jonls.dk/redshift/">Redshift</a>, (Windows: <a href="https://justgetflux.com/">f.lux</a>)</li>
+        <li>Image viewer: <a href="https://apps.kde.org/en-gb/gwenview/">Gwenview</a></li>
+        <li>Image editing: <a href="https://www.photopea.com/">Photopea</a>, (<a href="https://krita.org/">Krita</a>, <a href="https://inkscape.org/">Inkscape</a>)</li>
+        <li>Live USB bootloader: <a href="https://www.ventoy.net">Ventoy</a></li>
+        <li>Macros: <a href="https://github.com/autokey/autokey">Autokey</a>, (Windows: <a href="https://www.autohotkey.com/">AutoHotkey</a>)</li>
+        <li>Media player: <a href="https://www.smplayer.info">smplayer</a>, <a href="https://audacious-media-player.org">Audacious</a></li>
+        <li>Scanner: <a href="https://wiki.ubuntuusers.de/XSane/">XSane</a></li>
+        <!-- <li>Spotify downloader: <a href="https://spotdl.readthedocs.io/en/latest/">spotDL</a></li> -->
+        <li>System monitoring: <a href="https://www.monitorix.org">Monitorix</a></li>
+        <li>Text: <a href="https://www.lyx.org/">LyX</a>, <a href="https://www.libreoffice.org/download/">LibreOffice</a>, <a href="https://www.geany.org">Geany</a></li>
+        <!-- <li>Document converter: <a href="https://pandoc.org">Pandoc</a></li> -->
+        <li>Video editing: <a href="https://www.shotcut.org">shotcut</a>, (<a href="https://natrongithub.github.io/">Natron</a>, <a href="https://jliljebl.github.io/flowblade/index.html" title="Flowblade video editor">Flowblade</a>, <a href="https://github.com/mifi/lossless-cut" title="Simple and ultra fast cross platform tool for lossless trimming/cutting of video and audio files.">LosslessCut</a>)</li>
+      </ul>
+    </div>
+  
+    <div>
+      <h2>Smartphone</h2>
+      <p>Model: 1. Samsung S10e (second-hand), 2. OnePlus One (2014).</p>
+      <p>OS: 1. Android 12, 2. <a href="https://lineageos.org/">LineageOS</a> <sup>(18.1)</sup> + <a href="https://lineage.microg.org">microG</a> (<span class="important">No Google account needed!</span>).</p>
+      <p><a href="https://f-droid.org/en/"><strong>F-Droid</strong></a> app catalogue:</p>
+        <ul>
+          <li>2FA: <a href="https://getaegis.app">Aegis Authenticator</a></li>
+          <li>Chat: <a href="https://fluffychat.im">FluffyChat</a> <a href="https://matrix.org">[matrix]</a></li>
+          <li>Flash cards: <a href="https://apps.ankiweb.net/">Anki</a></li>
+          <li>Gallery: <a href="https://github.com/kollerlukas/Camera-Roll-Android-App">Camera Roll</a></li>
+          <li>Keyboard: <a href="https://github.com/florisboard/florisboard#readme">FlorisBoard</a></li>
+          <li>Notes: <a href="https://github.com/gsantner/markor">Markor</a></li>
+          <li>Podcast player: <a href="https://antennapod.org">AntennaPod</a></li>
+          <li>Remote control: <a href="https://kdeconnect.kde.org">KDE Connect</a></li>
+          <!-- <li>Video player: <a href="https://f-droid.org/en/packages/is.xyz.mpv/">mpv-android</a></li> -->
+          <li>YouTube: <a href="https://newpipe.schabi.org/" title="Lightweight YouTube that supports background play, no ads, etc.">NewPipe</a></li>
+        </ul>
+    </div>
+  
+    <div>
+      <h2>Smartphone</h2>
+      <p><a href="https://auroraoss.com/app_info.php?app_id=1"><strong>Aurora Store</strong></a> app catalogue: </p>
+        <ul>
+          <li><strong>Ad blocking</strong>: <a href="https://rethinkdns.com">Rethink DNS</a></li>
+          <li>Browser: <a href="https://kiwibrowser.com">Kiwi Browser</a><br>
+            ↳&#xFE0E; Ad blocking: <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a><br></li>
+          <!-- <li>Camera: <a href="https://opencamera.org.uk">Open Camera</a></li> -->
+          <li>Calculator: <a href="https://play.google.com/store/apps/details?id=com.fredericmrozinski.jadecalculator">Jade Scientific Calculator</a>
+          <li>Calendar: <a href="https://play.google.com/store/apps/details?id=com.appgenix.bizcal">Business Calendar 2 Planner</a></li>
+          <li>Chess (clock): <a href="https://play.google.com/store/apps/details?id=org.lichess.mobileapp">lichess</a></li>
+          <li>Cloud storage: <a href="https://mega.nz/">MEGA</a></li>
+          <li>Dictionary (offline): <a href="http://thesaurus.altervista.org/dictionary">Livio</a> , <a href="https://www.linguee.com">Linguee</a><!-- , <a href="https://www.kiwix.org/en/downloads/kiwix-custom-apps/">WikiMed</a> --></li>
+          <li>Email: <a href="https://bluemail.me">BlueMail</a></li>
+          <li>Eye health: <a href="https://play.google.com/store/apps/details?id=com.mlhg.screenfilter">Darker</a></li>
+          <li>File explorer: <a href="https://play.google.com/store/apps/details?id=com.cxinventor.file.explorer">Cx File Explorer</a></li>
+          <li>Graphing calculator: <a href="https://play.google.com/store/apps/details?id=org.geogebra.android">GeoGebra</a>, <a href="https://play.google.com/store/apps/details?id=com.desmos.calculator">Desmos</a></li>
+          <!-- <li>Maps: <a href="https://wego.here.com">Here WeGo</a></li> -->
+          <li>Music player: <a href="https://krosbits.in/musicolet/">Musicolet</a></li>
+          <li>Pomodoro: <a href="https://productivitychallengetimer.com">Productivity Challenge Timer</a></li>
+          <li>Screensaver, live wallpaper: <a href="https://www.jwz.org/xscreensaver/">XScreenSaver</a></li>
+          <li>Scrobbler: <a href="https://github.com/kawaiiDango/pScrobbler">Pano Scrobbler</a></li>
+  <!--
+          <li>Weather: <a href="https://github.com/Gitsaibot/AF-Weather-Widget">AF Weather Widget</a></li>
+          <li>Plant identifier: <a href="https://floraincognita.com">Flora Incognita</a></li>
+          <li>Insect identifier: <a href="https://observation.org/apps/obsidentify/">ObsIdentify</a></li>
+  -->
+        </ul>
+        <p><strong>apkpure</strong> website:</p>
+        <ul>
+          <li>Calculator: <a href="https://apkpure.com/mathally-graphing-calculator/com.mathally.calculator.pro">MathAlly</a></li>
+        </ul>
+    </div>
+  
+    <div>
+      <h2>Miscellaneous</h2>
+      <ul>
+        <li>Chess: <a href="https://lichess.org"><span>lichess</span></a></li>
+        <li>Citizen science:<br>
+          ↳&#xFE0E; Searching primes with <a href="https://www.primegrid.com">PrimeGrid</a> (via <a href="https://boinc.berkeley.edu">BOINC</a>)<br>
+          ↳&#xFE0E; Great Internet Mersenne Prime Search: <a href="https://www.mersenne.org">GIMPS</a>
+        </li>
+        <li>Comedy: <a href="https://www.southparkstudios.com">South Park</a></li>
+        <li>Library: <a href="./zlibrary.html">Z-Library</a>, <a href="http://gen.lib.rus.ec/">Library Genesis</a></li>
+        <li>Science news: <a href="https://www.quantamagazine.org">Quanta Magazine</a></li>
+        <li>Skateboarding: <a href="https://www.thrashermagazine.com">Thrasher Magazine</a></li>
+      </ul>
+    </div>
   
     <!-- <div>
-    <h2>Laptop</h2>
-    <ul>
-      <li>Model: MSI GT70 0NC (2012).</li>
-      <li>OS: <a href="https://endeavouros.com">EndeavourOS</a> (Arch).</li>
-      <li>CPU: Intel Core i7-3610QM @ 2.30㎓.</li>
-      <li>GPU: NVIDIA GTX 670M 3㎇ GDDR5.</li>
-      <li>RAM: 16㎇ (2 x 8㎇ DDR3).</li>
-      <li>SSD: 64㎇.</li>
-      <li>HDD: 750㎇ 7200 RPM.</li>
-      <li>Keyboard: Dragon War: Dark Sector.</li>
-      <li>Mouse: Razer Deathadder V2<br>
-    </ul>
-  </div>  -->
+      <h2>Laptop²</h2>
+      <p>Purpose: lightweight general purpose tasks.</p>
+      <ul>
+        <li>OS: <a href="https://endeavouros.com">EndeavourOS</a> (Arch)</li>
+        <li>Model: Toshiba Satellite L750D (2011).</li>
+        <li>CPU: AMD A6-3400M @ 1.40㎓.</li>
+        <li>GPU: Radeon HD 6520G.</li>
+        <li>RAM: 16㎇.</li>
+        <li>HDD: 640㎇ 5400 RPM.</li>
+        <li>Mouse: ISY ICM 3000.</li>
+      </ul>
+    </div> -->
   
-  <div><h2>Linux</h2>
-    <ul>
-      <li>Distro: <a href="https://manjaro.org">Manjaro</a></li>
-      <li>Desktop: <a href="https://xfce.org">Xfce</a></li>
-      <li>Firewall: <a href="https://wiki.archlinux.org/title/Uncomplicated_Firewall#Gufw:~:text=GUI%20frontends-,Gufw,-gufw%20is%20a">gufw</a></li>
-      <li>Proces viewer: <a href="https://github.com/aristocratos/btop">btop</a></li>
-      <li>Screensaver: <a href="https://www.jwz.org/xscreensaver/">XScreenSaver</a></li>
-      <li>Terminal: <a href="https://wiki.archlinux.org/title/Yakuake">Yakuake</a></li>
-    </ul>  
-  </div>
-  <div>
-    <h2>Internet</h2>
-    <ul>
-      <li>Browser: <a href="https://vivaldi.com">Vivaldi</a><br>
-        ↳&#xFE0E; <strong>Ad blocking</strong>: <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a><br>
-        ↳&#xFE0E; Convenience: <a href="https://www.mrfdev.com/enhancer-for-youtube">Enhancer for YouTube™</a>, <a href="https://languagetoolplus.com/#firefox_chrome">LanguageTool Plus</a>, 
-        <a href="https://chrome.google.com/webstore/detail/transover/aggiiclaiamajehmlfpkjmlbadmkledi">TransOver</a>, <a href="https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm">Web Scrobbler</a></li>
-      <li><strong>Ad blocking</strong>: <!-- <a href="https://adguard.com/en/adguard-dns/overview.html" title="https://wiki.archlinux.org/index.php/Openresolv#Defining_multiple_values_for_options">AdGuard DNS</a>,  --><a href="https://github.com/hectorm/hblock">hBlock</a></li>
-      <li>Chat: <a href="https://nheko-reborn.github.io">nheko</a> <a href="https://matrix.org">[matrix]</a></li>
-      <li>Cloud storage: <a href="https://mega.nz/">MEGA</a></li>
-      <li>Email: <a href="https://webmail.vivaldi.net">Vivaldi Webmail</a><!-- , <a href="https://www.thunderbird.net">Thunderbird</a>, <a href="https://github.com/gyunaev/birdtray">Birdtray</a> --></li>
-      <!-- <li>Handwritten notes [handy PDF editor]: <a href="https://xournalpp.github.io">Xournal++</a></li> -->
-      <li>Password manager: <a href="https://bitwarden.com">bitwarden</a></li>
-      <li>P2P: <!-- <a href="https://www.slsknet.org">Soulseek</a>,  --><a href="https://www.deluge-torrent.org">Deluge</a></li>
-      <li>Remote control: <a href="https://kdeconnect.kde.org">KDE Connect</a></li>
-      <!-- <li>RSS: <a href="https://github.com/martinrotter/rssguard">RSS Guard</a></li> -->
-      <li>Search: <a href="https://kagi.com">Kagi Search</a>, <a href="https://www.startpage.com">Startpage</a>, <a href="https://duckduckgo.com">DuckDuckGo</a></li>
-      <li>Translate: <a href="https://translate.google.com">Google Translate</a>, <a href="https://www.deepl.com/translator">Deepl Translate</a></li>
-      <li>YouTube: <a href="https://invidio.us">invidio.us</a></li>
-    </ul>
-  </div>
-  
-  <div>
-    <h2>Utilities</h2>
-    <ul>
-      <li>Calculator: <a href="https://qalculate.github.io/downloads.html">Qalculate!</a>, <a href="https://www.geogebra.org">GeoGebra</a>, <a href="https://www.wolframalpha.com">WolframAlpha</a>, <a href="https://www.symbolab.com">Symbolab</a>, (<a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>)</li>
-      <li>Code: <a href="https://vscodium.com">VSCodium</a></li>
-      <li>Disk usage analyser: <a href="https://wiki.gnome.org/Apps/DiskUsageAnalyzer">baobab</a></li>
-      <li>Eye health: <a href="http://jonls.dk/redshift/">Redshift</a>, (Windows: <a href="https://justgetflux.com/">f.lux</a>)</li>
-      <li>Image viewer: <a href="https://apps.kde.org/en-gb/gwenview/">Gwenview</a></li>
-      <li>Image editing: <a href="https://www.photopea.com/">Photopea</a>, (<a href="https://krita.org/">Krita</a>, <a href="https://inkscape.org/">Inkscape</a>)</li>
-      <li>Live USB bootloader: <a href="https://www.ventoy.net">Ventoy</a></li>
-      <li>Macros: <a href="https://github.com/autokey/autokey">Autokey</a>, (Windows: <a href="https://www.autohotkey.com/">AutoHotkey</a>)</li>
-      <li>Media player: <a href="https://www.smplayer.info">smplayer</a>, <a href="https://audacious-media-player.org">Audacious</a></li>
-      <li>Scanner: <a href="https://wiki.ubuntuusers.de/XSane/">XSane</a></li>
-      <!-- <li>Spotify downloader: <a href="https://spotdl.readthedocs.io/en/latest/">spotDL</a></li> -->
-      <li>System monitoring: <a href="https://www.monitorix.org">Monitorix</a></li>
-      <li>Text: <a href="https://www.lyx.org/">LyX</a>, <a href="https://www.libreoffice.org/download/">LibreOffice</a>, <a href="https://www.geany.org">Geany</a></li>
-      <!-- <li>Document converter: <a href="https://pandoc.org">Pandoc</a></li> -->
-      <li>Video editing: <a href="https://www.shotcut.org">shotcut</a>, (<a href="https://natrongithub.github.io/">Natron</a>, <a href="https://jliljebl.github.io/flowblade/index.html" title="Flowblade video editor">Flowblade</a>, <a href="https://github.com/mifi/lossless-cut" title="Simple and ultra fast cross platform tool for lossless trimming/cutting of video and audio files.">LosslessCut</a>)</li>
-    </ul>
-  </div>
-
-  <div>
-    <h2>Smartphone</h2>
-    <p>Model: 1. Samsung S10e (second-hand), 2. OnePlus One (2014).</p>
-    <p>OS: 1. Android 12, 2. <a href="https://lineageos.org/">LineageOS</a> <sup>(18.1)</sup> + <a href="https://lineage.microg.org">microG</a> (<span class="important">No Google account needed!</span>).</p>
-    <p><a href="https://f-droid.org/en/"><strong>F-Droid</strong></a> app catalogue:</p>
+    <!-- <div>
+      <h2>Desktop</h2>
+      <p>Purpose: <a href="https://foldingathome.org">Folding@Home</a>.</p>
       <ul>
-        <li>2FA: <a href="https://getaegis.app">Aegis Authenticator</a></li>
-        <li>Chat: <a href="https://fluffychat.im">FluffyChat</a> <a href="https://matrix.org">[matrix]</a></li>
-        <li>Flash cards: <a href="https://apps.ankiweb.net/">Anki</a></li>
-        <li>Gallery: <a href="https://github.com/kollerlukas/Camera-Roll-Android-App">Camera Roll</a></li>
-        <li>Keyboard: <a href="https://github.com/florisboard/florisboard#readme">FlorisBoard</a></li>
-        <li>Notes: <a href="https://github.com/gsantner/markor">Markor</a></li>
-        <li>Podcast player: <a href="https://antennapod.org">AntennaPod</a></li>
-        <li>Remote control: <a href="https://kdeconnect.kde.org">KDE Connect</a></li>
-        <!-- <li>Video player: <a href="https://f-droid.org/en/packages/is.xyz.mpv/">mpv-android</a></li> -->
-        <li>YouTube: <a href="https://newpipe.schabi.org/" title="Lightweight YouTube that supports background play, no ads, etc.">NewPipe</a></li>
+        <li>Model: custom built in 2015.</li>
+        <li>CPU: Intel Core i7-3820 3.6㎓ @ 4.5㎓.</li>
+        <li>PSU: Corsair AX760.</li>
+        <li>GPU: EVGA GeForce GT 520.</li>
+        <li>MOBO: Asus P9X79 LE.</li>
+        <li>RAM: 16㎇ (2x 8㎇ Corsair Vengeance LP).</li>
+        <li>SSD: Samsung 840 PRO 128㎇ & 850 EVO 250㎇.</li>
+        <li>HDD: WD Caviar GP 2TB.</li>
+        <li>Cooling: Noctua NH-D15.</li>
+        <li>Case: Thermaltake Core V71.</li>
       </ul>
+    </div> -->
   </div>
 
-  <div>
-    <h2>Smartphone</h2>
-    <p><a href="https://auroraoss.com/app_info.php?app_id=1"><strong>Aurora Store</strong></a> app catalogue: </p>
-      <ul>
-        <li><strong>Ad blocking</strong>: <a href="https://rethinkdns.com">Rethink DNS</a></li>
-        <li>Browser: <a href="https://kiwibrowser.com">Kiwi Browser</a><br>
-          ↳&#xFE0E; Ad blocking: <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a><br></li>
-        <!-- <li>Camera: <a href="https://opencamera.org.uk">Open Camera</a></li> -->
-	      <li>Calculator: <a href="https://play.google.com/store/apps/details?id=com.fredericmrozinski.jadecalculator">Jade Scientific Calculator</a>
-        <li>Calendar: <a href="https://play.google.com/store/apps/details?id=com.appgenix.bizcal">Business Calendar 2 Planner</a></li>
-        <li>Chess (clock): <a href="https://play.google.com/store/apps/details?id=org.lichess.mobileapp">lichess</a></li>
-        <li>Cloud storage: <a href="https://mega.nz/">MEGA</a></li>
-        <li>Dictionary (offline): <a href="http://thesaurus.altervista.org/dictionary">Livio</a> , <a href="https://www.linguee.com">Linguee</a><!-- , <a href="https://www.kiwix.org/en/downloads/kiwix-custom-apps/">WikiMed</a> --></li>
-        <li>Email: <a href="https://bluemail.me">BlueMail</a></li>
-        <li>Eye health: <a href="https://play.google.com/store/apps/details?id=com.mlhg.screenfilter">Darker</a></li>
-        <li>File explorer: <a href="https://play.google.com/store/apps/details?id=com.cxinventor.file.explorer">Cx File Explorer</a></li>
-        <li>Graphing calculator: <a href="https://play.google.com/store/apps/details?id=org.geogebra.android">GeoGebra</a>, <a href="https://play.google.com/store/apps/details?id=com.desmos.calculator">Desmos</a></li>
-        <!-- <li>Maps: <a href="https://wego.here.com">Here WeGo</a></li> -->
-        <li>Music player: <a href="https://krosbits.in/musicolet/">Musicolet</a></li>
-        <li>Pomodoro: <a href="https://productivitychallengetimer.com">Productivity Challenge Timer</a></li>
-        <li>Screensaver, live wallpaper: <a href="https://www.jwz.org/xscreensaver/">XScreenSaver</a></li>
-        <li>Scrobbler: <a href="https://github.com/kawaiiDango/pScrobbler">Pano Scrobbler</a></li>
-<!--
-        <li>Weather: <a href="https://github.com/Gitsaibot/AF-Weather-Widget">AF Weather Widget</a></li>
-        <li>Plant identifier: <a href="https://floraincognita.com">Flora Incognita</a></li>
-        <li>Insect identifier: <a href="https://observation.org/apps/obsidentify/">ObsIdentify</a></li>
--->
-      </ul>
-      <p><strong>apkpure</strong> website:</p>
-      <ul>
-        <li>Calculator: <a href="https://apkpure.com/mathally-graphing-calculator/com.mathally.calculator.pro">MathAlly</a></li>
-      </ul>
+  <hr class="hr-long">
+
+  <div class="readability">
+    <h1>Linux installation checklist.</h1>
+    <p class="sub-title">Installation checklist of my preferred Arch based Linux operating system <a href="https://manjaro.org">Manjaro</a>. Need help? Use the remarkably extensive <a href="https://archlinux.org"> ArchWiki</a>.</p>
+
+    <hr class="hr-long">
+    
+    <ol>
+      <li>Are you a first timer? Backup what you don’t want to lose on a separate medium. It helps if you have a second PC in case something breaks and renders your current PC temporarily unusable.</li>
+      <li>Download the OS and create the install medium with <a href="https://www.ventoy.net">Ventoy</a>.</li>
+      <li>To launch the OS from the USB key: reboot and press F12, or some other F-key during the start up it usually mentions which button to push to change boot device), or DELETE during the startup to pick/edit the drive to boot from.</li>
+      <li>Install the OS.</a></li>
+      <li><strong><a href="#:~:text=Dual%2Dboot%20and%20sharing%20a%20drive%20between%20Linux%20and%20Windows.">Disable fast startup</a> when dual-booting Windows!</strong></li>
+    </ol>
+
+    <hr class="hr-long">
+
+    <h2>Packages.</h2>
+    <p>I have certain set of software I install on every new machine. Here follows a list I copy paste so I don't have to install everything individually each time.</p>
+    <h3>Default:</h3>
+    <code>sudo pacman -Syu --needed geany gnome-disk-utility gparted yakuake btop dnsutils redshift catfish vivaldi vivaldi-ffmpeg-codecs xscreensaver gufw playerctl hunspell hunspell-nl hunspell-en_GB smplayer okular xfce4-systemload-plugin xfce4-sensors-plugin kdeconnect base-devel peek gst-plugins-good baobab</code>
+
+    <code>yay -S hblock && yay -S qalculate-gtk</code> <!-- if qalculate doesn't install, add -S -->
+    
+    <p>Run <em>hblock</em> in commandline to activate it, and run "cat /etc/hosts" to <a href="https://github.com/hectorm/hblock#installation">verify</a>.</p>
+    
+    <h3>Optional:</h3>
+    <code>sudo pacman -Syu --needed imwheel element-desktop shotcut libreoffice-still calibre rssguard audacious spotify-launcher npm discord bluez bluez-utils blueberry pulseaudio-bluetooth gst-plugins-good linux-lts texlive-most texstudio sagemath sagemath-doc xsane boinc opencl-nvidia seahorse nheko noto-fonts-emoji</code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
+    <code>npm install -g live-server</code>
+    <code>yay -S autokey-gtk && yay -S lyx && yay -S vscodium && yay -S monitorix</code>
+      <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
+      
+    <!-- <p><em>Subliminal</em>, necessary to use <a href="https://wiki.archlinux.org/index.php/Mpv#Scripts">scripts</a> that automatically download and sync subtitles in <em>mpv</em>:</p>
+    <code>sudo pacman -S python-pip && pip install subliminal ffsubsync && yay alass</code>
+
+    <p>Place <a href="https://github.com/davidde/mpv-autosub">autosub.lua</a> and <a href="https://github.com/Eisa01/mpv-scripts#smarthistory-script">SimpleHistory.lua</a> in …/.config/mpv/scripts/, and <a href="https://github.com/joaquintorres/autosubsync-mpv#configuration">autosubsync.lua</a> in …/.config/mpv/script-opts/</p> -->
+
+    <hr class="hr-long">
+
+    <h2>To configure.</h2>
+
+    <h3>AutoKey.</h3>
+
+    <h3>.bashrc</h3>
+    <pre><code>alias xyz="xdg-open path/to/file.ods"
+alias xyz="cd path/to/folder/"
+alias upoff="yes | sudo pacman -Syu && shutdown now"
+alias upd="yes | sudo pacman -Syu"
+alias gimps="cd .GIMPS/p95v308b17.linux64/ && ./mprime -m"</code></pre>
+
+    <h3>Shortcuts.</h3>
+    <p>Keyboard → Application Shortcuts: playerctl play-pause/next/previous, xscreensaver-command -activate, amixer set Master 10%+, xfce4-terminal -e btop</p>
+
+<!--     <h3>gvim.</h3>
+
+    <ol><li><a href="https://www.npmjs.com/package/live-server">Live Server</a></li>
+    <li>gvim (<a href="https://vimawesome.com">plugins</a> installed with <a href="https://github.com/junegunn/vim-plug">vim-plug</a>: 
+      <a href="https://github.com/mattn/emmet-vim">emmet-vim</a>, 
+      <a href="https://github.com/preservim/nerdtree">NERDTree</a>, 
+      <a href="https://github.com/mg979/vim-visual-multi">vim-visual-multi</a>. Other:  
+      <a href="https://github.com/tpope/vim-surround">surround.vim</a>,
+      <a href="https://github.com/tpope/vim-commentary">commentary.vim</a>)
+    </li></ol> -->
+	  
+
+    <h3>uBlock Origin.</h3>
+    <ul>
+      <li>☐ “Hide placeholders of blocked elements”.</li>
+      <li>☑ “Enable cloud storage support”. And don't forget to import from cloud storage the “Filter lists” and “My rules”. Subsequently export to cloud storage all future additions.</li>
+      <li>☑ “Block media elements larger than 512 KB”.</li>
+      <li>☑ “Block remote fonts”.</li>
+      <li>☑ “Disable JavaScript”.</li>
+      <li>☑ “I am an advanced user”.</li>
+      <li>Globally block 3rd-party scripts and 3rd-party frames.</li>
+    </ul>
+    
+    <h3>Enhancer for YouTube.</h3>
+    <details>
+      <summary>Click to expand the exported backup content.</summary>
+      <code>{"version":"2.0.118","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":85,"blackbars":false,"blockads":false,"blockadsexceptforsubs":false,"blockautoplay":true,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":false,"cinemamodewideplayer":true,"controlbar":{"active":true,"autohide":false,"centered":true,"position":"absolute"},"controls":["size","pop-up-player","speed","screenshot","options"],"controlsvisible":false,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":true,"controlvolumemousebutton":false,"convertshorts":true,"customcolors":{"--main-color":"#00adee","--main-background":"#111111","--second-background":"#181818","--hover-background":"#232323","--main-text":"#eff0f1","--dimmer-text":"#cccccc","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":false,"date":1687771133142,"defaultvolume":false,"disableautoplay":false,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":false,"ignoreplaylists":true,"ignorepopupplayer":true,"localecode":"en_GB","localedir":"ltr","message":false,"miniplayer":true,"miniplayerposition":"_top-left","miniplayersize":"_400x225","newestcomments":false,"overridespeeds":true,"pauseforegroundtab":false,"pausevideos":true,"popuplayersize":"640x360","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd720","qualityplaylistsfullscreen":"hd1080","qualityvideos":"hd720","qualityvideosfullscreen":"hd1080","reload":false,"reversemousewheeldirection":false,"selectquality":false,"selectqualityfullscreenoff":false,"selectqualityfullscreenon":false,"speed":1,"speedvariation":0.1,"stopvideos":false,"theatermode":false,"theme":"default-dark","themevariant":"youtube-deep-dark.css","update":0,"volume":50,"volumemultiplier":3,"volumevariation":5,"whitelist":"","wideplayer":false,"wideplayerviewport":false}}</code>
+    </details>
+    
+    <h3>Reddit Enhancement Suite.</h3>
+    <p>☑ “Hide All Child Comments”.</p>
+
+    <h3>LanguageTool.</h3>
+    <p>☐ “Enable rephrasing”.</p>
+
+<!--     <h3>DNS.</h3>
+    <p>Change the DNS IPs in resolvconf.conf (<a href="https://wiki.archlinux.org/title/Openresolv#Defining_multiple_values_for_options">openresolv</a>):</p>
+    <code>sudo mousepad /etc/resolvconf.conf </code>
+    <p>Add the following <a href="https://quad9.net">Quad9</a> IPs:</p>
+    <code>resolv_conf=/etc/resolv.conf <br>
+    name_servers="9.9.9.9 149.112.112.112 2620:fe::fe 2620:fe::9"</code>
+    <p>Lastly, right click on the network icon → open “Network Connections” by clicking “Edit Connections…” → select a connection and click the ⚙️ (cog); <br>
+    ↳ IPv4 Settings → Method: “Automatic (DHCP) addresses only”,  “DNS servers”: 9.9.9.9, 149.112.112.112 <br>
+    ↳ IPv6 Settings → Method: “Automatic”,  “Additional DNS servers”: 2620:fe::fe, 2620:fe::9</p> -->
+
+    <h3>Dual-boot and sharing a drive between Linux and Windows.</h3>
+    <p>To share a drive between Linux and Windows (11?) on a dual-boot setup and ensure Microsoft's incompetence doesn't delete your files, disable Windows' enabled by default fast startup: Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span>.</p>
+
+  <h3>IMWheel.</h3>
+  <p>Save the following config to “/home/x/.imwheelrc”:</p>
+    <pre><code>"^vivaldi-bin$"
+None, Up, Button4, 2
+None, Down, Button5, 2
+
+"^vivaldi-stable$"
+None, Up, Button4, 2
+None, Down, Button5, 2</code></pre>
+
+  <h3>Redshift.</h3>
+  <p>Save the following config to “/.config/redshift.conf”:</p>
+  <details>
+    <summary>Click to expand the Redshift configuration file content.</summary>
+<pre><code>[redshift]
+; Set the day and night screen temperatures
+;temp-day=6500
+temp-night=4000
+
+; Disable the smooth fade between temperatures when Redshift starts and stops.
+; 0 will cause an immediate change between screen temperatures.
+; 1 will gradually apply the new screen temperature over a couple of seconds.
+fade=1
+
+; Solar elevation thresholds.
+; By default, Redshift will use the current elevation of the sun to determine
+; whether it is daytime, night or in transition (dawn/dusk). When the sun is
+; above the degrees specified with elevation-high it is considered daytime and
+; below elevation-low it is considered night.
+;elevation-high=3
+;elevation-low=-6
+
+; Custom dawn/dusk intervals.
+; Instead of using the solar elevation, the time intervals of dawn and dusk
+; can be specified manually. The times must be specified as HH:MM in 24-hour
+; format.
+;dawn-time=6:00-7:45
+;dusk-time=18:35-20:15
+
+; Set the screen brightness. Default is 1.0.
+;brightness=0.9
+; It is also possible to use different settings for day and night
+; since version 1.8.
+;brightness-day=0.7
+brightness-night=0.60
+; Set the screen gamma (for all colors, or each color channel
+; individually)
+;gamma=0.8
+;gamma=0.8:0.7:0.8
+; This can also be set individually for day and night since
+; version 1.10.
+;gamma-day=0.8:0.7:0.8
+;gamma-night=0.6
+
+; Set the location-provider: 'geoclue2', 'manual'
+; type 'redshift -l list' to see possible values.
+; The location provider settings are in a different section.
+location-provider=manual
+
+; Set the adjustment-method: 'randr', 'vidmode'
+; type 'redshift -m list' to see all possible values.
+; 'randr' is the preferred method, 'vidmode' is an older API.
+; but works in some cases when 'randr' does not.
+; The adjustment method settings are in a different section.
+adjustment-method=randr
+
+; Configuration of the location-provider:
+; type 'redshift -l PROVIDER:help' to see the settings.
+; ex: 'redshift -l manual:help'
+; Keep in mind that longitudes west of Greenwich (e.g. the Americas)
+; are negative numbers.
+[manual]
+lat=33.67722
+lon=-106.47527
+
+; Configuration of the adjustment-method
+; type 'redshift -m METHOD:help' to see the settings.
+; ex: 'redshift -m randr:help'
+; In this example, randr is configured to adjust only screen 0.
+; Note that the numbering starts from 0, so this is actually the first screen.
+; If this option is not specified, Redshift will try to adjust _all_ screens.
+[randr]
+screen=0
+
+; --- I'm not using the below settings any more, but handy to know
+; Global settings for redshift
+; Place this file in .config/redshift/redshift.conf. Use the line below as startup command
+; redshift-gtk -c ./.config/redshift/redshift.conf</code></pre>
+  </details>
+    
+<h3>Whisker Menu search actions.</h3>
+<details>
+  <summary>Click to expand the whiskermenu-...rc file content.</summary>
+  <pre><code>//LOCATION: /home/x/.config/xfce4/panel/whiskermenu-….rc
+//Add xfce4-popup-whiskermenu to application shortcuts in Keyboard settings (Arch)
+
+search-actions=33
+
+[action0]
+name=Man Pages
+pattern=#
+command=exo-open --launch TerminalEmulator man %s
+regex=false
+
+[action1]
+name=Run in Terminal
+pattern=!
+command=exo-open --launch TerminalEmulator %s
+regex=false
+
+[action2]
+name=Open URI
+pattern=^(file|http|https):\\/\\/(.*)$
+command=exo-open \\0
+regex=true
+
+[action3]
+name=Search for files
+pattern=-
+command=catfish --path=~ --start %s
+regex=false
+
+[action4]
+name=Deepl & Google (EN > NL)
+pattern=?tr
+command=/home/x/MEGA/configuration/linux/scripts/search-translate-en.sh %u
+regex=false
+
+[action5]
+name=Deepl & Google (NL > EN)
+pattern=?trnl
+command=/home/x/MEGA/configuration/linux/scripts/search-translate-nl.sh %u
+regex=false
+
+[action6]
+name=Taaladvies, definities, synoniemen
+pattern=?dnl
+command=/home/x/MEGA/configuration/linux/scripts/search-definities.sh %u
+regex=false
+
+[action7]
+name=Search DDG
+pattern=?d
+command=/home/x/MEGA/configuration/linux/scripts/search-duck.sh %u
+regex=false
+
+[action8]
+name=WolframAlpha & Symbolab
+pattern=?math
+command=/home/x/MEGA/configuration/linux/scripts/search-math.sh %u
+regex=false
+
+[action9]
+name=YouTube
+pattern=?yt
+command=exo-open --launch WebBrowser https://www.youtube.com/results?search_query=%u
+regex=false
+
+[action10]
+name=Definition & thesaurus
+pattern=?den
+command=/home/x/MEGA/configuration/linux/scripts/search-dictionaries.sh %u
+regex=false
+
+[action11]
+name=ytprivate
+pattern=?yp
+command=exo-open --launch WebBrowser https://invidious.namazso.eu/search?q=%u
+regex=false
+
+[action12]
+name=Wiki and E. Britannica
+pattern=?wibr
+command=bash -c "exo-open https://www.britannica.com/search?query=%u && exo-open https://en.wikipedia.org/w/index.php?search=%u"
+regex=false
+
+[action13]
+name=Goodreads
+pattern=?gr
+command=exo-open --launch WebBrowser https://www.goodreads.com/search?q=%u
+regex=false
+
+[action14]
+name=Google Maps
+pattern=?gm
+command=exo-open --launch WebBrowser https://www.google.com/maps/search/%u
+regex=false
+
+[action15]
+name=Bypass paywall
+pattern=?12
+command=exo-open --launch WebBrowser https://12ft.io/proxy?q=%u
+regex=false
+
+[action16]
+name=Reddit
+pattern=?red
+command=bash -c exo-open https://www.reddit.com/search?q=%u
+regex=false
+
+[action17]
+name=unicode, emojipedia
+pattern=?uni
+command=exo-open --launch WebBrowser https://emojipedia.org/search/?q=%u
+regex=false
+
+[action18]
+name=Movie info
+pattern=?mov
+command=/home/x/MEGA/configuration/linux/scripts/search-movie.sh %u
+regex=false
+
+[action19]
+name=Amazon (all)
+pattern=?am
+command=/home/x/MEGA/configuration/linux/scripts/search-amazon.sh %u
+regex=false
+
+[action20]
+name=Search All
+pattern=?sa
+command=/home/x/MEGA/configuration/linux/scripts/search-all.sh %u
+regex=false
+
+[action21]
+name=Spotify
+pattern=?sp
+command=exo-open --launch WebBrowser https://open.spotify.com/search/%u
+regex=false
+
+[action22]
+name=Ebay
+pattern=?eb
+command=exo-open --launch WebBrowser https://www.ebay.com/sch/i.html?_nkw=%u&_sacat=0
+regex=false
+
+[action23]
+name=Idioms
+pattern=?idi
+command=exo-open --launch WebBrowser https://idioms.thefreedictionary.com/%u
+regex=false
+
+[action24]
+name=Freely-usable images
+pattern=?fimg
+command=exo-open --launch WebBrowser https://unsplash.com/s/photos/%u
+regex=false
+
+[action25]
+name=Images (all)
+pattern=?img
+command=/home/x/MEGA/configuration/linux/scripts/search-images.sh %u
+regex=false
+
+[action26]
+name=The Pirate Bay
+pattern=?pb
+command=exo-open --launch WebBrowser https://pirateproxy.live/search/%u/
+regex=false
+
+[action27]
+name=Startpage
+pattern=?s
+command=/home/x/MEGA/configuration/linux/scripts/search-startpage.sh %u
+regex=false
+
+[action28]
+name=Urban Dictionary
+pattern=?ud
+command=exo-open --launch WebBrowser https://www.urbandictionary.com/define.php?term=%u
+regex=false
+
+[action29]
+name=Alternative to
+pattern=?at
+command=exo-open --launch WebBrowser https://alternativeto.net/browse/search/?q=%u
+regex=false
+
+[action30]
+name=Wolfram Alpha
+pattern=?wa
+command=exo-open --launch WebBrowser https://www.wolframalpha.com/input/?i=%u
+regex=false
+
+[action31]
+name=Symbolab
+pattern=?sl
+command=exo-open --launch WebBrowser https://www.symbolab.com/solver/step-by-step/%u
+regex=false
+
+[action32]
+name=Wikipedia
+pattern=?w
+command=exo-open --launch WebBrowser https://en.wikipedia.org/w/index.php?search=%u
+regex=false</code></pre>
+</details>
+
+<h3>XScreenSaver.</h3>
+<details>
+  <summary>Click to expand the .xscreensaver file content.</summary>
+<pre><code># XScreenSaver Preferences File
+# Written by xscreensaver-settings 6.06 for x on Sat Jun  3 11:27:34 2023.
+# https://www.jwz.org/xscreensaver/
+
+timeout:	0:11:00
+cycle:		0:05:00
+lock:		True
+lockTimeout:	0:30:00
+passwdTimeout:	0:00:30
+visualID:	default
+installColormap:    True
+verbose:	False
+splash:		True
+splashDuration:	0:00:05
+demoCommand:	xscreensaver-settings
+nice:		10
+fade:		True
+unfade:		False
+fadeSeconds:	0:00:01
+ignoreUninstalledPrograms:False
+dpmsEnabled:	False
+dpmsQuickOff:	False
+dpmsStandby:	2:00:00
+dpmsSuspend:	2:00:00
+dpmsOff:	4:00:00
+grabDesktopImages:  False
+grabVideoFrames:    False
+chooseRandomImages: False
+imageDirectory:	
+
+mode:		random
+selected:	-1
+
+textMode:	url
+textLiteral:	XScreenSaver
+textFile:	
+textProgram:	fortune
+textURL:	https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
+dialogTheme:	greenblack
+settingsGeom:	280,132 1380,408
+
+programs:								      \
+-				maze --root				    \n\
+  GL: 				superquadrics --root			    \n\
+-				attraction --root			    \n\
+-				blitspin --root				    \n\
+-				greynetic --root			    \n\
+        helix --root				    \n\
+-				hopalong --root				    \n\
+-				imsmap --root				    \n\
+-				noseguy --root				    \n\
+-				pyro --root				    \n\
+-				qix --root				    \n\
+-				rocks --root				    \n\
+-				rorschach --root			    \n\
+-				decayscreen --root			    \n\
+-				flame --root				    \n\
+-				halo --root				    \n\
+-				slidescreen --root			    \n\
+-				pedal --root				    \n\
+-				bouboule --root				    \n\
+-				braid --root				    \n\
+        coral --root				    \n\
+-				deco --root				    \n\
+-				drift --root				    \n\
+-				fadeplot --root				    \n\
+        galaxy --root				    \n\
+-				goop --root				    \n\
+-				grav --root				    \n\
+        ifs --root				    \n\
+- GL: 				jigsaw --root				    \n\
+-				julia --root				    \n\
+-				kaleidescope --root			    \n\
+- GL: 				moebius --root				    \n\
+-				moire --root				    \n\
+- GL: 				morph3d --root				    \n\
+-				mountain --root				    \n\
+-				munch --root				    \n\
+-				penrose --root				    \n\
+- GL: 				pipes --root				    \n\
+-				rd-bomb --root				    \n\
+- GL: 				rubik --root				    \n\
+-				sierpinski --root			    \n\
+- any: 				slip --root				    \n\
+- GL: 				sproingies --root			    \n\
+-				starfish --root				    \n\
+        strange --root				    \n\
+-				swirl --root				    \n\
+-				triangle --root				    \n\
+-				xjack --root				    \n\
+-				xlyap --root				    \n\
+- GL: 				atlantis --root				    \n\
+-				bsod --root				    \n\
+- GL: 				bubble3d --root				    \n\
+  GL: 				cage --root				    \n\
+-				crystal --root				    \n\
+-				cynosure --root				    \n\
+-				discrete --root				    \n\
+-				distort --root				    \n\
+        epicycle --root				    \n\
+        flow -root -no-box			    \n\
+- GL: 				glplanet --root				    \n\
+-				interference --root			    \n\
+        kumppa --root				    \n\
+- GL: 				lament --root				    \n\
+-				moire2 --root				    \n\
+- GL: 				sonar --root				    \n\
+- GL: 				stairs --root				    \n\
+-				truchet --root				    \n\
+-				vidwhacker --root			    \n\
+-				blaster --root				    \n\
+-				bumps --root				    \n\
+-				ccurve --root				    \n\
+-				compass --root				    \n\
+-				deluxe --root				    \n\
+-				demon --root				    \n\
+- GL: 				extrusion --root			    \n\
+-				loop --root				    \n\
+-				penetrate --root			    \n\
+-				petri --root				    \n\
+-				phosphor --root				    \n\
+- GL: 				pulsar --root				    \n\
+-				ripples --root				    \n\
+-				shadebobs --root			    \n\
+  GL: 				sierpinski3d --root			    \n\
+-				spotlight --root			    \n\
+-				squiral --root				    \n\
+-				wander --root				    \n\
+-				webcollage --root			    \n\
+-				xflame --root				    \n\
+-				xmatrix --root				    \n\
+- GL: 				gflux --root				    \n\
+-				nerverot --root				    \n\
+        xrayswarm --root			    \n\
+-				xspirograph --root			    \n\
+- GL: 				circuit --root				    \n\
+- GL: 				dangerball --root			    \n\
+- GL: 				dnalogo --root				    \n\
+- GL: 				engine --root				    \n\
+- GL: 				flipscreen3d --root			    \n\
+- GL: 				gltext --root				    \n\
+  GL: 				menger --root				    \n\
+- GL: 				molecule --root				    \n\
+-				rotzoomer --root			    \n\
+-				scooter --root				    \n\
+-				speedmine --root			    \n\
+- GL: 				starwars --root				    \n\
+- GL: 				stonerview --root			    \n\
+-				vermiculate --root			    \n\
+        whirlwindwarp --root			    \n\
+-				zoom --root				    \n\
+-				anemone --root				    \n\
+-				apollonian --root			    \n\
+- GL: 				boxed --root				    \n\
+- GL: 				cubenetic --root			    \n\
+- GL: 				endgame --root				    \n\
+        euler2d --root				    \n\
+-				fluidballs --root			    \n\
+- GL: 				flurry --root				    \n\
+- GL: 				glblur --root				    \n\
+- GL: 				glsnake --root				    \n\
+-				halftone --root				    \n\
+- GL: 				juggler3d --root			    \n\
+- GL: 				lavalite --root				    \n\
+-				polyominoes --root			    \n\
+- GL: 				queens --root				    \n\
+- GL: 				sballs --root				    \n\
+- GL: 				spheremonics --root			    \n\
+-				thornbird --root			    \n\
+-				twang --root				    \n\
+- GL: 				antspotlight --root			    \n\
+-				apple2 --root				    \n\
+- GL: 				atunnel --root				    \n\
+-				barcode --root				    \n\
+- GL: 				blinkbox --root				    \n\
+- GL: 				blocktube --root			    \n\
+- GL: 				bouncingcow --root			    \n\
+-				cloudlife --root			    \n\
+- GL: 				cubestorm --root			    \n\
+-				eruption --root				    \n\
+- GL: 				flipflop --root				    \n\
+- GL: 				flyingtoasters --root			    \n\
+-				fontglide --root			    \n\
+- GL: 				gleidescope --root			    \n\
+- GL: 				glknots --root				    \n\
+  GL: 				glmatrix -root -no-rotate		    \n\
+- GL: 				glslideshow --root			    \n\
+  GL: 				hypertorus --root			    \n\
+- GL: 				jigglypuff --root			    \n\
+-				metaballs --root			    \n\
+- GL: 				mirrorblob --root			    \n\
+-				piecewise --root			    \n\
+- GL: 				polytopes --root			    \n\
+-				pong --root				    \n\
+-				popsquares --root			    \n\
+  GL: 				surfaces --root				    \n\
+-				xanalogtv --root			    \n\
+-				abstractile --root			    \n\
+-				anemotaxis --root			    \n\
+- GL: 				antinspect --root			    \n\
+-				fireworkx --root			    \n\
+-				fuzzyflakes --root			    \n\
+-				interaggregate --root			    \n\
+        intermomentary --root			    \n\
+-				memscroller --root			    \n\
+- GL: 				noof --root				    \n\
+-				pacman --root				    \n\
+- GL: 				pinion --root				    \n\
+- GL: 				polyhedra --root			    \n\
+- GL: 				providence --root			    \n\
+-				substrate --root			    \n\
+        wormhole --root				    \n\
+- GL: 				antmaze --root				    \n\
+- GL: 				boing --root				    \n\
+-				boxfit --root				    \n\
+- GL: 				carousel --root				    \n\
+-				celtic --root				    \n\
+- GL: 				crackberg --root			    \n\
+- GL: 				cube21 --root				    \n\
+-				fiberlamp --root			    \n\
+- GL: 				fliptext --root				    \n\
+- GL: 				glhanoi --root				    \n\
+- GL: 				tangram --root				    \n\
+- GL: 				timetunnel --root			    \n\
+- GL: 				glschool --root				    \n\
+- GL: 				topblock --root				    \n\
+  GL: 				cubicgrid --root			    \n\
+-				cwaves --root				    \n\
+- GL: 				gears --root				    \n\
+- GL: 				glcells --root				    \n\
+- GL: 				lockward --root				    \n\
+-				m6502 --root				    \n\
+- GL: 				moebiusgears --root			    \n\
+- GL: 				voronoi --root				    \n\
+- GL: 				hypnowheel --root			    \n\
+  GL: 				klein --root				    \n\
+-				lcdscrub --root				    \n\
+- GL: 				photopile --root			    \n\
+- GL: 				skytentacles --root			    \n\
+- GL: 				rubikblocks --root			    \n\
+- GL: 				companioncube --root			    \n\
+- GL: 				hilbert --root				    \n\
+- GL: 				tronbit --root				    \n\
+- GL: 				geodesic --root				    \n\
+-				hexadrop --root				    \n\
+- GL: 				kaleidocycle --root			    \n\
+- GL: 				quasicrystal --root			    \n\
+- GL: 				unknownpleasures --root			    \n\
+-				binaryring --root			    \n\
+- GL: 				cityflow --root				    \n\
+- GL: 				geodesicgears --root			    \n\
+  GL: 				projectiveplane --root			    \n\
+- GL: 				romanboy --root				    \n\
+-				tessellimage --root			    \n\
+- GL: 				winduprobot --root			    \n\
+- GL: 				splitflap --root			    \n\
+- GL: 				cubestack --root			    \n\
+  GL: 				cubetwist --root			    \n\
+- GL: 				discoball --root			    \n\
+- GL: 				dymaxionmap --root			    \n\
+- GL: 				energystream --root			    \n\
+- GL: 				hexstrut --root				    \n\
+- GL: 				hydrostat --root			    \n\
+- GL: 				raverhoop --root			    \n\
+- GL: 				splodesic --root			    \n\
+- GL: 				unicrud --root				    \n\
+- GL: 				esper --root				    \n\
+- GL: 				vigilance --root			    \n\
+- GL: 				crumbler --root				    \n\
+-				filmleader --root			    \n\
+-				glitchpeg --root			    \n\
+- GL: 				handsy --root				    \n\
+- GL: 				maze3d --root				    \n\
+- GL: 				peepers --root				    \n\
+- GL: 				razzledazzle --root			    \n\
+-				vfeedback --root			    \n\
+- GL: 				deepstars --root			    \n\
+  GL: 				gravitywell --root			    \n\
+- GL: 				beats --root				    \n\
+- GL: 				covid19 --root				    \n\
+  GL: 				etruscanvenus --root			    \n\
+- GL: 				gibson --root				    \n\
+- GL: 				headroom --root				    \n\
+- GL: 				sphereeversion --root			    \n\
+-				binaryhorizon --root			    \n\
+-				marbling --root				    \n\
+- GL: 				mapscroller --root			    \n\
+- GL: 				squirtorus --root			    \n\
+- GL: 				chompytower --root			    \n\
+- GL: 				nakagin --root				    \n\
+- GL: 				hextrail --root				    \n\
+
+
+pointerHysteresis:  10
+authWarningSlack:   20</code></pre>
+</details>
+
+<!--     <h2>Bluetooth</h2>
+    <p>From <a href="https://wiki.archlinux.org/title/Bluetooth">wiki.archlinux.org/title/Bluetooth.</a></p>
+    <p>Run bluetooth instantly, for a single session: <code>sudo systemctl start bluetooth</code> <br> run bluetooth permanently (after rebooting): <code>sudo systemctl enable bluetooth</code> <br> run bluetooth instantly, permanently: <code>sudo systemctl enable --now bluetooth</code></p>
+
+    <p>Auto power-on after boot/resume, and discoverable on startup: <code>sudo xed /etc/bluetooth/main.conf</code> <br> →  [Policy] → AutoEnable=true <br> → [General] → DiscoverableTimeout = 0</p> -->
+
+    <!-- <h2>ckb-next macros.</h2>
+    <p><code>+lctrl,+c,-c,-lctrl</code>, <code>+lctrl,+v,-v,-lctrl</code></p> -->
+
+    <!-- <h2>Login commands.</h2>
+    <p>Add the following line to .profile in home directory [doesn't always work for some reason]: <code>sudo msi-keyboard -m normal -c left,off,low -c middle,off,low -c right,off,low</code></p> -->
+
+    <hr class="hr-long">
+
+    <h2>Steps to reinitialize git folder after format.</h2>
+    <p>[Probably not the right way to do it any more.]</p>
+    <p><code>cd &ltrepo-folder&gt<br>
+      git init<br>
+      git remote add origin &lturl&gt<br>
+      git fetch<br>
+      git reset origin/main
+    </code></p>
+
+    <h2>…or create a new repository on the command line.</h2>
+    <p><code>echo "# REPONAME" >> README.md<br>
+      git init<br>
+      git add README.md<br>
+      git commit -m "first commit"<br>
+      git branch -M main<br>
+      git remote add origin https://github.com/USERNAME/REPONAME<br>
+      git push -u origin main
+    </code></p>
+    
+    <h2>…or push an existing repository from the command line.</h2>
+    <p><code>
+      git remote add origin https://github.com/USERNAME/REPONAME<br>
+      git branch -M main<br>
+      git push -u origin main
+    </code></p>
+
+    <hr class="hr-long">
+
+    <!-- <h2>Extensions in VSCodium.</h2>
+    <p>Create <a href="https://github.com/VSCodium/vscodium/blob/master/DOCS.md#extensions-marketplace">project.json</a> at ~/.config/VSCodium containing:<br>
+      <code>{
+        "extensionsGallery": {
+          "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+          "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
+          "itemUrl": "https://marketplace.visualstudio.com/items",
+          "controlUrl": "",
+          "recommendationsUrl": ""
+        }
+      }</code></p> -->
+    
+    <h2>Clean.</h2>
+    <p>The command below respectively removes cache and orphaned packages [<a href="https://averagelinuxuser.com/clean-arch-linux/">source</a>]:</p>
+    <p><code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code></p>
+
+    <h2>Other useful commands.</h2>
+    <p>Check when the network connection has disconnected/connected [thanks <a href="https://forum.manjaro.org/t/monitoring-ethernet-connection-failures/142985/10?u=cynicusrex">nikgnomic</a>]:</p>
+    <p><code>journalctl -b0 -u NetworkManager | grep -e DISCONNECTED -e CONNECTING</code></p>
+
+    <h2>Change the default browser for Telegram.</h2>
+    <p>Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium. To work around this problem:</p>
+
+    <p><code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code></p>
+
+    <p>Source: <a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">ArchWiki</a>, <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595">GitHub</a>.</p>
+
   </div>
-
-  <div>
-    <h2>Miscellaneous</h2>
-    <ul>
-      <li>Chess: <a href="https://lichess.org"><span>lichess</span></a></li>
-      <li>Citizen science:<br>
-        ↳&#xFE0E; Searching primes with <a href="https://www.primegrid.com">PrimeGrid</a> (via <a href="https://boinc.berkeley.edu">BOINC</a>)<br>
-        ↳&#xFE0E; Great Internet Mersenne Prime Search: <a href="https://www.mersenne.org">GIMPS</a>
-      </li>
-      <li>Comedy: <a href="https://www.southparkstudios.com">South Park</a></li>
-      <li>Library: <a href="./zlibrary.html">Z-Library</a>, <a href="http://gen.lib.rus.ec/">Library Genesis</a></li>
-      <li>Science news: <a href="https://www.quantamagazine.org">Quanta Magazine</a></li>
-      <li>Skateboarding: <a href="https://www.thrashermagazine.com">Thrasher Magazine</a></li>
-    </ul>
-  </div>
-
-  <!-- <div>
-    <h2>Laptop²</h2>
-    <p>Purpose: lightweight general purpose tasks.</p>
-    <ul>
-      <li>OS: <a href="https://endeavouros.com">EndeavourOS</a> (Arch)</li>
-      <li>Model: Toshiba Satellite L750D (2011).</li>
-      <li>CPU: AMD A6-3400M @ 1.40㎓.</li>
-      <li>GPU: Radeon HD 6520G.</li>
-      <li>RAM: 16㎇.</li>
-      <li>HDD: 640㎇ 5400 RPM.</li>
-      <li>Mouse: ISY ICM 3000.</li>
-    </ul>
-  </div> -->
-
-  <!-- <div>
-    <h2>Desktop</h2>
-    <p>Purpose: <a href="https://foldingathome.org">Folding@Home</a>.</p>
-    <ul>
-      <li>Model: custom built in 2015.</li>
-      <li>CPU: Intel Core i7-3820 3.6㎓ @ 4.5㎓.</li>
-      <li>PSU: Corsair AX760.</li>
-      <li>GPU: EVGA GeForce GT 520.</li>
-      <li>MOBO: Asus P9X79 LE.</li>
-      <li>RAM: 16㎇ (2x 8㎇ Corsair Vengeance LP).</li>
-      <li>SSD: Samsung 840 PRO 128㎇ & 850 EVO 250㎇.</li>
-      <li>HDD: WD Caviar GP 2TB.</li>
-      <li>Cooling: Noctua NH-D15.</li>
-      <li>Case: Thermaltake Core V71.</li>
-    </ul>
-  </div> -->
-
   <hr class="hr-long">
     <p id="bottom-nav"><a href="../note.html">⇠ Return</a>, <a href="/">⌂ Home</a>, <a href="../support.html">€ Support</a>, <a href="../feed.rss">☑ RSS</a></p>
 </body>

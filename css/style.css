@@ -230,6 +230,10 @@ ol > li > ul > li {
   border-bottom: 0.06rem solid grey;
 }
 
+#setup-page h1 sup {
+  font-size: small;
+}
+
 /*———————————————————————————————————————————————————————————————*/
 /* Portfolio */
 
