@@ -16,6 +16,7 @@
 
 body {
   background-color: var(--bg-color);
+  padding-bottom: 1rem; /* Ensures the bottom nav doesn't display over content. */
 }
 
 h1 {
@@ -499,8 +500,18 @@ ol > li > ul > li {
 }
 
 #bottom-nav {
-  margin-top: 1rem;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: var(--bg-color);
+  /* box-shadow: 0 0 0.5rem 0 rgba(250, 235, 215, 0.726); */
+  z-index: 53;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-top: 0.06rem solid rgba(0, 0, 0, 0.19);
 }
 
 #bottom-nav a {
