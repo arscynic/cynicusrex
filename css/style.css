@@ -510,16 +510,25 @@ ol > li > ul > li {
 #bottom-nav {
   text-align: center;
   position: fixed;
-  width: 100%;
-  left: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0;
+  margin: 0;
+  margin-bottom: -0.25rem;
+  /* width: 50%; */
+  left: 50%;
+  transform: translate(-50%);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   bottom: 0;
   background-color: var(--bg-color);
-  /* box-shadow: 0 0 0.5rem 0 rgba(250, 235, 215, 0.726); */
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.075);
   z-index: 53;
-  margin: 0;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  border-top: 0.06rem solid rgba(0, 0, 0, 0.19);
+  border: 0.06rem solid rgba(0, 0, 0, 0.19);
+  border-bottom: 0;
+  /* font-size: small; */
 }
 
 #bottom-nav a {
