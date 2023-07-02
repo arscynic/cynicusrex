@@ -238,6 +238,10 @@ ol > li > ul > li {
 /*———————————————————————————————————————————————————————————————*/
 /* Portfolio */
 
+#portfolio-page {
+  margin-bottom: 1rem;
+}
+
 #portfolio-page h2 {
   border-bottom: 0.06rem solid grey;
 }
