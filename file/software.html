@@ -921,29 +921,25 @@ authWarningSlack:   20</code></pre>
 
     <h2>Steps to reinitialize git folder after format.</h2>
     <p>[Probably not the right way to do it any more.]</p>
-    <p><code>cd &ltrepo-folder&gt<br>
-      git init<br>
-      git remote add origin &lturl&gt<br>
-      git fetch<br>
-      git reset origin/main
-    </code></p>
+    <code>cd &ltrepo-folder&gt</code>
+    <code>git init</code>
+    <code> git remote add origin &lturl&gt</code>
+    <code> git fetch</code>
+    <code>git reset origin/main</code>
 
     <h2>…or create a new repository on the command line.</h2>
-    <p><code>echo "# REPONAME" >> README.md<br>
-      git init<br>
-      git add README.md<br>
-      git commit -m "first commit"<br>
-      git branch -M main<br>
-      git remote add origin https://github.com/USERNAME/REPONAME<br>
-      git push -u origin main
-    </code></p>
-    
+    <code>echo "# REPONAME" >> README.md</code>
+    <code>git init</code>
+    <code>git add README.md</code>
+    <code>git commit -m "first commit"</code>
+    <code> git branch -M main</code>
+    <code>git remote add origin https://github.com/USERNAME/REPONAME</code>
+    <code>git push -u origin main</code>
+ 
     <h2>…or push an existing repository from the command line.</h2>
-    <p><code>
-      git remote add origin https://github.com/USERNAME/REPONAME<br>
-      git branch -M main<br>
-      git push -u origin main
-    </code></p>
+    <code>git remote add origin https://github.com/USERNAME/REPONAME</code>
+    <code>git branch -M main</code>
+    <code>git push -u origin main</code>
 
     <p class="fleuron">❦</p>
 
@@ -961,16 +957,19 @@ authWarningSlack:   20</code></pre>
     
     <h2>Clean.</h2>
     <p>The command below respectively removes cache and orphaned packages [<a href="https://averagelinuxuser.com/clean-arch-linux/">source</a>]:</p>
-    <p><code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code></p>
+    <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code>
 
     <h2>Other useful commands.</h2>
     <p>Check when the network connection has disconnected/connected [thanks <a href="https://forum.manjaro.org/t/monitoring-ethernet-connection-failures/142985/10?u=cynicusrex">nikgnomic</a>]:</p>
-    <p><code>journalctl -b0 -u NetworkManager | grep -e DISCONNECTED -e CONNECTING</code></p>
+    <code>journalctl -b0 -u NetworkManager | grep -e DISCONNECTED -e CONNECTING</code>
+
+    <p>Monitor read/write operation of a USB key [<a href="https://unix.stackexchange.com/a/48245">source</a>]:</p>
+    <code>watch -d grep -e Dirty: -e Writeback: /proc/meminfo</code>
 
     <h2>Change the default browser for Telegram.</h2>
     <p>Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium. To work around this problem:</p>
 
-    <p><code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code></p>
+    <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code>
 
     <p>Source: <a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">ArchWiki</a>, <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595">GitHub</a>.</p>
 
