@@ -534,9 +534,6 @@ ul li {
   text-decoration: none;
   color: dimgray;
 }
-#bottom-nav a:first-child {
-  font-size: larger;
-}
 
 #bottom-nav a:hover {
   color: black;
