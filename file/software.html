@@ -966,6 +966,10 @@ authWarningSlack:   20</code></pre>
     <p>Monitor read/write operation of a USB key [<a href="https://unix.stackexchange.com/a/48245">source</a>]:</p>
     <code>watch -d grep -e Dirty: -e Writeback: /proc/meminfo</code>
 
+    <p>Enable/disable keyboard backlight:</p>
+    <code>xset led</code>
+    <code>xset -led</code>
+
     <h2>Change the default browser for Telegram.</h2>
     <p>Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium. To work around this problem:</p>
 
