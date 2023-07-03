@@ -960,22 +960,20 @@ authWarningSlack:   20</code></pre>
     <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code>
 
     <h2>Other useful commands.</h2>
-    <p>Check when the network connection has disconnected/connected [thanks <a href="https://forum.manjaro.org/t/monitoring-ethernet-connection-failures/142985/10?u=cynicusrex">nikgnomic</a>]:</p>
+    <p>Check when the network connection has disconnected/connected [credits to <a href="https://forum.manjaro.org/t/monitoring-ethernet-connection-failures/142985/10?u=cynicusrex">nikgnomic</a>]:</p>
     <code>journalctl -b0 -u NetworkManager | grep -e DISCONNECTED -e CONNECTING</code>
 
-    <p>Monitor read/write operation of a USB key [<a href="https://unix.stackexchange.com/a/48245">source</a>]:</p>
+    <p>Monitor read/write operation of a USB key [credits to <a href="https://unix.stackexchange.com/a/48245">Mikko Rantalainen and Greg Smith</a>]:</p>
     <code>watch -d grep -e Dirty: -e Writeback: /proc/meminfo</code>
 
-    <p>Enable/disable keyboard backlight:</p>
-    <code>xset led</code>
-    <code>xset -led</code>
+    <p>Toggle keyboard backlight [credits to <a href="https://unix.stackexchange.com/a/732020/378857">m2456</a>]:</p>
+    <code>xset q | grep -q 'Scroll Lock: off' && xset led named 'Scroll Lock' || xset -led named 'Scroll Lock'
+    </code>
 
     <h2>Change the default browser for Telegram.</h2>
-    <p>Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium. To work around this problem:</p>
+    <p>Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium. To work around this problem [credits to <a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">ArchWiki</a>, <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595">enomado</a>]:</p>
 
     <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code>
-
-    <p>Source: <a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">ArchWiki</a>, <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595">GitHub</a>.</p>
 
   </div>
   
