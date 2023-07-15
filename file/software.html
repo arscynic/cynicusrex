@@ -288,10 +288,20 @@
     <code>* * 3p-frame block</code>
     <code>* * 3p-script block</code>
 
+    <h3>VSCodium.</h3>
+    <p>Brighten the minimap colors. Go to File → Preferences → Settings → in the search box, type: workbench.colorCustomizations → click “Edit in settings.json”</p>
+    <code><pre>
+"workbench.colorCustomizations": {
+  "scrollbarSlider.activeBackground": "#c4ee94",
+  "scrollbarSlider.hoverBackground": "#faebd7",
+  "scrollbarSlider.background": "#a39480",
+}</pre>
+    </code>
+
     <h3>Enhancer for YouTube.</h3>
     <details>
       <summary>Click to expand the exported backup content.</summary>
-      <code>{"version":"2.0.118","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":85,"blackbars":false,"blockads":false,"blockadsexceptforsubs":false,"blockautoplay":true,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":false,"cinemamodewideplayer":true,"controlbar":{"active":true,"autohide":false,"centered":true,"position":"absolute"},"controls":["size","pop-up-player","speed","screenshot","options"],"controlsvisible":false,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":true,"controlvolumemousebutton":false,"convertshorts":true,"customcolors":{"--main-color":"#00adee","--main-background":"#111111","--second-background":"#181818","--hover-background":"#232323","--main-text":"#eff0f1","--dimmer-text":"#cccccc","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":false,"date":1687771133142,"defaultvolume":false,"disableautoplay":false,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":false,"ignoreplaylists":true,"ignorepopupplayer":true,"localecode":"en_GB","localedir":"ltr","message":false,"miniplayer":true,"miniplayerposition":"_top-left","miniplayersize":"_400x225","newestcomments":false,"overridespeeds":true,"pauseforegroundtab":false,"pausevideos":true,"popuplayersize":"640x360","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd720","qualityplaylistsfullscreen":"hd1080","qualityvideos":"hd720","qualityvideosfullscreen":"hd1080","reload":false,"reversemousewheeldirection":false,"selectquality":false,"selectqualityfullscreenoff":false,"selectqualityfullscreenon":false,"speed":1,"speedvariation":0.1,"stopvideos":false,"theatermode":false,"theme":"default-dark","themevariant":"youtube-deep-dark.css","update":0,"volume":50,"volumemultiplier":3,"volumevariation":5,"whitelist":"","wideplayer":false,"wideplayerviewport":false}}</code>
+      <code>{"version":"2.0.119.1","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":100,"blackbars":false,"blockads":false,"blockadsexceptforsubs":false,"blockautoplay":true,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":true,"cinemamodewideplayer":false,"controlbar":{"active":true,"autohide":false,"centered":true,"position":"absolute"},"controls":["cinema-mode","size","pop-up-player","speed","screenshot","options"],"controlsvisible":false,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":true,"controlvolumemousebutton":false,"convertshorts":true,"customcolors":{"--dimmer-text":"#cccccc","--hover-background":"#232323","--main-background":"#111111","--main-color":"#00adee","--main-text":"#eff0f1","--second-background":"#181818","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":false,"date":1687771133142,"defaultvolume":false,"disableautoplay":true,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":false,"ignoreplaylists":true,"ignorepopupplayer":false,"localecode":"en_GB","localedir":"ltr","message":false,"miniplayer":true,"miniplayerposition":"_top-left","miniplayersize":"_560x315","newestcomments":false,"overridespeeds":true,"pauseforegroundtab":true,"pausevideos":true,"popuplayersize":"960x540","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd1080","qualityplaylistsfullscreen":"hd1080","qualityvideos":"hd1080","qualityvideosfullscreen":"hd1440","reload":false,"reversemousewheeldirection":false,"selectquality":true,"selectqualityfullscreenoff":true,"selectqualityfullscreenon":true,"speed":1,"speedvariation":0.1,"stopvideos":false,"theatermode":false,"theme":"default-dark","themevariant":"youtube-deep-dark.css","update":0,"volume":50,"volumemultiplier":3,"volumevariation":5,"whitelist":"","wideplayer":false,"wideplayerviewport":false}}</code>
     </details>
     
     <h3>Reddit Enhancement Suite.</h3>
@@ -403,7 +413,7 @@ screen=0
 <h3>Whisker Menu search actions.</h3>
 <details>
   <summary>Click to expand the whiskermenu-...rc file content.</summary>
-  <pre><code>//LOCATION: /home/x/.config/xfce4/panel/whiskermenu-….rc
+  <code><pre>//LOCATION: /home/x/.config/xfce4/panel/whiskermenu-….rc
 //Add xfce4-popup-whiskermenu to application shortcuts in Keyboard settings (Arch)
 
 search-actions=33
@@ -604,7 +614,7 @@ regex=false
 name=Wikipedia
 pattern=?w
 command=exo-open --launch WebBrowser https://en.wikipedia.org/w/index.php?search=%u
-regex=false</code></pre>
+regex=false</pre></code>
 </details>
 
 <h3>XScreenSaver.</h3>
@@ -962,8 +972,8 @@ authWarningSlack:   20</code></pre>
     <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code>
 
     <h2>Other useful commands.</h2>
-    <p>Check when the network connection has disconnected/connected [credits to <a href="https://forum.manjaro.org/t/monitoring-ethernet-connection-failures/142985/10?u=cynicusrex">nikgnomic</a>]:</p>
-    <code>journalctl -b0 -u NetworkManager | grep -e DISCONNECTED -e CONNECTING</code>
+    <!-- <p>Check when the network connection has disconnected/connected [credits to <a href="https://forum.manjaro.org/t/monitoring-ethernet-connection-failures/142985/10?u=cynicusrex">nikgnomic</a>]:</p>
+    <code>journalctl -b0 -u NetworkManager | grep -e DISCONNECTED -e CONNECTING</code> -->
 
     <p>Monitor read/write operation of a USB key [credits to <a href="https://unix.stackexchange.com/a/48245">Mikko Rantalainen and Greg Smith</a>]:</p>
     <code>watch -d grep -e Dirty: -e Writeback: /proc/meminfo</code>

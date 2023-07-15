@@ -28,10 +28,7 @@ code {
   font-family: monospace;
   margin: 0.5rem 0 0.5rem 0;
   background-color: cornsilk;
-}
-
-li code {
-  word-break: break-all; /* otherwise links exceed page, screwing up the navbar */
+  word-break: break-all;
 }
 
 summary {
