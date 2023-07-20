@@ -32,7 +32,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Excellent free software. <sup>[2023/07/15]</sup></h1>
+    <h1>Excellent free software. <sup>[2023/07/19]</sup></h1>
     
       <!-- <div>
       <h2>Laptop</h2>
@@ -93,6 +93,7 @@
         <li>Live USB bootloader: <a href="https://www.ventoy.net">Ventoy</a></li>
         <li>Macros: <a href="https://github.com/autokey/autokey">Autokey</a>, (Windows: <a href="https://www.autohotkey.com/">AutoHotkey</a>)</li>
         <li>Media player: <a href="https://www.smplayer.info">smplayer</a>, <a href="https://audacious-media-player.org">Audacious</a></li>
+        <li>Remote desktop: <a href="https://remmina.org">Remmina</a></li>
         <li>Scanner: <a href="https://wiki.ubuntuusers.de/XSane/">XSane</a></li>
         <!-- <li>Spotify downloader: <a href="https://spotdl.readthedocs.io/en/latest/">spotDL</a></li> -->
         <li>System monitoring: <a href="https://www.monitorix.org">Monitorix</a></li>
@@ -228,7 +229,7 @@
     <p><a href="https://mega.io/desktop#downloadapps">MEGA desktop app</a>.</p>
     
     <h3>Optional:</h3>
-    <code>sudo pacman -Syu --needed imwheel element-desktop shotcut libreoffice-still calibre rssguard audacious spotify-launcher npm discord bluez bluez-utils blueberry pulseaudio-bluetooth gst-plugins-good linux-lts texlive-most texstudio sagemath sagemath-doc xsane boinc opencl-nvidia seahorse noto-fonts-emoji</code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
+    <code>sudo pacman -Syu --needed imwheel element-desktop shotcut libreoffice-still calibre rssguard audacious spotify-launcher npm discord bluez bluez-utils blueberry pulseaudio-bluetooth gst-plugins-good linux-lts texlive-most texstudio sagemath sagemath-doc xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc</code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
     <code>npm install -g live-server</code>
     <code>yay -S autokey-gtk && yay -S lyx && yay -S vscodium && yay -S monitorix</code>
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
@@ -325,18 +326,24 @@
     <h3>LanguageTool.</h3>
     <p>☐ “Enable rephrasing”.</p>
 
-<!--     <h3>DNS.</h3>
-    <p>Change the DNS IPs in resolvconf.conf (<a href="https://wiki.archlinux.org/title/Openresolv#Defining_multiple_values_for_options">openresolv</a>):</p>
-    <code>sudo mousepad /etc/resolvconf.conf </code>
-    <p>Add the following <a href="https://quad9.net">Quad9</a> IPs:</p>
-    <code>resolv_conf=/etc/resolv.conf <br>
-    name_servers="9.9.9.9 149.112.112.112 2620:fe::fe 2620:fe::9"</code>
-    <p>Lastly, right click on the network icon → open “Network Connections” by clicking “Edit Connections…” → select a connection and click the ⚙️ (cog); <br>
-    ↳ IPv4 Settings → Method: “Automatic (DHCP) addresses only”,  “DNS servers”: 9.9.9.9, 149.112.112.112 <br>
-    ↳ IPv6 Settings → Method: “Automatic”,  “Additional DNS servers”: 2620:fe::fe, 2620:fe::9</p> -->
+    <h3>Remmina.</h3>
+    <p>On the remote computer (server) to connect to:</p>
+    <ol>
+      <li>Install packages: libvncserver x11vnc</li>
+      <li>Open port 5900 in the firewall settings.</li>
+      <li>Start the vncserver by running the command: x11vnc -display :0</li>
+    </ol>
 
-  <h3>IMWheel.</h3>
-  <p>Save the following config to “/home/x/.imwheelrc”:</p>
+    <p>On the local computer:</p>
+    <ol>
+      <li>Install packages: remmina libvncserver</li>
+      <li>In Remmina “Add a new connection profile” by clicking “+” in the top left corner. Type a name. Select protocol “Remmina VNC Plugin”. Enter the server: ipaddress:5900. Click “Save and Connect”.</li>
+    </ol>
+
+    <p>The desktop environment of the remote computer should now be visible. Don't forget to set a password in <a href="https://wiki.archlinux.org/title/x11vnc#Setting_a_password">x11vnc</a> when leaving the connection open indefinitely.</p>
+
+    <h3>IMWheel.</h3>
+    <p>Save the following config to “/home/x/.imwheelrc”:</p>
     <pre><code>"^vivaldi-bin$"
 None, Up, Button4, 2
 None, Down, Button5, 2
@@ -345,9 +352,9 @@ None, Down, Button5, 2
 None, Up, Button4, 2
 None, Down, Button5, 2</code></pre>
 
-  <h3>Redshift.</h3>
-  <p>Save the following config to “/.config/redshift.conf”:</p>
-  <details>
+    <h3>Redshift.</h3>
+    <p>Save the following config to “/.config/redshift.conf”:</p>
+    <details>
     <summary>Click to expand the Redshift configuration file content.</summary>
 <pre><code>[redshift]
 ; Set the day and night screen temperatures
@@ -423,10 +430,10 @@ screen=0
 ; Global settings for redshift
 ; Place this file in .config/redshift/redshift.conf. Use the line below as startup command
 ; redshift-gtk -c ./.config/redshift/redshift.conf</code></pre>
-  </details>
+    </details>
     
-<h3>Whisker Menu search actions.</h3>
-<details>
+    <h3>Whisker Menu search actions.</h3>
+    <details>
   <summary>Click to expand the whiskermenu-...rc file content.</summary>
   <code><pre>//LOCATION: /home/x/.config/xfce4/panel/whiskermenu-….rc
 //Add xfce4-popup-whiskermenu to application shortcuts in Keyboard settings (Arch)
@@ -630,10 +637,10 @@ name=Wikipedia
 pattern=?w
 command=exo-open --launch WebBrowser https://en.wikipedia.org/w/index.php?search=%u
 regex=false</pre></code>
-</details>
+    </details>
 
-<h3>XScreenSaver.</h3>
-<details>
+    <h3>XScreenSaver.</h3>
+    <details>
   <summary>Click to expand the .xscreensaver file content.</summary>
 <pre><code># XScreenSaver Preferences File
 # Written by xscreensaver-settings 6.06 for x on Sat Jun  3 11:27:34 2023.
@@ -930,12 +937,12 @@ programs:								      \
 
 pointerHysteresis:  10
 authWarningSlack:   20</code></pre>
-</details>
+    </details>
 
-<h3>Change the default browser for Telegram.</h3>
-<p>Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium. To work around this problem [credits to <a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">ArchWiki</a>, <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595">enomado</a>]:</p>
+    <h3>Change the default browser for Telegram.</h3>
+    <p>Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium. To work around this problem [credits to <a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">ArchWiki</a>, <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595">enomado</a>]:</p>
 
-<code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code>
+    <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code>
 
 <!--     <h2>Bluetooth</h2>
     <p>From <a href="https://wiki.archlinux.org/title/Bluetooth">wiki.archlinux.org/title/Bluetooth.</a></p>
