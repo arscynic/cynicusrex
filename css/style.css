@@ -480,6 +480,11 @@ ul li {
   border-radius: 0.375rem;
 }
 
+.yt-embed {
+  width: 39rem;
+  height: 21.938rem;
+}
+
 .readability td {
   vertical-align: top;
 }
