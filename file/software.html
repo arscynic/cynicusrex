@@ -32,7 +32,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Excellent free software. <sup>[2023/07/22]</sup></h1>
+    <h1>Excellent free software. <sup>[2023/07/24]</sup></h1>
     
       <!-- <div>
       <h2>Laptop</h2>
@@ -60,7 +60,7 @@
         <li>Image viewer: <a href="https://apps.kde.org/en-gb/gwenview/">Gwenview</a></li>
         <li>Image editing: <a href="https://www.photopea.com/">Photopea</a>, (<a href="https://krita.org/">Krita</a>, <a href="https://inkscape.org/">Inkscape</a>)</li>
         <li>Live USB bootloader: <a href="https://www.ventoy.net">Ventoy</a></li>
-        <li>Macros: <a href="https://github.com/autokey/autokey">Autokey</a><!-- , (Windows: <a href="https://www.autohotkey.com/">AutoHotkey</a>) --></li>
+        <li>Macros / remap: <a href="https://github.com/autokey/autokey">Autokey</a>, <a href="https://github.com/sezanzeb/input-remapper">Input Remapper</a><!-- , (Windows: <a href="https://www.autohotkey.com/">AutoHotkey</a>) --></li>
         <li>Media player: <a href="https://www.smplayer.info">smplayer</a>, <a href="https://audacious-media-player.org">Audacious</a></li>
         <li>Proces viewer: <a href="https://github.com/aristocratos/btop">btop</a></li>
         <li>Remote desktop: <a href="https://remmina.org">Remmina</a></li>
@@ -131,8 +131,9 @@
           <li>Keyboard: <a href="https://github.com/florisboard/florisboard#readme">FlorisBoard</a></li>
           <li>Notes: <a href="https://github.com/gsantner/markor">Markor</a></li>
           <li>Podcast player: <a href="https://antennapod.org">AntennaPod</a></li>
-          <li>Remote control: <a href="https://kdeconnect.kde.org">KDE Connect</a></li>
+          <li>Remote control: <a href="https://kdeconnect.kde.org">KDE Connect</a>, <a href="https://github.com/gujjwal00/avnc">AVNC</a>, <a href="https://github.com/bk138/droidVNC-NG">droidVNC-NG</a></li>
           <!-- <li>Video player: <a href="https://f-droid.org/en/packages/is.xyz.mpv/">mpv-android</a></li> -->
+          <li>VNC: </li>
           <li>YouTube: <a href="https://newpipe.schabi.org/" title="Lightweight YouTube that supports background play, no ads, etc.">NewPipe</a></li>
         </ul>
     </div>
@@ -207,7 +208,7 @@
     <h3>Default:</h3>
     <code>sudo pacman -Syu --needed geany gnome-disk-utility gparted yakuake btop dnsutils redshift catfish vivaldi vivaldi-ffmpeg-codecs xscreensaver gufw playerctl hunspell hunspell-nl hunspell-en_GB smplayer okular xfce4-systemload-plugin xfce4-sensors-plugin kdeconnect base-devel peek gst-plugins-good baobab</code>
 
-    <code>yay -S hblock && yay -S qalculate-gtk</code> <!-- if qalculate doesn't install, add -S -->
+    <code>yay -S hblock && yay -S qalculate-gtk && yay -S input-remapper-git</code> <!-- if qalculate doesn't install, add -S -->
     
     <p>Run <em>hblock</em> in commandline to activate it, and run "cat /etc/hosts" to <a href="https://github.com/hectorm/hblock#installation">verify</a>.</p>
 
@@ -294,6 +295,11 @@
     "editor.fontSize": 16,
 }</pre>
     </code>
+
+    <h3>Input Remapper.</h3>
+    <p>Copy-paste functionality of mouse side buttons → In “Input”: Button EXTRA or Button SIDE; “Output” (Type: Key or Macro, Target: keyboard): Control_L + c or Control_L + v</p>
+    <code><pre>sudo systemctl restart input-remapper
+sudo systemctl enable input-remapper</pre></code>
 
     <h3>Git.</h3>
     <p>Caching your repository website password in Git, for one hour [<a href="https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/github-caching_password_in_git.pdf">source</a>].</p>
