@@ -47,7 +47,20 @@
 
     <ol>
       <li>Create an account on Codeberg: <a href="https://codeberg.org/user/sing_up">https://codeberg.org/user/sing_up</a>*. Then via the top right button click “+ New Repository”. Choose whatever repository name, and as “Default Branch” replace main with <em>pages</em>. Click “Create Repository”.</li>
-      <li>Go to the directory on your local machine of which you want the content into your newly created Codeberg repository. For me that was “/home/…/project/quitfacebook.org/public/”</li>
+      <li>Go to the directory on your local machine of which you want the content into your newly created Codeberg repository. For me that was “/home/…/quitfacebook.org/public/”</li>
+    </ol>
+
+    <h3>Option 1: keep git history.</h3>
+    <p>This will save the nice graph that shows all the contributions you made, and all the file versioning history of course.</p>
+
+      <code>git remote rename origin old-origin-github</code>
+      <code>git remote add origin https://codeberg.org/CynicusRex/quitfacebook.git</code>
+      <code>git branch -M pages</code>
+      <code>git push --set-upstream origin --all</code>
+      <code>git push --set-upstream origin --tags</code>
+
+    <h3>Option 2: remove git history.</h3>
+    <ol>
       <li>Assuming you still have the hidden .git folder, rename it to .git_BAK or whatever, or delete it.</li>
       <li>Open the terminal in that directory and run: <code>git init</code> It will probably show you the following message: “hint: Using 'master' as the name for the initial branch. This default branch name […] The just-created branch can be renamed via this command: git branch -m &lt;name&gt;”</li>
       <li>Run: <code>git branch -m pages</code> You see, the repository needn't be named pages, but the branch does. Which is great because now we can have multiple pages with distinct names. The official documentation makes it seem as if one is limited to one page.</li>
@@ -80,12 +93,12 @@
     <p>Enjoy your day.</p>
     
     <div class="align-right">—Angelino Desmet; 15 April 2023.</div>
+    <div class="align-right edit-list" 
+    title="Edit log:
+    2023/07/28: adds git commands that save git history.">Edited: 28 July 2023.</div>
 
     <p class="footnote">– – – – –</p>
     <p class="footnote">* Credits to <a href="https://matrix.to/#/!wkyjxWeAOBpKMvHbno:matrix.org/$FTJc4s9wUiTM_xsb9ZsqEG-mkAyISdAwSyEyZB4O1Xw?via=freeyourgadget.org&via=matrix.org&via=tchncs.de">Jan Wildeboer for helping</a> with this.</p>
-    <!-- <div class="align-right edit-list" 
-    title="Edit log:
-    d/d/d: ">Edited: d D d.</div> -->
 
     <p class="end-crown">♔</p>
 
