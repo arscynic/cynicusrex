@@ -40,14 +40,6 @@ summary {
   cursor: pointer;
 }
 
-ol li {
-  margin-left: -1rem;
-}
-
-ul li {
-  margin-left: -1.438rem;
-}
-
 .important {
   color: tomato;
 }

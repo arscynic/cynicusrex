@@ -32,7 +32,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Excellent free software. <sup>[2023/07/29]</sup></h1>
+    <h1>Excellent free software. <sup>[2023/07/31]</sup></h1>
     
       <!-- <div>
       <h2>Laptop</h2>
@@ -237,6 +237,9 @@
     <code>alias upoff="yes | sudo pacman -Syu && shutdown now"</code>
     <code>alias upd="yes | sudo pacman -Syu"</code>
     <code>alias gimps="cd .GIMPS/p95v308b17.linux64/ && ./mprime -m"</code>
+    <code>alias clean="sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)"</code>
+    <code>alias gitp="git push -u origin main"</code>
+    <code>alias gpush="git push -u origin main"</code>
 
     <h3>Shortcuts.</h3>
     <p>Keyboard → Application Shortcuts:</p>
@@ -296,9 +299,23 @@
     </code>
 
     <h3>Input Remapper.</h3>
-    <p>Copy-paste functionality of mouse side buttons → In “Input”: Button EXTRA or Button SIDE; “Output” (Type: Key or Macro, Target: keyboard): Control_L + c or Control_L + v</p>
     <code><pre>sudo systemctl restart input-remapper
 sudo systemctl enable input-remapper</pre></code>
+    <p>Mouse:</p>
+    <ul>
+      <li>Button EXTRA → Control_L + c</li>
+      <li>Button EXTRA + Button LEFT → Prior</li>
+      <li>Button EXTRA + Button MIDDLE → Home</li>
+      <li>Button SIDE → Control_L + v</li>
+      <li>Button SIDE + Button LEFT → Next</li>
+      <li>Button SIDE + Button MIDDLE → End</li>
+    </ul>
+    
+    <p>Keyboard:</p>
+    <ul>
+      <li>Caps Lock → Escape</li>
+      <li>Escape → Caps_Lock</li>
+    </ul>
 
     <h3>Git.</h3>
     <p>Caching your repository website password in Git, for one hour [<a href="https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/github-caching_password_in_git.pdf">source</a>].</p>
@@ -307,7 +324,7 @@ sudo systemctl enable input-remapper</pre></code>
     <h3>Enhancer for YouTube.</h3>
     <details>
       <summary>Click to expand the exported backup content.</summary>
-      <code>{"version":"2.0.119.1","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":100,"blackbars":false,"blockads":false,"blockadsexceptforsubs":false,"blockautoplay":true,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":true,"cinemamodewideplayer":false,"controlbar":{"active":true,"autohide":false,"centered":true,"position":"absolute"},"controls":["cinema-mode","size","pop-up-player","speed-minus","speed-plus","screenshot","options"],"controlsvisible":false,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":false,"controlvolumemousebutton":false,"convertshorts":true,"customcolors":{"--dimmer-text":"#cccccc","--hover-background":"#232323","--main-background":"#111111","--main-color":"#00adee","--main-text":"#eff0f1","--second-background":"#181818","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":false,"date":1687771133142,"defaultvolume":false,"disableautoplay":true,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":false,"ignoreplaylists":true,"ignorepopupplayer":false,"localecode":"en_GB","localedir":"ltr","message":false,"miniplayer":true,"miniplayerposition":"_top-left","miniplayersize":"_560x315","newestcomments":false,"overridespeeds":true,"pauseforegroundtab":true,"pausevideos":true,"popuplayersize":"960x540","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd720","qualityplaylistsfullscreen":"hd1080","qualityvideos":"hd720","qualityvideosfullscreen":"hd1440","reload":false,"reversemousewheeldirection":false,"selectquality":true,"selectqualityfullscreenoff":true,"selectqualityfullscreenon":true,"speed":1,"speedvariation":0.25,"stopvideos":false,"theatermode":false,"theme":"default-dark","themevariant":"youtube-deep-dark.css","update":0,"volume":50,"volumemultiplier":3,"volumevariation":5,"whitelist":"","wideplayer":false,"wideplayerviewport":false}}</code>
+      <code>{"version":"2.0.119.1","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":100,"blackbars":false,"blockads":false,"blockadsexceptforsubs":false,"blockautoplay":true,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":true,"cinemamodewideplayer":false,"controlbar":{"active":true,"autohide":false,"centered":true,"position":"absolute"},"controls":["cinema-mode","size","pop-up-player","speed","screenshot","options"],"controlsvisible":false,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":false,"controlvolumemousebutton":false,"convertshorts":true,"customcolors":{"--dimmer-text":"#cccccc","--hover-background":"#232323","--main-background":"#111111","--main-color":"#00adee","--main-text":"#eff0f1","--second-background":"#181818","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":false,"date":1687771133142,"defaultvolume":false,"disableautoplay":true,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":false,"ignoreplaylists":true,"ignorepopupplayer":false,"localecode":"en_GB","localedir":"ltr","message":false,"miniplayer":true,"miniplayerposition":"_top-left","miniplayersize":"_560x315","newestcomments":false,"overridespeeds":true,"pauseforegroundtab":true,"pausevideos":true,"popuplayersize":"960x540","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd720","qualityplaylistsfullscreen":"hd1080","qualityvideos":"hd720","qualityvideosfullscreen":"hd1440","reload":false,"reversemousewheeldirection":false,"selectquality":true,"selectqualityfullscreenoff":true,"selectqualityfullscreenon":true,"speed":1,"speedvariation":0.25,"stopvideos":false,"theatermode":false,"theme":"default-dark","themevariant":"youtube-deep-dark.css","update":0,"volume":50,"volumemultiplier":3,"volumevariation":5,"whitelist":"","wideplayer":false,"wideplayerviewport":false}}</code>
     </details>
     
     <h3>Reddit Enhancement Suite.</h3>
@@ -332,7 +349,7 @@ sudo systemctl enable input-remapper</pre></code>
 
     <p>The desktop environment of the remote computer should now be visible. Don't forget to set a password in <a href="https://wiki.archlinux.org/title/x11vnc#Setting_a_password">x11vnc</a> when leaving the connection open indefinitely.</p>
 
-    <h3>IMWheel.</h3>
+    <!-- <h3>IMWheel.</h3>
     <p>Save the following config to “/home/x/.imwheelrc”:</p>
     <pre><code>"^vivaldi-bin$"
 None, Up, Button4, 2
@@ -340,7 +357,7 @@ None, Down, Button5, 2
 
 "^vivaldi-stable$"
 None, Up, Button4, 2
-None, Down, Button5, 2</code></pre>
+None, Down, Button5, 2</code></pre> -->
 
     <h3>Redshift.</h3>
     <p>Save the following config to “/.config/redshift.conf”:</p>
@@ -376,7 +393,7 @@ fade=1
 ; It is also possible to use different settings for day and night
 ; since version 1.8.
 ;brightness-day=0.7
-brightness-night=0.60
+brightness-night=0.37
 ; Set the screen gamma (for all colors, or each color channel
 ; individually)
 ;gamma=0.8
@@ -404,8 +421,8 @@ adjustment-method=randr
 ; Keep in mind that longitudes west of Greenwich (e.g. the Americas)
 ; are negative numbers.
 [manual]
-lat=33.67722
-lon=-106.47527
+lat=50.846667
+lon=4.3525
 
 ; Configuration of the adjustment-method
 ; type 'redshift -m METHOD:help' to see the settings.
@@ -633,13 +650,13 @@ regex=false</pre></code>
     <details>
   <summary>Click to expand the .xscreensaver file content.</summary>
 <pre><code># XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.06 for x on Sat Jun  3 11:27:34 2023.
+# Written by xscreensaver-settings 6.06 for x on Sat Jul  8 19:12:21 2023.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:11:00
 cycle:		0:05:00
 lock:		True
-lockTimeout:	0:30:00
+lockTimeout:	0:01:00
 passwdTimeout:	0:00:30
 visualID:	default
 installColormap:    True
