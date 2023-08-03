@@ -40,6 +40,24 @@ summary {
   cursor: pointer;
 }
 
+blockquote {
+  text-align: left;
+  border-left: 0.125rem dashed grey;
+  margin-left: 1.5rem;
+  margin-right: 0;
+  padding-left: 1rem;
+}
+
+figcaption {
+  margin-top: 0.313rem;
+  font-size: small;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .important {
   color: tomato;
 }
