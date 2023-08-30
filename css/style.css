@@ -84,7 +84,7 @@ figure {
   margin-right: 0.063rem;
 }
 
-#footer a:nth-child(1), #footer a:nth-child(3) {
+#footer a {
   text-decoration: none;
 }
 
