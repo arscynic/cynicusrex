@@ -14,6 +14,36 @@
   font-family: "Liberation Serif", serif, Georgia, "Times New Roman", Times;
 }
 
+h1 {
+  font-size: xx-large;
+  text-align: center;
+}
+
+h2 {
+  font-size: x-large;
+}
+
+h3 {
+  font-size: larger;
+}
+
+p, ol, ul, details, code, #author {
+  font-size: large;
+}
+
+pre { /* Source: https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+figcaption, .media-source /* remove the media class when converted to figcaption */ {
+  font-size: medium;
+  margin-top: 0.313rem;
+}
+
 ::selection {
   color: black;
   background-color: lightgreen;
@@ -22,10 +52,6 @@
 body {
   background-color: var(--bg-color);
   padding-bottom: 1rem; /* Ensures the bottom nav doesn't display over content. */
-}
-
-h1 {
-  text-align: center;
 }
 
 code {
@@ -46,11 +72,6 @@ blockquote {
   margin-left: 1.5rem;
   margin-right: 0;
   padding-left: 1rem;
-}
-
-figcaption {
-  margin-top: 0.313rem;
-  font-size: small;
 }
 
 figure {
@@ -443,7 +464,6 @@ figure {
 
 .media-source {
   margin-top: 0.313rem;
-  font-size: small;
 }
 
 .sub-title {
@@ -455,21 +475,25 @@ figure {
 }
 
 .margin-comment {
+  font-size: medium;
   margin-left: auto; 
   margin-right: 0; 
   width: 21rem;
 }
 
-.align-right, .margin-comment {
+#author, #edit-list, .margin-comment {
   text-align: right;
 }
 
-.edit-list {
+#author {
+  margin-bottom: 0;
+}
+
+#edit-list {
   text-decoration: underline;
   cursor: progress;
   color: darkslategrey;
-  width: fit-content;
-  float: right; /* find other solution, this should be in .align-right */
+  margin-top: 0;
 }
 
 .quote {
