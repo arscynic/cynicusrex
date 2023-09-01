@@ -34,7 +34,9 @@
   <h1><span id="animation"></span> Unicode.</h1>
   <p>On Linux: press CTRL + Shift ⇧ + U and enter the number below. On Windows, search for the “alt codes”. Symbols in <span class="inv-on-android">grey</span> may show up as ▯ on Android.</p>
 
-  <p>In HTML, to force rendering actual unicode symbols and not emojis, type the symbol's hex code followed by the varation selector “&amp;#xFE0F;”. E.g., to draw:</p>
+  <p>In HTML, to force rendering actual black and white unicode symbols and not emojis*, type the symbol's hex code followed by the variation selector “<i>&amp;#xFE0F;</i>”. Unfortunately this doesn't work on Android for many symbols, such as the two below, but which are discerned correctly on Linux (if e.g., font <i>noto-fonts-emoji</i> is installed) and Windows; <a href="https://stackoverflow.com/questions/54592208/why-unicode-variation-text-selector-for-emoji-works-only-on-subset-of-emojis">Why?</a></p>
+
+  <p>For example, to draw:</p>
   <ul>
     <li>&#x1f32a;&#xFE0E; and not &#x1f32a;&#xFE0F;, type: &amp;#x<strong>1f32a</strong>;&amp;#xFE0E;</li>
     <li>&#x1f43f;&#xFE0E; and not &#x1f43f;&#xFE0F;, type: &amp;#x<strong>1f43f</strong>;&amp;#xFE0E;</li>
