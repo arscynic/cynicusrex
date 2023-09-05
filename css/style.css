@@ -27,7 +27,7 @@ h3 {
   font-size: larger;
 }
 
-p, ol, ul, details, code, #author {
+p, ol, ul, blockquote, details, code, #author {
   font-size: large;
 }
 
