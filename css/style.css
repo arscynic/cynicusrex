@@ -494,11 +494,18 @@ figure {
   margin-bottom: 0;
 }
 
-#edit-list {
+#edit-list summary {
   text-decoration: underline;
-  cursor: progress;
+  cursor: grab;
   color: darkslategrey;
   margin-top: 0;
+}
+
+#edit-list li {
+  font-size: x-small;
+  font-family: monospace;
+  text-align: left;
+  padding-bottom: 0.125rem;
 }
 
 .quote {
