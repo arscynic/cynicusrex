@@ -445,7 +445,7 @@ screen=0
   <code><pre>//LOCATION: /home/x/.config/xfce4/panel/whiskermenu-….rc
 //Add xfce4-popup-whiskermenu to application shortcuts in Keyboard settings (Arch)
 
-search-actions=33
+search-actions=37
 
 [action0]
 name=Man Pages
@@ -485,7 +485,7 @@ regex=false
 
 [action6]
 name=Taaladvies, definities, synoniemen
-pattern=?dnl
+pattern=?def
 command=/home/x/MEGA/configuration/linux/scripts/search-definities.sh %u
 regex=false
 
@@ -509,7 +509,7 @@ regex=false
 
 [action10]
 name=Definition & thesaurus
-pattern=?den
+pattern=?dic
 command=/home/x/MEGA/configuration/linux/scripts/search-dictionaries.sh %u
 regex=false
 
@@ -551,7 +551,7 @@ regex=false
 
 [action17]
 name=unicode, emojipedia
-pattern=?uni
+pattern=?un
 command=exo-open --launch WebBrowser https://emojipedia.org/search/?q=%u
 regex=false
 
@@ -574,75 +574,99 @@ command=/home/x/MEGA/configuration/linux/scripts/search-all.sh %u
 regex=false
 
 [action21]
-name=Spotify
-pattern=?sp
-command=exo-open --launch WebBrowser https://open.spotify.com/search/%u
-regex=false
-
-[action22]
 name=Ebay
 pattern=?eb
 command=exo-open --launch WebBrowser https://www.ebay.com/sch/i.html?_nkw=%u&_sacat=0
 regex=false
 
-[action23]
+[action22]
 name=Idioms
-pattern=?idi
+pattern=?id
 command=exo-open --launch WebBrowser https://idioms.thefreedictionary.com/%u
 regex=false
 
-[action24]
-name=Freely-usable images
-pattern=?uns
+[action23]
+name=Unsplash: freely-usable images
+pattern=?u
 command=exo-open --launch WebBrowser https://unsplash.com/s/photos/%u
 regex=false
 
-[action25]
+[action24]
 name=Images (all)
 pattern=?img
 command=/home/x/MEGA/configuration/linux/scripts/search-images.sh %u
 regex=false
 
-[action26]
+[action25]
 name=The Pirate Bay
 pattern=?pb
 command=exo-open --launch WebBrowser https://pirateproxy.live/search/%u/
 regex=false
 
-[action27]
+[action26]
 name=Startpage
 pattern=?s
 command=/home/x/MEGA/configuration/linux/scripts/search-startpage.sh %u
 regex=false
 
-[action28]
+[action27]
 name=Urban Dictionary
 pattern=?ud
 command=exo-open --launch WebBrowser https://www.urbandictionary.com/define.php?term=%u
 regex=false
 
-[action29]
-name=Alternative to
+[action28]
+name=Alternative To
 pattern=?at
 command=exo-open --launch WebBrowser https://alternativeto.net/browse/search/?q=%u
 regex=false
 
-[action30]
+[action29]
 name=Wolfram Alpha
 pattern=?wa
 command=exo-open --launch WebBrowser https://www.wolframalpha.com/input/?i=%u
 regex=false
 
-[action31]
+[action30]
 name=Symbolab
 pattern=?sl
 command=exo-open --launch WebBrowser https://www.symbolab.com/solver/step-by-step/%u
 regex=false
 
-[action32]
+[action31]
 name=Wikipedia
 pattern=?w
 command=exo-open --launch WebBrowser https://en.wikipedia.org/w/index.php?search=%u
+regex=false
+
+[action32]
+name=Merriam-Webster
+pattern=?mw
+command=exo-open --launch WebBrowser https://www.merriam-webster.com/dictionary/%u
+regex=false
+
+[action33]
+name=Rotten Tomatoes
+pattern=?rt
+command=exo-open --launch WebBrowser https://www.rottentomatoes.com/search?search=%u
+regex=false
+
+[action34]
+name=Encyclopedia Britannica
+pattern=?br
+command=exo-open --launch WebBrowser https://www.britannica.com/search?query=%u
+regex=false
+
+[action35]
+name=Badass Torrents
+pattern=?bt
+command=exo-open --launch WebBrowser https://badasstorrents.com/torrents/search/%u
+regex=false
+
+[action36]
+name=Yandex
+pattern=?y
+command=exo-open --launch WebBrowser https://yandex.com/search/?text=%u
 regex=false</pre></code>
     </details>
 
