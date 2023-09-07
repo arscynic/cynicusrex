@@ -40,7 +40,7 @@ pre { /* Source: https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
 }
 
 figcaption, .media-source /* remove the media class when converted to figcaption */ {
-  font-size: medium;
+  font-size: small;
   margin-top: 0.313rem;
 }
 
