@@ -301,7 +301,9 @@
     <h3>Input Remapper.</h3>
     <code><pre>sudo systemctl restart input-remapper
 sudo systemctl enable input-remapper</pre></code>
-    <p>Mouse:</p>
+
+    <p>Input: mouse → Output target: keyboard</p>
+
     <ul>
       <li>Button EXTRA → Control_L + c</li>
       <li>Button EXTRA + Button LEFT → Prior</li>
@@ -310,8 +312,15 @@ sudo systemctl enable input-remapper</pre></code>
       <li>Button SIDE + Button LEFT → Next</li>
       <li>Button SIDE + Button MIDDLE → End</li>
     </ul>
+
+    <p>Input: mouse → Output target: keyboard + mouse</p>
+
+    <ul>
+      <li>Button MIDDLE → Shift_L + BTN_MIDDLE</li>
+    </ul>
     
-    <p>Keyboard:</p>
+    <p>Input: keyboard → Output target: keyboard</p>
+    
     <ul>
       <li>Caps Lock → Escape</li>
       <li>Escape → Caps_Lock</li>
