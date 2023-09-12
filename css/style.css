@@ -39,7 +39,7 @@ pre { /* Source: https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-figcaption, .media-source /* remove the media class when converted to figcaption */ {
+figcaption {
   font-size: small;
   margin-top: 0.313rem;
 }
@@ -383,11 +383,8 @@ figure {
   vertical-align: bottom;
 }
 
-.yt-song p {
+.yt-song figcaption {
   width: 18.75rem;
-}
-
-.yt-song .media-source {
   height: 2rem;
 }
 
@@ -454,10 +451,6 @@ figure {
   max-width: 39rem;
   margin: auto;
   hyphens: none;
-}
-
-.media-source {
-  margin-top: 0.313rem;
 }
 
 .sub-title {
