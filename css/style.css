@@ -485,6 +485,10 @@ figure {
   margin-bottom: 0;
 }
 
+figure summary, #edit-list summary {
+  font-size: small;
+}
+
 #edit-list summary {
   text-decoration: underline;
   cursor: grab;
