@@ -485,7 +485,7 @@ figure {
   margin-bottom: 0;
 }
 
-figure summary, #edit-list summary {
+figure summary, figure details pre, #edit-list summary {
   font-size: small;
 }
 
