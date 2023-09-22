@@ -775,3 +775,16 @@ li ul li {
 #mastodon-comments a {
   word-break: break-all; /* Prevents links creating a scrollbar on mobile */
 }
+
+/*———————————————————————————————————————————————————————————————*/
+/* Essay specific */
+
+/* takemymoney.html */
+
+.grey-soft {
+  color: grey;
+}
+
+.altruistic {
+  font-weight: bold;
+}
