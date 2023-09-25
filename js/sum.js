@@ -6,8 +6,5 @@ document.addEventListener("DOMContentLoaded", function () {
       sum += tempFloat;
       terms[n].innerHTML = '&euro;' + tempFloat.toFixed(2);
     }
-    const sumMonth = sum.toFixed(2);
-    const sumYear = (sumMonth * 12).toFixed(2);
-    totalMonth.innerHTML = sumMonth;
-    totalYear.innerHTML = sumYear;
+      totalYear.innerHTML = sum.toFixed(2);
   });
