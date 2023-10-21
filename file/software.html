@@ -32,7 +32,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Mostly excellent free software. <sup>[2023/9/22]</sup></h1>
+    <h1>Mostly excellent free software. <sup>[2023/10/21]</sup></h1>
     
     <div><h2>Linux</h2>
       <ul>
@@ -210,9 +210,9 @@
     <p><a href="https://mega.io/desktop#downloadapps">MEGA desktop app</a>.</p>
     
     <h3>Optional:</h3>
-    <code>sudo pacman -Syu --needed element-desktop shotcut libreoffice-still calibre rssguard audacious spotify-launcher npm discord bluez bluez-utils blueberry pulseaudio-bluetooth gst-plugins-good linux-lts texlive-basic texlive-latex texlive-latexextra texstudio sagemath sagemath-doc xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc transmission-qt</code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
+    <code>sudo pacman -Syu --needed element-desktop shotcut libreoffice-still calibre rssguard audacious spotify-launcher npm discord bluez bluez-utils blueberry pulseaudio-bluetooth gst-plugins-good linux-lts texlive-basic texlive-latex texlive-latexextra texstudio sagemath sagemath-doc xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc transmission-qt inotify-tools</code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
     <code>npm install -g live-server</code>
-    <code>yay -S autokey-gtk && yay -S lyx && yay -S vscodium && yay -S monitorix</code>
+    <code>yay -S autokey-gtk && yay -S lyx && yay -S vscodium && yay -S monitorix && yay kdocker</code>
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
       
     <!-- <p><em>Subliminal</em>, necessary to use <a href="https://wiki.archlinux.org/index.php/Mpv#Scripts">scripts</a> that automatically download and sync subtitles in <em>mpv</em>:</p>
@@ -305,6 +305,21 @@
       <li>Comment out a selection: “<i>control + shift + A</i>”.</li>
       <li>Comment out an entire line: “<i>control + /</i>”.</li>
     </ul>
+
+    <h4>Automatically execute a Python script in VSCodium when it is updated.</h4>
+    <ol>
+      <li><code>sudo pacman -S inotify-tools
+      </code></li>
+      <li>Create a shell script e.g., <i>auto_execute.sh</i> containing the following code below:<br>
+        <code><pre>#!/bin/bash
+while inotifywait -e modify,move_self -qq your_python_script.py; do
+  python3 your_python_script.py
+done</pre></code>
+Make sure the shell script is executable by right clicking it → “Properties” → “Permissions” → “Program: ☑ Allow this file to run as a program”, or by running the following command: <code>chmod +x auto_execute.sh</code></li>
+      <li>Open the terminal in VSCodium and run <i>auto_execute.sh</i></li>
+    </ol>
+
+    <p>Now, whenever you save <i>your_python_script.py</i>, it will instantly throw the output in the VSCodium terminal, or whatever terminal you executed the shell script in. Source: ChatGPT.</p>
 
     <h3>Input Remapper.</h3>
     <code><pre>sudo systemctl restart input-remapper
