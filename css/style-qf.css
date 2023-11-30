@@ -1,0 +1,963 @@
+/* Variables */
+:root {
+  --bg-color: antiquewhite;
+  --border-color: rgba(0, 0, 0, 0.25);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* General */
+/* Apparently in Chrome on mobile devices, whenever there are more than 240 characters in the body, it scales the text to a huge size. Even after specifying the font size in css. Okay then. Thanks. */ /* https://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font/12965146#12965146 */
+
+/* html * {
+  max-height: 62500rem; 
+} */
+
+* {
+  font-family: Georgia, "Times New Roman", Times, serif, monospace;
+}
+
+hr {
+  border: 0;
+  width: 3rem;
+  border-top: dashed 0.125rem rgba(0, 0, 0, 0.42);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.important {
+  color:tomato;
+  font-weight: bold;
+}
+
+#sort-hint {
+  visibility: hidden;
+  display: none;
+}
+
+#sort-hint h2 {
+  display: inline-block;
+}
+
+.atom-symbol {
+  display: inline-block;
+  font-size: 1.188rem;
+  height: 1.188rem;
+  width: 1rem;
+  margin-top: -0.5rem;
+  text-align: center;
+}
+
+#bottom-nav {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+#bottom-nav a {
+  text-decoration: none;
+}
+
+.comment {
+  font-style: italic;
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* Readability */
+
+.readability {
+  max-width: 42rem;
+  margin: auto;
+}
+
+.sub-title {
+  font-size: 1.313rem;
+  font-weight: normal;
+  border-bottom: dashed 0.125rem rgba(0, 0, 0, 0.21);
+  padding-bottom: 1.37rem;
+}
+
+.asterisk {
+  text-decoration: none;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.quote {
+  text-align: left;
+  border-left: 0.125rem dashed grey;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+.readability img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.readability td {
+  vertical-align: top;
+}
+
+.readability a {
+  /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.readability iframe {
+  display: block;
+}
+
+.readability video {
+  max-width: 42rem;
+  width: 100%;
+}
+
+/*———————————————————————————————————————————————————————————————*/
+
+.image {
+  cursor: nesw-resize;
+}
+
+.hide, .google-analgetics {
+  display: none;
+}
+
+.no-script-warning {
+  position: fixed;
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.7rem;
+  margin-top: -0.5rem;
+  width: 100%;
+  z-index: 30;
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* Specify image sizes */
+
+#shtoyle {
+  width: 6.25rem;
+  height: 10rem;
+
+}
+
+#index-visitor img {
+  width: 3.875rem;
+  height: 3.875rem;
+  margin-bottom: 0.35rem;
+}
+
+#butterfly img {
+  width: 4.56rem;
+  height: 4.31rem;
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* index */
+
+#index-menu-container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 1rem 0.125rem rgba(0, 0, 0, 0.15);
+  z-index: 69;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  border-top: 0.06rem solid rgba(0, 0, 0, 0.18);
+}
+
+#index-menu-content-container {
+  text-align: center;
+}
+
+#index-menu-content {
+  display: inline-flex;
+  align-items: center;
+}
+
+#antifb-logo-container {
+  margin-left: 0.5rem;
+}
+
+#index-menu-links {
+  font-size: 1rem;
+  margin-right: 1rem;
+  text-align: left;
+}
+
+#dropdown-use, #dropdown-delete {
+  position: relative;
+  display: inline-block;
+}
+
+#dropdown-use-content, #dropdown-delete-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bg-color);
+  min-height: 1.25rem;
+  border: 0.06rem solid rgba(0, 0, 0, 0.18);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+#dropdown-use-content ul, #dropdown-delete-content ul {
+  margin: 0.5;
+  padding: 0.5;
+  padding-left: 1.5rem;
+}
+
+@media (pointer:fine) {
+  #dropdown-use:hover #dropdown-use-content {
+    display: block;
+    transform: translate(1rem, -10rem);
+  }
+
+  #dropdown-delete:hover #dropdown-delete-content {
+    display: block;
+    transform: translate(1rem, -15rem);
+  }
+}
+
+#antifb-logo img {
+  height: 1.9rem;
+  width: 1.9rem;
+  vertical-align: middle;
+}
+
+#index-topbot, #index-navbar, #index-menu-links {
+  margin-left: 0.42rem;
+}
+
+#index-navbar a, #index-topbot a {
+  display: block;
+  text-decoration: none;
+  color: rgb(42, 42, 42);
+  text-align: center;
+}
+
+#index-navbar a{
+  font-weight: normal;
+}
+
+#index-visitor {
+  position: fixed;
+  bottom: 2.75rem;
+  right: 0;
+  z-index: 42;
+}
+
+#shtoyle {
+  float: left;
+  margin-right: 0.75rem;
+}
+
+#index-description-container {
+  max-width: 47rem;
+  min-height: 14rem;
+  margin: auto;
+  text-align: justify;
+  hyphens: auto;
+}
+
+#index-heading {
+  margin: 0;
+  text-align: center;
+}
+
+#index-media {
+  text-align: center;
+}
+
+.media-section  {
+  display: inline-block;
+  margin-right: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+#index-media h2, #index-sources-title h2 {
+  /* Prevents text exceeding image width */
+  font-size: 1.25rem; 
+  margin: 0;
+}
+
+#index-sources-container {
+  max-width: 80.625rem;
+  margin: auto;
+}
+
+#index-sources th {
+  cursor: ns-resize;
+}
+
+#index-sources a {
+  text-decoration: none;
+}
+
+#index-sources th img {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 42.63rem) {
+
+  #index-sources tbody tr:hover {
+    background-color: white;
+  }
+
+  thead {
+    display: table-cell;
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: 2;
+    font-size: 1rem; /* Will zoom page on mobile if font is too large. */
+  }
+
+  #index-sources td:nth-child(4) {
+    font-weight: bold;
+  }
+
+  @media (pointer:none), (pointer:coarse) {
+    @media screen and (orientation: portrait) {
+      #index-menu-links {
+        font-size: 0.85rem;
+      }
+
+      #index-visitor img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    /* @media (pointer:none), (pointer:coarse) {
+      @media screen and (orientation: landscape) {
+        #index-menu-links {
+          font-size: 0.8rem;
+        }
+      }
+    } */
+  }
+
+  /* Responsive Table */
+  /* https://www.cssscript.com/pure-css-mobile-friendly-responsive-table/ */
+  /* https://css-tricks.com/responsive-data-tables/ */
+  #index-sources td, #index-sources tr { display: block; }
+  
+  #index-sources tr { 
+    border-style: dashed;
+    border-width: 0;
+    border-bottom-width: 0.06rem;
+    border-color: var(--border-color);
+    margin-bottom: 0.125rem;
+  }
+
+  #index-sources tr + #index-sources tr { margin-top: 1.5rem; }
+
+  #index-sources td {
+    /* make like a "row" */
+    border: none;
+    position: relative;
+    padding-left: 4rem;
+    padding-right: 0.3rem;
+  }
+
+  #index-sources td:before {
+    content: attr(data-label);
+    display: inline-block;
+    line-height: 1.5;
+    margin-left: -3.8rem;
+    width: 3.8rem;
+    white-space: nowrap;
+  }
+
+  #index-sources td:nth-of-type(1):before { content: "Flag:"; }
+  #index-sources td:nth-of-type(2):before { content: "Author:"; }
+  #index-sources td:nth-of-type(3):before { content: "Cred.:"; }
+  #index-sources td:nth-of-type(4):before { content: "Title:"; }
+  #index-sources td:nth-of-type(5):before { content: "URL:"; }
+  #index-sources td:nth-of-type(6):before { content: "Source:"; }
+  #index-sources td:nth-of-type(7):before { content: "Date:"; }
+  #index-sources td:nth-of-type(8):before { content: "#:"; }
+}
+
+#new:target td, #fuckads:target td {
+  animation: bump 2s normal, backlight 6s normal;
+  z-index: 1;
+}
+
+/* End responsive table */
+
+@media screen and (min-width: 42.63rem) {
+
+  /* https://stackoverflow.com/questions/44001954/css-only-sticky-table-headers-in-chrome/44004100#44004100 */
+  .sticky-head th {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    top: 0;
+    background-color: var(--bg-color);
+    padding-bottom: 0.125rem;
+    z-index: 3;
+  }
+
+  #index-sources th, #index-sources td {
+    border-style: dashed;
+    border-width: 0;
+    border-color:var(--border-color);
+    border-bottom-width: 0.06rem;
+  }
+
+  #index-sources tr:hover {
+    background-color: white;
+  }
+
+  /* Sharing columns */
+  #index-sources td:first-child, 
+  #index-sources td:nth-child(4), 
+  #index-sources td:nth-child(5), 
+  #index-sources td:nth-child(6), 
+  #index-sources td:nth-child(7),
+  #index-sources td:last-child {
+    text-align: center;
+  }
+
+  /* Comedy or Important */
+  #index-sources th:first-child {
+    min-width: 2rem;
+  }
+
+  /* Author & Credentials */
+  #index-sources td:nth-child(2) {
+    max-width: 7.25rem;
+  }
+
+  #index-sources th:nth-child(2), #index-sources th:nth-child(3) {
+    text-align: left; 
+  }
+
+  #index-sources td:nth-child(3) {
+    max-width: 11rem;
+  }
+
+  /* Title */
+  #index-sources th:nth-child(4), #index-sources td:nth-child(4) {
+    max-width: 42rem;
+  }
+
+  /* Source */
+  #index-sources th:nth-child(6), #index-sources td:nth-child(6) {
+    max-width: 7rem;
+  }
+
+  /* Date published */
+  #index-sources th:nth-child(7), #index-sources td:nth-child(7) {
+    text-align: right;
+  }
+}
+
+/* Submission number (Date added) */
+#index-sources th:last-child, #index-sources td:last-child {
+font-size: 0.8rem;
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* Credits to -> */ /* Stuart Langridge, http://www.kryogenix.org/code/browser/sorttable/ */
+
+/* 420px/30rem Otherwise it screws with the responsive table's margins. */
+@media screen and (min-width: 30rem) {
+  table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {
+    content: "\2195";
+    font-family: monospace;
+    font-weight: normal;
+    font-size: 1rem;
+    margin-left: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  #sort-hint {
+    visibility: visible;
+    display: block;
+  }
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* Light YouTube Embeds by @labnol */
+/* Web: http://labnol.org/?p=27941 */
+
+.youtube-player {
+  position: relative;
+  width: 18.75rem;
+  height: 11.25rem;
+  overflow: hidden;
+  background: #000;
+}
+
+.youtube-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.youtube-player img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  right: 0;
+  top: 0;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  -webkit-transition: .4s all;
+  -moz-transition: .4s all;
+  transition: .4s all;
+}
+
+.youtube-player .play {
+  position: absolute;
+  width: 7.5rem;
+  height: 5.25rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -3.75rem;
+  margin-top: -2.625rem;
+  background: url("../img/play.png") no-repeat;
+  cursor: pointer;
+  transform: scale(0.6,0.6);
+}
+
+.youtube-player .play:hover {
+  transform: scale(0.55,0.55);
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* profile */
+
+#profile-page h1, #profile-page h2 { font-size: 1.125rem; }
+
+#profile-menu h1, #profile-menu h2 { display: inline; }
+
+#profile-menu {
+  max-width: 73rem;
+  min-height: 7rem; /* To fit butterfly. */
+  margin: auto;
+}
+
+#avatar {
+  float: left;
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
+#profile-menu div {
+  display: block;
+}
+
+/* Two :not selectors: https://stackoverflow.com/a/5684168 */
+#contact:target a {
+  animation: backlight 6s normal;
+}
+
+#butterfly-container {
+  height: 7rem; /* To provent it drawing above text. */
+  float: right;
+}
+
+@keyframes translateButterfly {
+  from {
+    margin-top: -0.125rem;
+  }
+  to {
+    margin-top: 0.5rem;
+  }
+}
+
+@keyframes rotateButterfly {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(7deg);
+  }
+}
+
+#butterfly {
+  animation: translateButterfly 0.42s, rotateButterfly 0.7s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  text-align: center;
+  font-size: 0.625rem;
+  float: right;
+  text-decoration: none;
+  color: black;
+}
+
+#profile-quotes-container {
+  text-align: center;
+}
+
+#profile-quotes-header {
+  margin-bottom: 0.5rem;
+}
+
+#profile-quotes-header h2 {
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+#profile-quotes-header h2, #commandments {
+  display: inline;
+}
+
+#commandments {
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+
+#commandments span {
+  text-decoration: line-through;
+}
+
+.profile-quote {
+  border-top: 0.06rem dashed var(--border-color);
+  text-align: left;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+@media screen and (max-width: 39rem) {
+  #profile-menu-text div, #profile-quotes-container {
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 59.063rem) {
+  .profile-quote {
+    display: block;
+  }
+
+  #profile-quotes-header {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  #profile-media-container {
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 59.063rem) {
+  .profile-quote {
+    display: inline-block;
+    width: 25.5rem;
+    vertical-align: top;
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .profile-quote {
+    display: inline-block;
+    width: 29rem;
+    vertical-align: top;
+  }
+}
+
+@media (pointer:none), (pointer:coarse) {
+  @media screen and (orientation: portrait), (orientation: landscape) {
+    #profile-menu, .profile-quote {
+      font-size: 0.85rem;
+    }
+
+    #avatar {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    #butterfly-container img {
+      width: 3.56rem;
+      height: 3.36rem;
+    }
+
+    #butterfly {
+      font-size: 0.5rem;
+    }
+
+    #butterfly-container {
+      height: 6rem;
+    }
+  }
+}
+
+.profile-quote:hover {
+  background-color: white;
+}
+
+.quote-year {
+  font-size: 0.75rem;
+}
+
+.quote-year {
+  display: inline;
+}
+
+#profile-quotes-container a {
+  text-decoration: none;
+}
+
+#profile-media-container {
+  text-align: center;
+}
+
+#profile-media-container div {
+  display: inline-block;
+}
+
+#profile-media-container img {
+  height: 11.25rem;  
+}
+
+#lichess-puzzle iframe {
+  height: 11.25rem;  
+  width: 8.615rem;
+}
+
+.vimeo iframe {
+  width: 19.875rem;
+  height: 11.25rem;
+}
+
+/* https://fettblog.eu/blog/2013/06/16/preserving-aspect-ratio-for-embedded-iframes/ */
+#khan {
+  position: relative;
+  width: 85%;
+  height: 0;
+  padding-bottom: 48%;
+}
+
+#khan iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; bottom: 0;
+}
+
+#khan img {
+  width: 100%;
+  height: auto;
+}
+
+@media (pointer:none), (pointer:coarse) {
+  @media screen and (max-width: 47rem) and (orientation: portrait) {
+
+    #profile-media-container {
+      margin-top: 0.5rem;
+    }
+
+    #profile-media-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    #lichess-puzzle {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 111%;
+    }
+
+    #profile-page .youtube-player {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 60%;
+    }
+
+    .vimeo {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.6%;
+    }
+
+    #lichess-puzzle iframe, .youtube-player iframe, .vimeo iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0; top: 0;
+    }
+
+    #khan {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.22%;
+    }
+    
+    #khan iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0; bottom: 0;
+    }
+  }
+}
+
+/* .mars-tickets iframe {
+  width: 61.25rem;
+  height: 25.625rem;
+} */
+
+/*———————————————————————————————————————————————————————————————*/
+/* software */
+
+#setup-page {
+  text-align: center;
+}
+
+#setup-page li {
+  text-align: left;
+}
+
+#setup-page div {
+  display: inline-block;
+  vertical-align: text-top;
+  margin-right: 0.5rem;
+  max-width: 29rem;
+}
+
+#setup-page h2 {
+  border-bottom: 0.06rem dashed var(--border-color);
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* CV */
+#cv-page {
+  background-color: white; /* Looks nicer when printed as .pdf on https://webtopdf.com */
+}
+
+#cv-page h1, #cv-page h2 {
+  margin: 0;
+}
+
+/* The 'not' is to exclude the return button. */
+#cv-page p:not(:last-of-type) {
+  margin-bottom: 0.3rem;
+  margin-top: 0;
+}
+
+#cv-page #bottom-nav {
+  margin-bottom: 0rem;
+}
+
+#cv-page td {
+  vertical-align: top;
+}
+#cv-page td:first-child {
+  min-width: 6rem;
+}
+
+#cv-page a {
+  text-decoration: none;
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* Animations */
+
+@keyframes backlight {
+  0% { background-color: var(--bg-color); }
+  80% { background-color: greenyellow; }
+  100% { background-color: var(--bg-color); }
+}
+
+@keyframes bump {
+  0% { transform: translateY(0rem); }
+  80% { transform: translateY(2rem); }
+  100% { transform: translateY(0rem); }
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* About */
+
+#about:target {
+  animation: backlight 6s normal;
+  border-radius: 0.125rem;
+}
+
+#bot {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2.2rem;
+  color: forestgreen;
+}
+
+#footnote:target {
+  animation: backlight 6s normal;
+  z-index: 1;
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* Comment section */
+
+.mastodon-comment {
+  position: relative;
+  width: 100%;
+  min-height: 3.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.comment-avatar {
+  width: 4.313rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.comment-avatar img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.comment-content {
+  padding-left: 4.313rem;
+}
+
+.comment-author img {
+  float: left;
+  margin-right: 0.125rem;
+}
+
+.mastodon-comment-content p:first-of-type {
+  margin-top: 0.5rem;
+}
+
+/*———————————————————————————————————————————————————————————————*/
+/* Thanks */
+/* https://nekocalc.com/px-to-rem-converter */
+
