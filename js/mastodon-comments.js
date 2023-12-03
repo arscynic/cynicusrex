@@ -1,4 +1,4 @@
-// Credits to Carl Schwan: https://berglyd.net/blog/2023/03/mastodon-comments/, and Veronica Berglyd Olsen: https://berglyd.net/blog/2023/03/mastodon-comments/ 
+// Credits to Carl Schwan: https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/, and Veronica Berglyd Olsen: https://berglyd.net/blog/2023/03/mastodon-comments/ 
 
 const mastodonUser = "stardust";
 const mastodonDomain = "fosstodon.org";
