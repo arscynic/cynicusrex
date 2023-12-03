@@ -232,7 +232,6 @@ figure {
 }
 
 .quote-year {
-  font-size: 0.75rem;
   display: inline;
 }
 
@@ -621,7 +620,7 @@ Credits to Michael Coker https://stackoverflow.com/a/42497946/13963944 */
 }
 
 .source {
-  font-size: small;
+  font-size: smaller;
   font-family: monospace;
   vertical-align: text-top;
 }
