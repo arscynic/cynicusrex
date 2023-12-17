@@ -32,7 +32,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Mostly excellent free software. <sup>[2023/12/15]</sup></h1>
+    <h1>Mostly excellent free software. <sup>[2023/12/17]</sup></h1>
     
     <div><h2>Linux</h2>
       <ul>
@@ -51,7 +51,7 @@
         <li>Image editing: <a href="https://www.photopea.com/">Photopea</a>, (<a href="https://krita.org/">Krita</a>, <a href="https://inkscape.org/">Inkscape</a>)</li>
         <li>Live USB bootloader: <a href="https://www.ventoy.net">Ventoy</a></li>
         <li>Macros/remap: <a href="https://github.com/autokey/autokey">AutoKey</a>, <a href="https://github.com/sezanzeb/input-remapper">Input Remapper</a><!-- , (Windows: <a href="https://www.autohotkey.com/">AutoHotkey</a>) --></li>
-        <li>Media player: <a href="https://www.smplayer.info">smplayer</a>, <a href="https://audacious-media-player.org">Audacious</a></li>
+        <li>Media player: <a href="https://www.smplayer.info">smplayer</a>, <a href="https://www.strawberrymusicplayer.org">Strawberry</a></li>
         <li>PDF reader: <a href="https://okular.kde.org/en-gb/">Okular</a></li>
         <li>Process viewer: <a href="https://github.com/aristocratos/btop">btop</a></li>
         <li>Remote desktop: <a href="https://remmina.org">Remmina</a>, <a href="https://rustdesk.com">RustDesk</a></li>
@@ -97,13 +97,12 @@
           <a href="https://chrome.google.com/webstore/detail/transover/aggiiclaiamajehmlfpkjmlbadmkledi">TransOver</a>, <a href="https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm">Web Scrobbler</a>, <a href="https://joypixels.com/apps/emoji-keyboard-extension">Emoji Keyboard</a></li>
         <!-- <li><strong>Ad blocking</strong>: <a href="https://github.com/hectorm/hblock">hBlock</a></li> -->
         <li>Calculator: <a href="https://www.symbolab.com">Symbolab</a>, <a href="https://www.wolframalpha.com">WolframAlpha</a>, <a href="https://www.geogebra.org/calculator">GeoGebra</a>, <a href="https://www.desmos.com">Desmos</a></li>
-        <li>Chat: <a href="https://element.io">element</a> <a href="https://matrix.org">[matrix]</a></li>
+        <li>Chat [matrix]: <a href="https://fluffychat.im">FluffyChat</a>, <a href="https://element.io">element</a></li>
         <li>Cloud storage: <a href="https://mega.nz/">MEGA</a></li>
-        <li>Email: <a href="https://webmail.vivaldi.net">Vivaldi Webmail</a></li>
         <!-- <li>Handwritten notes [handy PDF editor]: <a href="https://xournalpp.github.io">Xournal++</a></li> -->
         <li>Firewall: <a href="https://wiki.archlinux.org/title/Uncomplicated_Firewall#Gufw:~:text=GUI%20frontends-,Gufw,-gufw%20is%20a">gufw</a></li>
         <li>Password manager: <a href="https://bitwarden.com">bitwarden</a></li>
-        <li>P2P: <!-- <a href="https://www.slsknet.org">Soulseek</a>,  --><a href="https://transmissionbt.com">Transmission</a></li>
+        <li>P2P: <a href="https://transmissionbt.com">Transmission</a>, <a href="https://www.slsknet.org">Soulseek</a></li>
         <li>Remote control: <a href="https://kdeconnect.kde.org">KDE Connect</a></li>
         <!-- <li>RSS: <a href="https://github.com/martinrotter/rssguard">RSS Guard</a></li> -->
         <li>Search: <a href="https://www.startpage.com">Startpage</a>, <a href="https://duckduckgo.com">DuckDuckGo</a>, <a href="https://yandex.com">Yandex</a><br>
@@ -193,7 +192,7 @@
     <p class="sub-title">Installation checklist of my preferred Arch based Linux operating system (<abbr title="operating system">OS</abbr>) <a href="https://manjaro.org">Manjaro</a>. Need help? Read the <a href="https://wiki.manjaro.org/index.php/Main_Page">Manjaro wiki</a> or use the remarkably extensive <a href="https://archlinux.org"> ArchWiki</a>.</p>
     
     <ol>
-      <li>Are you a first timer? Backup what you don’t want to lose on a separate medium. It helps if you have a second personal computer (<abbr title="personal computer">PC</abbr>) in case something breaks and renders your current PC temporarily unusable.</li>
+      <li>Backup what you don’t want to lose on a separate medium. It brings peace of mind to have a second personal computer (<abbr title="personal computer">PC</abbr>) in case something breaks and renders your current PC temporarily unusable.</li>
       <li>Download the OS and create the install medium with <a href="https://www.ventoy.net">Ventoy</a>.</li>
       <li>To launch the OS from the <abbr title="Universal Serial Bus">USB</abbr> key: reboot and press <i>F12</i> / some other <i>F-key</i> / <i>delete</i> during the startup to pick/edit the drive to boot from. During the start up process it usually mentions which button to push to change boot device.</li>
       <li>Install the OS.</a></li>
@@ -205,7 +204,7 @@
     <h2>Packages.</h2>
     <p>I have certain set of software I install on every new machine. Here follows a list I copy paste so I don't have to install everything individually each time.</p>
     <h3>Default:</h3>
-    <code>sudo pacman -Syu --needed geany geany-plugins gnome-disk-utility gparted yakuake btop dnsutils redshift dolphin catfish vivaldi vivaldi-ffmpeg-codecs ffmpeg ffmpegthumbs xscreensaver gufw playerctl hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular xfce4-systemload-plugin xfce4-sensors-plugin base-devel peek gst-plugins-good baobab bash-completion fwupd qalculate-gtk</code>
+    <code>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop dolphin catfish ffmpeg ffmpegthumbs gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk</code>
 
     <code>yay -S hblock && yay -S input-remapper-git</code> <!-- if qalculate doesn't install, add -S -->
     
@@ -213,11 +212,11 @@
 
     <p>Direct download: <a href="https://mega.io/desktop#downloadapps">MEGA desktop app</a>.</p>
     
-    <h3>Optional:</h3>
-    <code>sudo pacman -Syu --needed element-desktop shotcut libreoffice-still calibre rssguard audacious spotify-launcher npm discord bluez bluez-utils blueberry pulseaudio-bluetooth gst-plugins-good linux-lts texlive-basic texlive-latex texlive-latexextra texstudio sagemath sagemath-doc xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect</code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
+    <h3>Optional/legacy:</h3>
+    <code>sudo pacman -Syu --needed element-desktop shotcut libreoffice-still calibre rssguard spotify-launcher npm discord bluez bluez-utils blueberry pulseaudio-bluetooth gst-plugins-good linux-lts texlive-basic texlive-latex texlive-latexextra<!--  texstudio sagemath sagemath-doc --> xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils redshift playerctl xfce4-systemload-plugin xfce4-sensors-plugin baobab gst-plugins-good peek geany-plugins</code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
     <code>npm install -g live-server</code>
     <code>yay -S autokey-gtk && yay -S lyx && yay -S monitorix</code>
-    <p>To build LyX one needs: make automake autoconf base-devel, otherwise you get this error: <code>configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR.</code></p>
+    <p>To build LyX one needs: <i>make</i> <i>automake</i> <i>autoconf</i> <i>base-devel</i> , otherwise it throws the following error: “configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR”.</p>
     <p>Direct downloads: <a href="https://github.com/VSCodium/vscodium/releases">VSCodium-linux-x64…</a>, <a href="https://www.betterbird.eu/downloads/index.php">Betterbird</a>, <a href="https://github.com/rustdesk/rustdesk/releases/">rustdesk-…-x86_64.AppImage</a>.</p>
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
       
@@ -710,11 +709,11 @@ regex=false</pre></code>
     <details>
   <summary>Click to expand the .xscreensaver file content.</summary>
 <pre><code># XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.06 for x on Sat Jul  8 19:12:21 2023.
+# Written by xscreensaver-settings 6.08 for x on Sat Dec 16 20:21:55 2023.
 # https://www.jwz.org/xscreensaver/
 
-timeout:	0:11:00
-cycle:		0:05:00
+timeout:	0:01:00
+cycle:		0:03:00
 lock:		True
 lockTimeout:	0:01:00
 passwdTimeout:	0:00:30
@@ -729,18 +728,18 @@ fade:		True
 unfade:		False
 fadeSeconds:	0:00:01
 ignoreUninstalledPrograms:False
-dpmsEnabled:	False
+dpmsEnabled:	True
 dpmsQuickOff:	False
-dpmsStandby:	2:00:00
-dpmsSuspend:	2:00:00
-dpmsOff:	4:00:00
+dpmsStandby:	0:30:00
+dpmsSuspend:	0:30:00
+dpmsOff:	0:30:00
 grabDesktopImages:  False
 grabVideoFrames:    False
 chooseRandomImages: False
 imageDirectory:	
 
 mode:		random
-selected:	-1
+selected:	142
 
 textMode:	url
 textLiteral:	XScreenSaver
@@ -748,15 +747,15 @@ textFile:
 textProgram:	fortune
 textURL:	https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
 dialogTheme:	greenblack
-settingsGeom:	280,132 1380,408
+settingsGeom:	0,28 0,28
 
 programs:								      \
 -				maze --root				    \n\
-  GL: 				superquadrics --root			    \n\
+- GL: 				superquadrics --root			    \n\
 -				attraction --root			    \n\
 -				blitspin --root				    \n\
 -				greynetic --root			    \n\
-        helix --root				    \n\
+-				helix --root				    \n\
 -				hopalong --root				    \n\
 -				imsmap --root				    \n\
 -				noseguy --root				    \n\
@@ -771,14 +770,14 @@ programs:								      \
 -				pedal --root				    \n\
 -				bouboule --root				    \n\
 -				braid --root				    \n\
-        coral --root				    \n\
+-				coral --root				    \n\
 -				deco --root				    \n\
 -				drift --root				    \n\
 -				fadeplot --root				    \n\
         galaxy --root				    \n\
 -				goop --root				    \n\
 -				grav --root				    \n\
-        ifs --root				    \n\
+-				ifs --root				    \n\
 - GL: 				jigsaw --root				    \n\
 -				julia --root				    \n\
 -				kaleidescope --root			    \n\
@@ -789,13 +788,13 @@ programs:								      \
 -				munch --root				    \n\
 -				penrose --root				    \n\
 - GL: 				pipes --root				    \n\
--				rd-bomb --root				    \n\
+-				rdbomb --root				    \n\
 - GL: 				rubik --root				    \n\
 -				sierpinski --root			    \n\
-- any: 				slip --root				    \n\
+-				slip --root				    \n\
 - GL: 				sproingies --root			    \n\
 -				starfish --root				    \n\
-        strange --root				    \n\
+-				strange --root				    \n\
 -				swirl --root				    \n\
 -				triangle --root				    \n\
 -				xjack --root				    \n\
@@ -803,22 +802,23 @@ programs:								      \
 - GL: 				atlantis --root				    \n\
 -				bsod --root				    \n\
 - GL: 				bubble3d --root				    \n\
-  GL: 				cage --root				    \n\
+GL: 				cage --root				    \n\
 -				crystal --root				    \n\
 -				cynosure --root				    \n\
 -				discrete --root				    \n\
 -				distort --root				    \n\
-        epicycle --root				    \n\
-        flow -root -no-box			    \n\
+-				epicycle --root				    \n\
+-				flow --root --no-box			    \n\
 - GL: 				glplanet --root				    \n\
 -				interference --root			    \n\
-        kumppa --root				    \n\
+-				kumppa --root				    \n\
 - GL: 				lament --root				    \n\
 -				moire2 --root				    \n\
 - GL: 				sonar --root				    \n\
 - GL: 				stairs --root				    \n\
 -				truchet --root				    \n\
 -				vidwhacker --root			    \n\
+-				webcollage --root			    \n\
 -				blaster --root				    \n\
 -				bumps --root				    \n\
 -				ccurve --root				    \n\
@@ -833,11 +833,10 @@ programs:								      \
 - GL: 				pulsar --root				    \n\
 -				ripples --root				    \n\
 -				shadebobs --root			    \n\
-  GL: 				sierpinski3d --root			    \n\
+  GL: 				sierpinski3d --root --delay 16935 --depth 4 \n\
 -				spotlight --root			    \n\
 -				squiral --root				    \n\
 -				wander --root				    \n\
--				webcollage --root			    \n\
 -				xflame --root				    \n\
 -				xmatrix --root				    \n\
 - GL: 				gflux --root				    \n\
@@ -850,7 +849,7 @@ programs:								      \
 - GL: 				engine --root				    \n\
 - GL: 				flipscreen3d --root			    \n\
 - GL: 				gltext --root				    \n\
-  GL: 				menger --root				    \n\
+- GL: 				menger --root --delay 32258 --speed 50	    \n\
 - GL: 				molecule --root				    \n\
 -				rotzoomer --root			    \n\
 -				scooter --root				    \n\
@@ -858,14 +857,14 @@ programs:								      \
 - GL: 				starwars --root				    \n\
 - GL: 				stonerview --root			    \n\
 -				vermiculate --root			    \n\
-        whirlwindwarp --root			    \n\
+-				whirlwindwarp --root			    \n\
 -				zoom --root				    \n\
 -				anemone --root				    \n\
 -				apollonian --root			    \n\
 - GL: 				boxed --root				    \n\
 - GL: 				cubenetic --root			    \n\
 - GL: 				endgame --root				    \n\
-        euler2d --root				    \n\
+-				euler2d --root				    \n\
 -				fluidballs --root			    \n\
 - GL: 				flurry --root				    \n\
 - GL: 				glblur --root				    \n\
@@ -877,7 +876,6 @@ programs:								      \
 - GL: 				queens --root				    \n\
 - GL: 				sballs --root				    \n\
 - GL: 				spheremonics --root			    \n\
--				thornbird --root			    \n\
 -				twang --root				    \n\
 - GL: 				antspotlight --root			    \n\
 -				apple2 --root				    \n\
@@ -886,7 +884,7 @@ programs:								      \
 - GL: 				blinkbox --root				    \n\
 - GL: 				blocktube --root			    \n\
 - GL: 				bouncingcow --root			    \n\
--				cloudlife --root			    \n\
+        cloudlife --root			    \n\
 - GL: 				cubestorm --root			    \n\
 -				eruption --root				    \n\
 - GL: 				flipflop --root				    \n\
@@ -894,7 +892,7 @@ programs:								      \
 -				fontglide --root			    \n\
 - GL: 				gleidescope --root			    \n\
 - GL: 				glknots --root				    \n\
-  GL: 				glmatrix -root -no-rotate		    \n\
+  GL: 				glmatrix --root --no-rotate		    \n\
 - GL: 				glslideshow --root			    \n\
   GL: 				hypertorus --root			    \n\
 - GL: 				jigglypuff --root			    \n\
@@ -912,7 +910,7 @@ programs:								      \
 -				fireworkx --root			    \n\
 -				fuzzyflakes --root			    \n\
 -				interaggregate --root			    \n\
-        intermomentary --root			    \n\
+-				intermomentary --root			    \n\
 -				memscroller --root			    \n\
 - GL: 				noof --root				    \n\
 -				pacman --root				    \n\
@@ -920,7 +918,7 @@ programs:								      \
 - GL: 				polyhedra --root			    \n\
 - GL: 				providence --root			    \n\
 -				substrate --root			    \n\
-        wormhole --root				    \n\
+-				wormhole --root				    \n\
 - GL: 				antmaze --root				    \n\
 - GL: 				boing --root				    \n\
 -				boxfit --root				    \n\
@@ -944,7 +942,7 @@ programs:								      \
 - GL: 				moebiusgears --root			    \n\
 - GL: 				voronoi --root				    \n\
 - GL: 				hypnowheel --root			    \n\
-  GL: 				klein --root				    \n\
+- GL: 				klein --root				    \n\
 -				lcdscrub --root				    \n\
 - GL: 				photopile --root			    \n\
 - GL: 				skytentacles --root			    \n\
@@ -957,16 +955,16 @@ programs:								      \
 - GL: 				kaleidocycle --root			    \n\
 - GL: 				quasicrystal --root			    \n\
 - GL: 				unknownpleasures --root			    \n\
--				binaryring --root			    \n\
+        binaryring --root			    \n\
 - GL: 				cityflow --root				    \n\
 - GL: 				geodesicgears --root			    \n\
-  GL: 				projectiveplane --root			    \n\
-- GL: 				romanboy --root				    \n\
+- GL: 				projectiveplane --root			    \n\
+  GL: 				romanboy --root				    \n\
 -				tessellimage --root			    \n\
 - GL: 				winduprobot --root			    \n\
 - GL: 				splitflap --root			    \n\
 - GL: 				cubestack --root			    \n\
-  GL: 				cubetwist --root			    \n\
+- GL: 				cubetwist --root			    \n\
 - GL: 				discoball --root			    \n\
 - GL: 				dymaxionmap --root			    \n\
 - GL: 				energystream --root			    \n\
@@ -986,24 +984,29 @@ programs:								      \
 - GL: 				razzledazzle --root			    \n\
 -				vfeedback --root			    \n\
 - GL: 				deepstars --root			    \n\
-  GL: 				gravitywell --root			    \n\
+- GL: 				gravitywell --root			    \n\
 - GL: 				beats --root				    \n\
 - GL: 				covid19 --root				    \n\
-  GL: 				etruscanvenus --root			    \n\
+- GL: 				etruscanvenus --root			    \n\
 - GL: 				gibson --root				    \n\
 - GL: 				headroom --root				    \n\
 - GL: 				sphereeversion --root			    \n\
 -				binaryhorizon --root			    \n\
 -				marbling --root				    \n\
-- GL: 				mapscroller --root			    \n\
-- GL: 				squirtorus --root			    \n\
 - GL: 				chompytower --root			    \n\
-- GL: 				nakagin --root				    \n\
 - GL: 				hextrail --root				    \n\
+- GL: 				mapscroller --root			    \n\
+- GL: 				nakagin --root				    \n\
+- GL: 				squirtorus --root			    \n\
+- GL: 				cubocteversion --root			    \n\
+-				droste --root				    \n\
+- GL: 				papercube --root			    \n\
+- GL: 				skulloop --root				    \n\
 
 
 pointerHysteresis:  10
-authWarningSlack:   20</code></pre>
+authWarningSlack:   20
+  </code></pre>
     </details>
 
     <h3>Change the default browser for Telegram, Betterbird, etc.</h3>
