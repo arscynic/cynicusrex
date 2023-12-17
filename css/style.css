@@ -58,9 +58,10 @@ body {
   padding-bottom: 1rem; /* Ensures the bottom nav doesn't display over content. */
 }
 
-code {
+code, code pre {
   display: block;
   font-family: monospace;
+  font-size: small;
   margin: 0.5rem 0 0.5rem 0;
   background-color: cornsilk;
   word-break: break-all;
