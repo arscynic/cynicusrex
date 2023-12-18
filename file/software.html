@@ -46,7 +46,7 @@
         <li>Disk usage analyser: <a href="https://wiki.gnome.org/Apps/DiskUsageAnalyzer">baobab</a></li>
         <li>E-books: <a href="https://calibre-ebook.com">Calibre</a></li>
         <li>Email: <a href="https://www.betterbird.eu">Betterbird</a></li>
-        <li>Eye health: <a href="http://jonls.dk/redshift/">Redshift</a></li>
+        <!-- <li>Eye health: <a href="http://jonls.dk/redshift/">Redshift</a></li> -->
         <li>Image viewer: <a href="https://apps.kde.org/en-gb/gwenview/">Gwenview</a></li>
         <li>Image editing: <a href="https://www.photopea.com/">Photopea</a>, (<a href="https://krita.org/">Krita</a>, <a href="https://inkscape.org/">Inkscape</a>)</li>
         <li>Live USB bootloader: <a href="https://www.ventoy.net">Ventoy</a></li>
@@ -323,6 +323,21 @@ done</pre>
     </ol>
 
     <p>Now, whenever you save <i>your_python_script.py</i>, it will instantly throw the output in the VSCodium terminal, or whatever terminal you executed the shell script in. Source: ChatGPT.</p>
+
+    <h3>KDE Plasma.</h3>
+    <h4>Custom KRunner/Plasma browser search query.</h4>
+    <p>To configure Plasma search to open a browser with a query when entering “xyz example.com”, e.g., “viv example.com” that opens example.com in Vivaldi browser:</p>
+
+    <blockquote>
+      <p>“create a symlink named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
+    </blockquote>
+
+    <p>Either there likely already is a symlink named <i>vivaldi</i> within /usr/bin/, of which you can make another symlink with a more convenient shorter name [<a href="https://kb.iu.edu/d/abbe">source</a>]: <code>sudo ln -s vivaldi viv</code></p>
+
+    <p>Or go to the directory containing the <i>vivaldi</i> binary, in my case “/opt/vivaldi/”, and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
+
+    <h4>Web Search Keywords backup</h4>
+    <p>To back up all your custom websites added to the <i>Web Search Keywords</i> KRunner plugin, navigate to “ ~/.local/share/kservices5/searchproviders/” and back up the containing files.</p>
 
     <h3>Remmina.</h3>
     <p>On the remote computer (server) to connect to:</p>
@@ -1093,6 +1108,18 @@ screen=0
     <p>Toggle keyboard backlight [credits to <a href="https://unix.stackexchange.com/a/732020/378857">m2456</a>]:</p>
     <code>xset q | grep -q 'Scroll Lock: off' && xset led named 'Scroll Lock' || xset -led named 'Scroll Lock'
     </code>
+
+    <p class="fleuron">❦</p>
+
+    <h2>Comments.</h2>
+
+    <div id="mastodon-comments">
+      <p>Comments on <a id="mastodon-url" href="https://fosstodon.org/@stardust/">https://fosstodon.org/@stardust/</a> appear below. Or search for the aforementioned URL in your preferred <cite>Fediverse</cite> instance while logged in, and comment.</p>
+      <p id="mastodon-comments-list"><button id="load-comment">> load comments</button></p>
+      <noscript><p>Enable JavaScript to view the comments.</p></noscript>
+      <script src="../js/purify.min.js"></script>
+      <script src="../js/mastodon-comments.js"></script> <!-- Credits to Carl Schwan: https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/, and Veronica Berglyd Olsen: https://berglyd.net/blog/2023/03/mastodon-comments/ -->
+    </div>
 
   </div>
   
