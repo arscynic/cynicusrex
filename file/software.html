@@ -32,7 +32,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Mostly excellent free software. <sup>[2023/12/18]</sup></h1>
+    <h1>Mostly excellent free software. <sup>[2023/12/19]</sup></h1>
     
     <div><h2>Linux</h2>
       <ul>
@@ -273,25 +273,24 @@ alias gitp="git push -u origin main"</pre>
     <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: workbench.colorCustomizations → click “Edit in settings.json”</p>
     <code>
 <pre>{
-    "editor.tabSize": 2,
-    "editor.wordWrap": "on",
-    "cSpell.language": "en-GB",
-    "editor.minimap.showSlider": "always",
-    "editor.minimap.size": "fill",
-    "workbench.colorCustomizations": {
-        "scrollbarSlider.activeBackground": "#95efff",
-        "scrollbarSlider.hoverBackground": "#c0ebff",
-        "scrollbarSlider.background": "#dfeeff",
-
-        "editor.selectionBackground": "#7cffc2",
-        "editor.selectionHighlightBackground": "#d2e6d7",
-
-        "editor.background": "#faebd7",
-        "editor.foreground": "#000000",
-    },
-    "workbench.colorTheme": "Default Light Modern",
-    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
-    "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "cSpell.language": "en-GB",
+  "editor.minimap.showSlider": "always",
+  "workbench.colorCustomizations": {
+      "editor.background": "#faebd7",
+      "editor.foreground": "#000000",
+      "editor.lineHighlightBorder": "#ddffe1",
+      "editor.lineHighlightBackground": "#9ae6c0",
+      "editor.selectionBackground": "#7cffc2",
+      "editor.selectionHighlightBackground": "#d2e6d7",
+      "scrollbarSlider.activeBackground": "#95efff",
+      "scrollbarSlider.hoverBackground": "#c0ebff",
+      "scrollbarSlider.background": "#dfeeff",
+  },
+  "workbench.colorTheme": "Default Light Modern",
+  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontSize": 16,
 }</pre>
     </code>
 
@@ -338,6 +337,11 @@ done</pre>
 
     <h4>Web Search Keywords backup</h4>
     <p>To back up all your custom websites added to the <i>Web Search Keywords</i> KRunner plugin, navigate to “ ~/.local/share/kservices5/searchproviders/” and back up the containing files.</p>
+
+    <h3>Vivaldi.</h3>
+    <p>To remove Vivaldi's header / title bar, open Vivaldi's settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
+      display: none;
+      }</code></p>
 
     <h3>Remmina.</h3>
     <p>On the remote computer (server) to connect to:</p>
