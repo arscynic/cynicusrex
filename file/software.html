@@ -310,9 +310,9 @@ sleep 1; xset dpms force off</pre>
     <ul>
       <li>Select multiple instances of the same word: select the word and press “<i>control + shift + L</i>”.</li>
       <li>Select multiple instances of the same isolated word: place the cursor on the word and press “<i>control + shift + l</i>”.</li>
-      <li>Rename the opening/closing tag pairs in HTML [<a href="https://stackoverflow.com/a/59221721/13963944">source</a>]: place the cursor on the tag and press <i>F2</i>.</li>
-      <li>Wrap selected text with tags [<a href="https://stackoverflow.com/a/62537701/13963944">source</a>]: “<i>control + shift + P</i>” and select “<i>Emmet: Wrap with Abbreviation</i>”.</li>
-      <li>Multiple selections (multi-cursor) [<a href="https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor">source</a>]: “<i>alt + click</i>”, and/or add more with “<i>shift + alt + up/down</i>”</li>
+      <li><a href="https://stackoverflow.com/a/59221721/13963944">Rename the opening/closing tag pairs in HTML</a>: place the cursor on the tag and press <i>F2</i>.</li>
+      <li><a href="https://stackoverflow.com/a/62537701/13963944">Wrap selected text with tags</a>: “<i>control + shift + P</i>” and select “<i>Emmet: Wrap with Abbreviation</i>”.</li>
+      <li><a href="https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor">Multiple selections (multi-cursor)</a>: “<i>alt + click</i>”, and/or add more with “<i>shift + alt + up/down</i>”</li>
       <li>Select word at cursor or the next occurrence of the current selection: “<i>control + D</i>”.</li>
       <li>Comment out a selection: “<i>control + shift + A</i>”.</li>
       <li>Comment out an entire line: “<i>control + /</i>”.</li>
@@ -347,10 +347,10 @@ done</pre>
     <p>To configure Plasma search to open a browser with a query when entering “xyz example.com”, e.g., “viv example.com” that opens example.com in Vivaldi browser:</p>
 
     <blockquote>
-      <p>“create a symlink named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
+      <p>“<a href="https://kb.iu.edu/d/abbe">create a symlink</a> named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
     </blockquote>
 
-    <p>Either there likely already is a symlink named <i>vivaldi</i> within /usr/bin/, of which you can make another symlink with a more convenient shorter name [<a href="https://kb.iu.edu/d/abbe">source</a>]: <code>sudo ln -s vivaldi viv</code></p>
+    <p>Either there likely already is a symlink named <i>vivaldi</i> within /usr/bin/, of which you can make another symlink with a more convenient shorter name: <code>sudo ln -s vivaldi viv</code></p>
 
     <p>Or go to the directory containing the <i>vivaldi</i> binary, in my case “/opt/vivaldi/”, and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
 
@@ -756,16 +756,16 @@ sudo systemctl enable input-remapper</pre>
   <ul>
     <li><a href="https://averagelinuxuser.com/clean-arch-linux/">Commands to clean Arch Linux</a>; respectively removes cache and orphaned packages: <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code></li>
     <li><a href="https://wiki.archlinux.org/title/Display_Power_Management_Signaling#Modify_DPMS_and_screensaver_settings_with_a_command">Command to manually turn off display/monitor/screen</a>. This is useful for certains laptops, or if your monitor only has one button to control everything; if that button breaks due to turning your monitor on and off frequently… <code>sleep 1; xset dpms force off</code></li>
-    <li><a href="https://unix.stackexchange.com/a/48245">Monitor read/write operation of a USB drive</a>: <code>watch -d grep -e Dirty: -e Writeback: /proc/meminfo</code></li>
-    <li><a href="https://unix.stackexchange.com/a/732020/378857">Toggle keyboard backlight</a>: <code>xset q | grep -q 'Scroll Lock: off' && xset led named 'Scroll Lock' || xset -led named 'Scroll Lock'
+    <li><a href="https://unix.stackexchange.com/a/48245">Command to monitor read/write operation of a USB drive</a>: <code>watch -d grep -e Dirty: -e Writeback: /proc/meminfo</code></li>
+    <li><a href="https://unix.stackexchange.com/a/732020/378857">Command to toggle keyboard backlight</a>: <code>xset q | grep -q 'Scroll Lock: off' && xset led named 'Scroll Lock' || xset -led named 'Scroll Lock'
     </code></li>
-    <li><a href="https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/github-caching_password_in_git.pdf">Caching the <i>git</i> password</a>, for one hour: <code>git config --global credential.helper 'cache --timeout=3600'</code></li>
-    <li><a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">Change the default browser</a> for <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595">Telegram</a>, Betterbird, etc. Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium: <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code></li>
-    <li>Control media players: <code>playerctl play-pause/next/previous</code></li>
-    <li>Control volume: <code>amixer set Master n%+/n%-</code></li>
-    <li>Launch terminal with a command: <code>konsole -e btop</code></li>
-    <li>Activate XScreenSaver: <code>xscreensaver-command -activate</code></li>
-    <li>Lock screen: <code>xscreensaver-command -lock</code></li>
+    <li><a href="https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/github-caching_password_in_git.pdf">Command to cache the <i>git</i> password</a>, for one hour: <code>git config --global credential.helper 'cache --timeout=3600'</code></li>
+    <li><a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">Command to change the default browser</a> for <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595">Telegram</a>, Betterbird, etc. Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium: <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code></li>
+    <li>Command to control media players: <code>playerctl play-pause/next/previous</code></li>
+    <li>Command to control volume: <code>amixer set Master n%+/n%-</code></li>
+    <li>Command to launch terminal with a command: <code>konsole -e btop</code></li>
+    <li>Command to activate XScreenSaver: <code>xscreensaver-command -activate</code></li>
+    <li>Command to lock screen: <code>xscreensaver-command -lock</code></li>
   </ul>
 
 <!-- ///////////////////// Legacy stuff ///////////////////// -->
