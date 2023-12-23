@@ -32,7 +32,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Mostly excellent free software. <sup>[2023/12/21]</sup></h1>
+    <h1>Mostly excellent free software. <sup>[2023/12/23]</sup></h1>
     
     <div><h2>Linux</h2>
       <ul>
@@ -204,7 +204,7 @@
     <h2>Packages.</h2>
     <p>I have certain set of software I install on every new machine. Here follows a list I copy paste so I don't have to install everything individually each time.</p>
     <h3>Default:</h3>
-    <code>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop dolphin catfish ffmpeg ffmpegthumbs gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk keepassxc</code>
+    <code>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop dolphin catfish ffmpeg ffmpegthumbs gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk keepassxc tmux</code>
 
     <code>yay -S hblock && yay -S input-remapper-git</code> <!-- if qalculate doesn't install, add -S -->
 
@@ -251,6 +251,7 @@
       <li><a href="#yt">Enhancer for YouTube</a></li>
       <li><a href="#res">Reddit Enhancement Suite</a></li>
       <li><a href="#remap">Input Remapper</a></li>
+      <li><a href="#tmux">Tmux</a></li>
       <li><a href="#misc">Miscellaneous</a></li>
     </ol>
 
@@ -769,6 +770,11 @@ sudo systemctl enable input-remapper</pre>
         <p>Input: keyboard → Output target: keyboard</p></code>
     </details>
 
+  <h2 id="tmux">tmux.</h2>
+  <p><cite>tmux</cite> cheat sheet: <a href="https://tmuxcheatsheet.com">https://tmuxcheatsheet.com</a>.</p>
+  <p>List tmux sessions: <code>tmux list-sessions</code></p>
+  <p>Reopen/attach to a running tmux session (e.g., session 3): <code>tmux attach -t 3</code></p>
+  <p>Exit/detach from a session: press “CTRL + b” and type “d”.<p>
  
   <h2 id="misc">Miscellaneous.</h2>
   <ul>
