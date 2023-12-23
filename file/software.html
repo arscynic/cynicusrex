@@ -237,27 +237,27 @@
     <h2>To configure.</h2>
 
     <ol>
-      <li><a href="./software.html#:~:text=Miscellaneous-,Dual%2Dboot%20and%20sharing%20a%20drive,-between%20Linux%20and">Dual-boot</a></li>
-      <li><a href="./software.html#:~:text=/.bashrc.">~/.bashrc</a></li>
-      <li><a href="./software.html#:~:text=dpms%20force%20off-,uBlock%20Origin,-.">uBlock Origin</a></li>
-      <li><a href="./software.html#:~:text=3p%2Dscript%20block-,hBlock.,-Run%20hblock%20in">hBlock</a></li>
-      <li><a href="./software.html#:~:text=StevenBlack/hosts.-,VSCodium,-.">VSCodium</a></li>
-      <li><a href="./software.html#:~:text=in.%20Source%3A%20ChatGPT.-,LyX.,-To%20build%20LyX">LyX</a></li>
-      <li><a href="./software.html#:~:text=the%20right%20%24QTDIR%E2%80%9D-,KDE%20Plasma,-.">KDE Plasma</a></li>
-      <li><a href="./software.html#:~:text=header%20%7B%20display%3A%20none%3B%20%7D-,Remmina.,-On%20the%20remote">Remmina</a></li>
-      <li><a href="./software.html#:~:text=connection%20open%20indefinitely.-,BOINC.,-Double%2Dcheck%20if">BOINC</a></li>
-      <li><a href="./software.html#:~:text=log%20spam.-,XScreenSaver.,-To%20enable%20XScreenSaver">XScreenSaver</a></li>
-      <li><a href="./software.html#:~:text=Enhancer%20for%20YouTube.">Enhancer for YouTube</a></li>
-      <li><a href="./software.html#:~:text=Reddit%20Enhancement%20Suite.">Reddit Enhancement Suite</a></li>
-      <li><a href="./software.html#:~:text=All%20Child%20Comments%E2%80%9D.-,Input%20Remapper.,-sudo%20systemctl%20restart">Input Remapper</a></li>
-      <li><a href="./software.html#:~:text=Miscellaneous.,-Commands%20to%20clean">Miscellaneous</a></li>
-      
+      <li><a href="#dual-boot">Dual-boot</a></li>
+      <li><a href="#bashrc">~/.bashrc</a></li>
+      <li><a href="#ubo">uBlock Origin</a></li>
+      <li><a href="#hblock">hBlock</a></li>
+      <li><a href="#vscodium">VSCodium</a></li>
+      <li><a href="#lyx">LyX</a></li>
+      <li><a href="#plasma">KDE Plasma</a></li>
+      <li><a href="#vivaldi">Vivaldi</a></li>
+      <li><a href="#remmina">Remmina</a></li>
+      <li><a href="#boinc">BOINC</a></li>
+      <li><a href="#xscreensaver">XScreenSaver</a></li>
+      <li><a href="#yt">Enhancer for YouTube</a></li>
+      <li><a href="#res">Reddit Enhancement Suite</a></li>
+      <li><a href="#remap">Input Remapper</a></li>
+      <li><a href="#misc">Miscellaneous</a></li>
     </ol>
 
-    <h3>Dual-boot and sharing a drive between Linux and Windows.</h3>
+    <h3 id="dual-boot">Dual-boot and sharing a drive between Linux and Windows.</h3>
     <p>To share a drive between Linux and Windows (11?) on a dual-boot setup and ensure Microsoft's incompetence doesn't delete your files, disable Windows' enabled by default fast startup: Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span>.</p>
 
-    <h3>~/.bashrc.</h3>
+    <h3 id="bashrc">~/.bashrc.</h3>
     <code>
 <pre>alias xyz="xdg-open path/to/file.ods"
 alias xyz="cd path/to/folder/"
@@ -280,7 +280,7 @@ sleep 1; xset dpms force off</pre>
       <a href="https://github.com/tpope/vim-commentary">commentary.vim</a>)
     </li></ol> -->
 	  
-    <h3>uBlock Origin.</h3>
+    <h3 id="ubo">uBlock Origin.</h3>
     <ul>
       <li>☐ “Hide placeholders of blocked elements”.</li>
       <li>☑ “Enable cloud storage support”. And don't forget to import from cloud storage the “Filter lists” and “My rules”. Subsequently export to cloud storage all future additions.</li>
@@ -296,10 +296,10 @@ sleep 1; xset dpms force off</pre>
 * * 3p-script block</pre>
     </code>
 
-    <h3>hBlock.</h3>
+    <h3 id="hblock">hBlock.</h3>
     <p>Run <em>hblock</em> in commandline to activate it, and run "<i>cat /etc/hosts</i>" to <a href="https://github.com/hectorm/hblock#installation">verify</a>. I manually add other domains listed at <a href="https://github.com/StevenBlack/hosts">https://github.com/StevenBlack/hosts</a>.</p>
 
-    <h3>VSCodium.</h3>
+    <h3 id="vscodium">VSCodium.</h3>
     <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: workbench.colorCustomizations → click “Edit in settings.json”</p>
     <code>
 <pre>{
@@ -353,14 +353,14 @@ done</pre>
 
     <p>Now, whenever you save <i>your_python_script.py</i>, it will instantly throw the output in the VSCodium terminal, or whatever terminal you executed the shell script in. Source: ChatGPT.</p>
 
-    <h3>LyX.</h3>
+    <h3 id="lyx">LyX.</h3>
     <p>To build <cite>LyX</cite> one needs packages: <i>make</i> <i>automake</i> <i>autoconf</i> <i>base-devel</i> , otherwise it throws the following error: </p>
 
     <blockquote>
       <p>“configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR”</p>
     </blockquote>
 
-    <h3>KDE Plasma.</h3>
+    <h3 id="plasma">KDE Plasma.</h3>
     <h4>Custom KRunner/Plasma browser search query.</h4>
     <p>To configure Plasma search to open a browser with a query when entering “xyz example.com”, e.g., “viv example.com” that opens example.com in Vivaldi browser:</p>
 
@@ -375,12 +375,12 @@ done</pre>
     <h4>Web Search Keywords backup</h4>
     <p>To back up all your custom websites added to the <i>Web Search Keywords</i> KRunner plugin, navigate to “ ~/.local/share/kservices5/searchproviders/” and back up the containing files.</p>
 
-    <h3>Vivaldi.</h3>
+    <h3 id="vivaldi">Vivaldi.</h3>
     <p>To remove Vivaldi's header / title bar, open Vivaldi's settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
       display: none;
       }</code></p>
 
-    <h3>Remmina.</h3>
+    <h3 id="remmina">Remmina.</h3>
     <p>On the remote computer (server) to connect to:</p>
     <ol>
       <li>Install packages: libvncserver x11vnc</li>
@@ -396,10 +396,10 @@ done</pre>
 
     <p>The desktop environment of the remote computer should now be visible. Don't forget to set a password in <a href="https://wiki.archlinux.org/title/x11vnc#Setting_a_password">x11vnc</a> when leaving the connection open indefinitely.</p>
 
-    <h3>BOINC.</h3>
+    <h3 id="boinc">BOINC.</h3>
     <p>Double-check if <a href="https://wiki.archlinux.org/index.php?title=BOINC&oldid=794657#Log_spam."><i>boinc</i> causes log spam</a>.</p>
 
-    <h3>XScreenSaver.</h3>
+    <h3 id="xscreensaver">XScreenSaver.</h3>
     <p>To <a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">enable XScreenSaver in KDE Plasma</a>.</p>
     <details>
   <summary>Click to expand the .xscreensaver file content.</summary>
@@ -706,7 +706,7 @@ authWarningSlack:   20
     </code>
     </details>
 
-    <h3>Enhancer for YouTube.</h3>
+    <h3 id="yt">Enhancer for YouTube.</h3>
     <details>
       <summary>Click to expand the exported backup content.</summary>
       <code>{"version":"2.0.121","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":100,"blackbars":false,"blockads":false,"blockadsexceptforsubs":false,"blockautoplay":true,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":false,"cinemamodewideplayer":false,"controlbar":{"active":true,"autohide":false,"centered":true,"position":"absolute"},"controls":["cinema-mode","size","pop-up-player","speed","screenshot","options"],"controlsvisible":false,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":false,"controlvolumemousebutton":false,"convertshorts":false,"customcolors":{"--dimmer-text":"#cccccc","--hover-background":"#232323","--main-background":"#111111","--main-color":"#00adee","--main-text":"#eff0f1","--second-background":"#181818","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":false,"date":1687771133142,"defaultvolume":false,"disableautoplay":true,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":true,"ignoreplaylists":true,"ignorepopupplayer":false,"localecode":"en_GB","localedir":"ltr","message":false,"miniplayer":true,"miniplayerposition":"_top-left","miniplayersize":"_560x315","newestcomments":false,"overridespeeds":true,"pauseforegroundtab":true,"pausevideos":true,"popuplayersize":"960x540","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd720","qualityplaylistsfullscreen":"hd1080","qualityvideos":"hd720","qualityvideosfullscreen":"hd1440","reload":false,"reversemousewheeldirection":false,"selectquality":false,"selectqualityfullscreenoff":true,"selectqualityfullscreenon":true,"speed":1,"speedvariation":0.25,"stopvideos":false,"theatermode":false,"theme":"default-dark","themevariant":"youtube-deep-dark.css","update":0,"volume":50,"volumemultiplier":3,"volumevariation":5,"whitelist":"","wideplayer":false,"wideplayerviewport":false}}</code>
@@ -718,7 +718,7 @@ authWarningSlack:   20
     <!-- <h3>LanguageTool.</h3>
     <p>☐ “Enable rephrasing”.</p> -->
 
-    <h3>Input Remapper.</h3>
+    <h3 id="remap">Input Remapper.</h3>
 
     <code>
 <pre>sudo systemctl restart input-remapper
@@ -770,7 +770,7 @@ sudo systemctl enable input-remapper</pre>
     </details>
 
  
-  <h2>Miscellaneous.</h2>
+  <h2 id="misc">Miscellaneous.</h2>
   <ul>
     <li><a href="https://averagelinuxuser.com/clean-arch-linux/">Commands to clean Arch Linux</a>; respectively removes cache and orphaned packages: <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code></li>
     <li><a href="https://wiki.archlinux.org/title/Display_Power_Management_Signaling#Modify_DPMS_and_screensaver_settings_with_a_command">Command to manually turn off display/monitor/screen</a>. This is useful for certains laptops, or if your monitor only has one button to control everything; if that button breaks due to turning your monitor on and off frequently… <code>sleep 1; xset dpms force off</code></li>

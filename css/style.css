@@ -73,10 +73,11 @@ summary {
 
 blockquote {
   text-align: left;
-  border-left: 0.125rem dashed grey;
+  border-left: 0.125rem dotted grey;
   margin-left: 1.5rem;
   margin-right: 0;
   padding-left: 1rem;
+  border-radius: .5rem;
 }
 
 figure {
