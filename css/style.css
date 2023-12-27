@@ -43,7 +43,7 @@ pre { /* Source: https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-figcaption {
+figcaption, .audio-caption {
   font-size: small;
   margin-top: 0.313rem;
 }
