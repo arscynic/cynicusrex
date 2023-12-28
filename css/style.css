@@ -632,8 +632,7 @@ Credits to Michael Coker https://stackoverflow.com/a/42497946/13963944 */
 }
 
 .dagger {
-  font-family: monospace;
-  vertical-align: text-top;
+  vertical-align: text-bottom;
 }
 
 li ul li {
