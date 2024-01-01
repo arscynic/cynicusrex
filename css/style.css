@@ -492,7 +492,7 @@ figure summary, figure details pre, #edit-list summary {
 
 #edit-list summary {
   text-decoration: underline;
-  cursor: grab;
+  cursor: pointer;
   color: darkslategrey;
   margin-top: 0;
 }
