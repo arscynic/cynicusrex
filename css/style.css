@@ -64,12 +64,15 @@ body {
 }
 
 code, code pre {
-  display: block;
   font-family: monospace;
   font-size: medium;
   margin: 0.5rem 0 0.5rem 0;
   background-color: cornsilk;
   word-break: break-all;
+}
+
+code:hover {
+  user-select: all;
 }
 
 summary {

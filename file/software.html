@@ -203,10 +203,11 @@
 
     <h2>Packages.</h2>
     <p>I have certain set of software I install on every new machine. Here follows a list I copy paste so I don't have to install everything individually each time.</p>
-    <h3>Default:</h3>
-    <code>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop dolphin catfish ffmpeg ffmpegthumbs gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk keepassxc tmux</code>
 
-    <code>yay -S hblock && yay -S input-remapper-git</code> <!-- if qalculate doesn't install, add -S -->
+    <h3>Default:</h3>
+    <code><pre>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop dolphin catfish ffmpeg ffmpegthumbs gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk keepassxc tmux</pre></code>
+
+    <code><pre>yay -S hblock && yay -S input-remapper-git</pre></code> <!-- if qalculate doesn't install, add -S -->
 
     <p>Direct download:</p>
 
@@ -215,9 +216,9 @@
     </ul>
     
     <h3>Optional/legacy:</h3>
-    <code>sudo pacman -Syu --needed element-desktop shotcut libreoffice-still calibre rssguard spotify-launcher npm discord bluez bluez-utils blueberry pulseaudio-bluetooth gst-plugins-good linux-lts texlive-basic texlive-latex texlive-latexextra<!--  texstudio sagemath sagemath-doc --> xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils redshift playerctl xfce4-systemload-plugin xfce4-sensors-plugin baobab gst-plugins-good peek geany-plugins</code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
-    <code>npm install -g live-server</code>
-    <code>yay -S autokey-gtk && yay -S lyx && yay -S monitorix</code>
+    <code><pre>sudo pacman -Syu --needed element-desktop shotcut libreoffice-still calibre rssguard spotify-launcher npm discord bluez bluez-utils blueberry pulseaudio-bluetooth gst-plugins-good linux-lts texlive-basic texlive-latex texlive-latexextra<!--  texstudio sagemath sagemath-doc --> xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils redshift playerctl xfce4-systemload-plugin xfce4-sensors-plugin baobab gst-plugins-good peek geany-plugins</pre></code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
+    <code><pre>npm install -g live-server</pre></code>
+    <code><pre>yay -S autokey-gtk && yay -S lyx && yay -S monitorix</pre></code>
     
     <p>Direct downloads:</p>
     <ul>
@@ -259,16 +260,14 @@
     <p>To share a drive between Linux and Windows (11?) on a dual-boot setup and ensure Microsoft's incompetence doesn't delete your files, disable Windows' enabled by default fast startup: Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span>.</p>
 
     <h3 id="bashrc">~/.bashrc.</h3>
-    <code>
-<pre>alias xyz="xdg-open path/to/file.ods"
+    <code><pre>alias xyz="xdg-open path/to/file.ods"
 alias xyz="cd path/to/folder/"
 alias xyz="cd /path/to/scripts/ && ./script-name.sh $1"
 alias upd="yes | sudo pacman -Syu"
 alias gimps="cd .GIMPS/p95v308b17.linux64/ && ./mprime -m"
 alias clean="sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)"
 alias gitp="git push -u origin main"
-sleep 1; xset dpms force off</pre>
-    </code>
+sleep 1; xset dpms force off</pre></code>
 
 <!--     <h3>gvim.</h3>
 
@@ -292,18 +291,15 @@ sleep 1; xset dpms force off</pre>
     </ul>
 
     <p>Globally block 3rd-party scripts and 3rd-party frames.</p>
-    <code>
-<pre>* * 3p-frame block
-* * 3p-script block</pre>
-    </code>
+    <code><pre>* * 3p-frame block
+* * 3p-script block</pre></code>
 
     <h3 id="hblock">hBlock.</h3>
-    <p>Run <em>hblock</em> in commandline to activate it, and run "<i>cat /etc/hosts</i>" to <a href="https://github.com/hectorm/hblock#installation">verify</a>. I manually add other domains listed at <a href="https://github.com/StevenBlack/hosts">https://github.com/StevenBlack/hosts</a>.</p>
+    <p>Run <em>hblock</em> in commandline to activate it, and run <code>cat /etc/hosts</code> to <a href="https://github.com/hectorm/hblock#installation">verify</a>. I manually add other domains listed at <a href="https://github.com/StevenBlack/hosts">https://github.com/StevenBlack/hosts</a>.</p>
 
     <h3 id="vscodium">VSCodium.</h3>
-    <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: workbench.colorCustomizations → click “Edit in settings.json”</p>
-    <code>
-<pre>{
+    <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click “Edit in settings.json”</p>
+    <code><pre>{
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "cSpell.language": "en-GB",
@@ -322,13 +318,12 @@ sleep 1; xset dpms force off</pre>
   "workbench.colorTheme": "Default Light Modern",
   "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
   "editor.fontSize": 16,
-}</pre>
-    </code>
+}</pre></code>
 
     <p>Frequently used shortcuts:</p>
     <ul>
-      <li>To select multiple instances of the same character combination, select the combination (word, sentence, etc.) and press: <code>control + shift + L</code></li>
-      <li>Select multiple instances of the same isolated word: place the cursor on the word and press: <code>control + shift + l</code></li>
+      <li>To select multiple instances of the <em>same character combination</em>, select the combination (word, sentence, etc.) and press: <code>control + shift + L</code></li>
+      <li>Select multiple instances of the <em>same isolated word</em>: place the cursor on the word and press: <code>control + shift + L</code></li>
       <li><a href="https://stackoverflow.com/a/59221721/13963944">Rename the opening/closing tag pairs in HTML</a>: place the cursor on the tag and press <i>F2</i>.</li>
       <li><a href="https://stackoverflow.com/a/62537701/13963944">Wrap selected text with tags</a>: <code>control + shift + P</code> and select “<i>Emmet: Wrap with Abbreviation</i>”.</li>
       <li><a href="https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor">Multiple selections (multi-cursor)</a>: <code>alt + click</code> and/or add more with: <code>shift + alt + up/down</code></li>
@@ -342,12 +337,10 @@ sleep 1; xset dpms force off</pre>
       <li><code>sudo pacman -S inotify-tools
       </code></li>
       <li>Create a shell script e.g., <i>auto_execute.sh</i> containing the following code below:<br>
-        <code>
-<pre>#!/bin/bash
+        <code><pre>#!/bin/bash
 while inotifywait -e modify,move_self -qq your_python_script.py; do
   python3 your_python_script.py
-done</pre>
-        </code>
+done</pre></code>
         Make sure the shell script is executable by right clicking it → “Properties” → “Permissions” → “Program: ☑ Allow this file to run as a program”, or by running the following command: <code>chmod +x auto_execute.sh</code></li>
       <li>Open the terminal in VSCodium and run <i>auto_execute.sh</i></li>
     </ol>
@@ -355,7 +348,7 @@ done</pre>
     <p>Now, whenever you save <i>your_python_script.py</i>, it will instantly throw the output in the VSCodium terminal, or whatever terminal you executed the shell script in. Source: ChatGPT.</p>
 
     <h3 id="lyx">LyX.</h3>
-    <p>To build <cite>LyX</cite> one needs packages: <i>make</i> <i>automake</i> <i>autoconf</i> <i>base-devel</i> , otherwise it throws the following error: </p>
+    <p>To build <cite>LyX</cite> one needs packages <code>make automake autoconf base-devel</code>, otherwise it throws the following error: </p>
 
     <blockquote>
       <p>“configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR”</p>
@@ -721,53 +714,46 @@ authWarningSlack:   20
 
     <h3 id="remap">Input Remapper.</h3>
 
-    <code>
-<pre>sudo systemctl restart input-remapper
-sudo systemctl enable input-remapper</pre>
-    </code>
+    <code>sudo systemctl restart input-remapper && systemctl enable input-remapper</code>
 
     <p>MOBA “gaming” mice with lots of buttons might be preconfigured to output letters, numbers, etc. These preconfigurations need to be removed first so you can properly remap them with <cite>Input Remapper</cite>. Otherwise, let's say a button is preconfigured to output number 5, when trying to remap that button, it will remap number 5 on the keyboard is well.</p>
 
     <details>
       <summary>Click to see new mouse configuration.</summary>
-      <code>
-        <p>Input: mouse → Output target: keyboard</p>
-        <ul>
-          <li>XF86Launch5 → KEY_LEFTCTRL + c</li>
-          <li>XF86Launch6 → KEY_LEFTCTRL + v</li>
-          <li>XF86Launch7 → KEY_LEFTCTRL + x</li>
-          <li>XF86Launch8 → KEY_LEFTCTRL + Shift_L + v</li>
-          <li>F24 → Alt_L + KEY_F4</li>
-        </ul>
+      <p>Input: mouse → Output target: keyboard</p>
+      <ul>
+        <li>XF86Launch5 → <code>KEY_LEFTCTRL + c</code></li>
+        <li>XF86Launch6 → <code>KEY_LEFTCTRL + v</code></li>
+        <li>XF86Launch7 → <code>KEY_LEFTCTRL + x</code></li>
+        <li>XF86Launch8 → <code>KEY_LEFTCTRL + Shift_L + v</code></li>
+        <li>F24 → <code>Alt_L + KEY_F4</code></li>
+      </ul>
 
       <p>Input: mouse → Output target: keyboard + mouse</p>
       <ul>
-        <li>XF86Tools → Shift_L + BTN_MIDDLE</li>
+        <li>XF86Tools → <code>Shift_L + BTN_MIDDLE</code></li>
       </ul>
-
-    </code>
     </details>
 
     <details>
       <summary>Click to see old mice configuration.</summary>
-      <code>
-        <p>Input: mouse → Output target: keyboard</p>
-        <ul>
-          <li>Button EXTRA → Control_L + c</li>
-          <li>Button EXTRA + Button LEFT → Prior</li>
-          <li>Button EXTRA + Button MIDDLE → Home</li>
-          <li>Button SIDE → Control_L + v</li>
-          <li>Button SIDE + Button LEFT → Next</li>
-          <li>Button SIDE + Button MIDDLE → End</li>
-        </ul>
-    
-        <p>Input: mouse → Output target: keyboard + mouse</p>
-    
-        <ul>
-          <li>Button MIDDLE → Shift_L + BTN_MIDDLE</li>
-        </ul>
-        
-        <p>Input: keyboard → Output target: keyboard</p></code>
+      <p>Input: mouse → Output target: keyboard</p>
+      <ul>
+        <li>Button EXTRA → <code>Control_L + c</code></li>
+        <li>Button EXTRA + Button LEFT → <code>Prior</code></li>
+        <li>Button EXTRA + Button MIDDLE → <code>Home</code></li>
+        <li>Button SIDE → <code>Control_L + v</code></li>
+        <li>Button SIDE + Button LEFT → <code>Next</code></li>
+        <li>Button SIDE + Button MIDDLE → <code>End</code></li>
+      </ul>
+  
+      <p>Input: mouse → Output target: keyboard + mouse</p>
+  
+      <ul>
+        <li>Button MIDDLE → <code>Shift_L + BTN_MIDDLE</code></li>
+      </ul>
+      
+      <!-- <p>Input: keyboard → Output target: keyboard</p> -->
     </details>
 
   <h2 id="tmux">tmux.</h2>
