@@ -96,6 +96,23 @@ figure {
 /*———————————————————————————————————————————————————————————————*/
 /* Index */
 
+#index-page {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: .5rem;
+}
+
+@media (min-width: 39rem) {
+  #index-page {
+    position: absolute;
+    width: 39rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 #cr-sub-title, nav {
   text-align: center;
 }
