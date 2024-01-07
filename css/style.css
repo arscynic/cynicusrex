@@ -96,11 +96,11 @@ figure {
 /*———————————————————————————————————————————————————————————————*/
 /* Index */
 
-#cr-sub-title, #navbar {
+#cr-sub-title, nav {
   text-align: center;
 }
 
-#index-together, #index-invites, #footer {
+#index-together, #index-invites {
   text-align: center;
 }
 
