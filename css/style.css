@@ -96,7 +96,16 @@ figure {
 /*———————————————————————————————————————————————————————————————*/
 /* Index */
 
-#index-page {
+#cr-sub-title, nav {
+  text-align: center;
+}
+
+#index-together, #index-invites {
+  text-align: center;
+}
+
+/* Removed vertical middle align because it reduces flow when navigating to other pages. */
+/* #index-page {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -111,15 +120,7 @@ figure {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
-
-#cr-sub-title, nav {
-  text-align: center;
-}
-
-#index-together, #index-invites {
-  text-align: center;
-}
+} */
 
 /*———————————————————————————————————————————————————————————————*/
 /* beggar */
