@@ -27,6 +27,11 @@ h3 {
   font-size: larger;
 }
 
+hr {
+  border: 0;
+  border-bottom: 0.06rem solid grey;
+}
+
 p, ol, ul, nav, blockquote, details, code, #author {
   font-size: large;
 }
@@ -620,19 +625,6 @@ Credits to Michael Coker https://stackoverflow.com/a/42497946/13963944 */
   font-size: 1.5rem;
   text-align: center;
   margin: 1.5rem;
-}
-
-.hr-short {
-  border: 0;
-  width: 3rem;
-  border-top: dashed 0.125rem rgba(0, 0, 0, 0.42);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.hr-long {
-  border: 0;
-  border-bottom: 0.06rem solid grey;
 }
 
 .source {
