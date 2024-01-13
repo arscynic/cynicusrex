@@ -32,7 +32,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Mostly excellent free software. <sup>[2023/1/11]</sup></h1>
+    <h1>Mostly excellent free software. <sup>[2023/1/13]</sup></h1>
     
     <div><h2>Linux</h2>
       <ul>
@@ -253,6 +253,7 @@
       <li><a href="#res">Reddit Enhancement Suite</a></li>
       <li><a href="#remap">Input Remapper</a></li>
       <li><a href="#tmux">Tmux</a></li>
+      <li><a href="#multi-search">Multi website/query search</a></li>
       <li><a href="#misc">Miscellaneous</a></li>
     </ol>
 
@@ -761,6 +762,18 @@ authWarningSlack:   20
   <p>List tmux sessions: <code>tmux list-sessions</code></p>
   <p>Reopen/attach to a running tmux session (e.g., session 3): <code>tmux attach -t 3</code></p>
   <p>Exit/detach from a session: press <code>CTRL + b</code> and type <code>d</code>.<p>
+
+  <h2 id="multi-search">Opening multiple websites with multiple word queries with one command.</h2>
+  <p>Insert in the <i>.bashrc</i> file: <code>alias am="cd /path/to/scripts/ && ./search-amazon.sh"</code></p>
+  <p>Insert in a script, here <i>search-amazon.sh</i>:</p>
+
+  <code><pre><!-- search_query="$*" -->xdg-open "https://amazon.fr/s?k=$*"
+xdg-open "https://amazon.de/s?k=$*"
+xdg-open "https://amazon.com.be/s?k=$*"
+xdg-open "https://amazon.nl/s?k=$*"</pre></code>
+
+  <p>To update bash execute: <code>. ~/.bashrc</code></p>
+  <p>Now, within a terminal simply execute <code>am foo bar</code>, and it will open all websites with the same search query.</p>
  
   <h2 id="misc">Miscellaneous.</h2>
   <ul>
