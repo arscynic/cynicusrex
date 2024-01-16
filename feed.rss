@@ -13,6 +13,13 @@
     </image>
   <atom:link href="https://www.cynicusrex.com/feed.rss" rel="self" type="application/rss+xml" />
   <item>
+    <title>CEOs may be tough, but cleaning is tougher.</title>
+    <description>Household cleaning is the toughest job I have ever done. It should not exist.</description>
+    <guid>https://www.cynicusrex.com/file/cleaning.html</guid>
+    <pubDate>Wed, 17 Jan 2024 01:45:00 +0200</pubDate>
+    <comments>https://fosstodon.org/@stardust/</comments>
+  </item>
+  <item>
     <title>What if I paid for all my free software?</title>
     <description>I've always felt guilty by taking for granted the rare breed of virtuous humans that provide free excellent software without relying on advertising. Let's change that and pay, how much would I “lose” anyway?</description>
     <guid>https://www.cynicusrex.com/file/takemymoney.html</guid>
