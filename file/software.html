@@ -33,7 +33,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Mostly excellent free software. <sup>[18 Feb 2023]</sup></h1>
+    <h1>Mostly excellent free software. <sup>[22 Feb 2023]</sup></h1>
     
     <div><h2>Linux</h2>
       <ul>
@@ -206,7 +206,7 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman</pre></code>
+    <code><pre>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool</pre></code>
 
     <code><pre>yay -S hblock && yay -S input-remapper-git</pre></code> <!-- if qalculate doesn't install, add -S -->
 
@@ -241,6 +241,7 @@
     <ol>
       <li><a href="#dual-boot">Dual-boot</a></li>
       <li><a href="#bashrc">~/.bashrc</a></li>
+      <li><a href="#zsh">Zsh</a></li>
       <li><a href="#ubo">uBlock Origin</a></li>
       <li><a href="#hblock">hBlock</a></li>
       <li><a href="#vscodium">VSCodium</a></li>
@@ -272,6 +273,21 @@ alias cync="cd /home/…/public/ && git pull && xdotool key alt+F12 && live-serv
 alias clean="sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)"
 alias gitp="git push -u origin main"
 sleep 1; xset dpms force off</pre></code>
+
+    <h3 id="zsh">Zsh</h3>
+    <p>The only plugin I use for now is <cite>zsh-autosuggestions</cite>: <code>git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions</code></p>
+    <code><pre># Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=100000
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/x/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh</pre></code>
 
 <!--     <h3>gvim.</h3>
 
