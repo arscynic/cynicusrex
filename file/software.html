@@ -33,7 +33,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Mostly excellent free software. <sup>[22 Feb 2023]</sup></h1>
+    <h1>Mostly excellent free software. <sup>[25 Feb 2023]</sup></h1>
     
     <div><h2>Linux</h2>
       <ul>
@@ -275,19 +275,21 @@ alias gitp="git push -u origin main"
 sleep 1; xset dpms force off</pre></code>
 
     <h3 id="zsh">Zsh</h3>
-    <p>The only plugin I use for now is <cite>zsh-autosuggestions</cite>: <code>git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions</code></p>
-    <code><pre># Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=100000
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/x/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh</pre></code>
+    <p>To install Linux Manjaro's zsh config: <code>yay manjaro-zsh-config</code>, and copy-paste the following into your <i>.zshrc</i> file in the home directory.</p>
+    <code><pre># Use powerline
+USE_POWERLINE="true"
+# Has weird character width
+# Example:
+#    is not a diamond
+HAS_WIDECHARS="false"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi</pre></code>
 
 <!--     <h3>gvim.</h3>
 
