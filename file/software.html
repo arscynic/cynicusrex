@@ -423,7 +423,7 @@ done</pre></code>
     <p>If this log spam is present, create a drop-in file for boinc-client.service:</p>
     <code>mkdir /etc/systemd/system/boinc-client.service.d/ && sudo echo -e '[Service]\nLogFilterPatterns=~no authorization protocol specified' > /etc/systemd/system/boinc-client.service.d/wayland-syslog-spam.conf</code>
 
-    <p>To <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC">use BOINC via the GUI</a>, click the previous link. When creating the <i>gui_rpc_auth.cfg</i> file and launching boincmgr via commandline it will probably work, but when launching BOINC Manager via an application launcher I recall it throwing an “gui_rpc_auth.cfg exists but can't be read. Check the File permissions.” error message. Changing the file's permissions fixed this: <code>chmod 640 ~/gui_rpc_auth.cfg</code>.</p>
+    <p>To <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC">use BOINC via the GUI</a>, click the previous link. When creating the <i>gui_rpc_auth.cfg</i> file and launching boincmgr via commandline it will probably work, but when launching BOINC Manager via an application launcher I recall it throwing an “gui_rpc_auth.cfg exists but can't be read. Check the File permissions.” error message. <a href="https://boinc.berkeley.edu/forum_thread.php?id=14013&postid=101192">Changing the file's permissions fixed this</a>: <code>chmod 640 ~/gui_rpc_auth.cfg</code>.</p>
 
     <h3 id="xscreensaver">XScreenSaver.</h3>
     <p>To <a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">enable XScreenSaver in KDE Plasma</a>.</p>
