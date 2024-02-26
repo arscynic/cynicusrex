@@ -240,8 +240,7 @@
 
     <ol>
       <li><a href="#dual-boot">Dual-boot</a></li>
-      <li><a href="#bashrc">~/.bashrc</a></li>
-      <li><a href="#zsh">Zsh</a></li>
+      <li><a href="#shell">Shell</a></li>
       <li><a href="#ubo">uBlock Origin</a></li>
       <li><a href="#hblock">hBlock</a></li>
       <li><a href="#vscodium">VSCodium</a></li>
@@ -263,7 +262,8 @@
     <h3 id="dual-boot">Dual-boot and sharing a drive between Linux and Windows.</h3>
     <p>To share a drive between Linux and Windows (11?) on a dual-boot setup and ensure Microsoft's incompetence doesn't delete your files, disable Windows' enabled by default fast startup: Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span>.</p>
 
-    <h3 id="bashrc">~/.bashrc.</h3>
+    <h3 id="shell">Shell.</h3>
+    <h4>Bash/Zsh aliases.</h4>
     <code><pre>alias xyz="xdg-open path/to/file.ods"
 alias xyz="cd path/to/folder/"
 alias xyz="cd /path/to/scripts/ && ./script-name.sh $1"
@@ -274,7 +274,7 @@ alias clean="sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -
 alias gitp="git push -u origin main"
 sleep 1; xset dpms force off</pre></code>
 
-    <h3 id="zsh">Zsh</h3>
+    <h4>Zsh.</h4>
     <p>To install Linux Manjaro's zsh config: <code>yay manjaro-zsh-config</code>, and copy-paste the following into your <i>.zshrc</i> file in the home directory.</p>
     <code><pre># Use powerline
 USE_POWERLINE="true"
