@@ -33,7 +33,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Mostly excellent free software. <sup>[25 Feb 2023]</sup></h1>
+    <h1>Mostly excellent free software. <sup>[26 Feb 2023]</sup></h1>
     
     <div><h2>Linux</h2>
       <ul>
@@ -416,7 +416,14 @@ done</pre></code>
     <p>The desktop environment of the remote computer should now be visible. Don't forget to set a password in <a href="https://wiki.archlinux.org/title/x11vnc#Setting_a_password">x11vnc</a> when leaving the connection open indefinitely.</p>
 
     <h3 id="boinc">BOINC.</h3>
-    <p>Double-check if <a href="https://wiki.archlinux.org/index.php?title=BOINC&oldid=794657#Log_spam."><i>boinc</i> causes log spam</a>.</p>
+    <p>Install package <i>boinc</i>. Add your username to the boinc user group: <code>gpasswd -a x boinc</code>. Start boinc: <code>systemctl start boinc-client.service</code>.</p>
+
+    <p>Double-check if <a href="https://wiki.archlinux.org/index.php?title=BOINC&oldid=794657#Log_spam."><i>boinc</i> causes log spam</a>: <code>journalctl --grep='Authorization required, but no authorization protocol specified'</code></p>
+
+    <p>If this log spam is present, create a drop-in file for boinc-client.service:</p>
+    <code>mkdir /etc/systemd/system/boinc-client.service.d/ && sudo echo -e '[Service]\nLogFilterPatterns=~no authorization protocol specified' > /etc/systemd/system/boinc-client.service.d/wayland-syslog-spam.conf</code>
+
+    <p>To <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC">use BOINC via the GUI</a>, click the previous link. When creating the <i>gui_rpc_auth.cfg</i> file and launching boincmgr via commandline it will probably work, but when launching BOINC Manager via an application launcher I recall it throwing an “gui_rpc_auth.cfg exists but can't be read. Check the File permissions.” error message. Changing the file's permissions fixed this: <code>chmod 640 ~/gui_rpc_auth.cfg</code>.</p>
 
     <h3 id="xscreensaver">XScreenSaver.</h3>
     <p>To <a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">enable XScreenSaver in KDE Plasma</a>.</p>
