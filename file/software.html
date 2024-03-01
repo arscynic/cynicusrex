@@ -203,27 +203,15 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool qt5-imageformats</pre></code>
+    <code><pre>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool qt5-imageformats xournalpp</pre></code>
 
-    <code><pre>yay -S hblock && yay -S input-remapper-git</pre></code> <!-- if qalculate doesn't install, add -S -->
+    <code><pre>yay autokey-gtk && yay sblock-git<!--  && yay hblock --> && yay input-remapper-git && yay megasync-bin && yay vscodium-bin && yay betterbird-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin</pre></code> <!-- if qalculate doesn't install, add -S -->
 
-    <p>Direct download:</p>
-
-    <ul>
-      <li><a href="https://mega.io/desktop#downloadapps">MEGA desktop app</a></li>
-    </ul>
+    <code><pre>npm install -g live-server</pre></code>
     
     <h3>Optional/legacy:</h3>
-    <code><pre>sudo pacman -Syu --needed element-desktop shotcut libreoffice-fresh calibre rssguard spotify-launcher npm discord bluez bluez-utils texlive-basic texlive-latex texlive-latexextra<!--  texstudio sagemath sagemath-doc --> xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils redshift playerctl xfce4-systemload-plugin xfce4-sensors-plugin baobab gst-plugins-good peek geany-plugins</pre></code> <!-- thunderbird birdtray clementine torbrowser-launcher xournalpp audio-recorder-->
-    <code><pre>npm install -g live-server</pre></code>
-    <code><pre>yay -S autokey-gtk && yay -S lyx && yay -S monitorix && yay -S simplescreenrecorder-bin</pre></code>
-    
-    <p>Direct downloads:</p>
-    <ul>
-      <li><a href="https://github.com/VSCodium/vscodium/releases">VSCodium-linux-x64…</a></li>
-      <li><a href="https://www.betterbird.eu/downloads/index.php">Betterbird</a></li>
-      <li><a href="https://github.com/rustdesk/rustdesk/releases/">rustdesk-…-x86_64.AppImage</a></li>
-    </ul>
+    <code><pre>sudo pacman -Syu --needed element-desktop shotcut libreoffice-fresh calibre rssguard spotify-launcher npm discord bluez bluez-utils texlive-basic texlive-latex texlive-latexextra<!--  texstudio sagemath sagemath-doc --> xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils redshift playerctl xfce4-systemload-plugin xfce4-sensors-plugin baobab gst-plugins-good peek geany-plugins</pre></code> <!-- thunderbird birdtray clementine torbrowser-launcher audio-recorder-->
+
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
       
     <!-- <p><em>Subliminal</em>, necessary to use <a href="https://wiki.archlinux.org/index.php/Mpv#Scripts">scripts</a> that automatically download and sync subtitles in <em>mpv</em>:</p>
