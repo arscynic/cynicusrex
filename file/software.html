@@ -224,10 +224,9 @@
     <h2>To configure.</h2>
 
     <ol>
-      <li><a href="#dual-boot">Dual-boot</a></li>
       <li><a href="#shell">Shell</a></li>
       <li><a href="#ubo">uBlock Origin</a></li>
-      <li><a href="#hblock">hBlock</a></li>
+      <li><a href="#hosts">Hosts file</a></li>
       <li><a href="#vscodium">VSCodium</a></li>
       <li><a href="#lyx">LyX</a></li>
       <li><a href="#plasma">KDE Plasma</a></li>
@@ -241,11 +240,9 @@
       <li><a href="#tmux">Tmux</a></li>
       <li><a href="#multi-search">Multi website/query search</a></li>
       <li><a href="#misc">Miscellaneous</a></li>
-      <li><a href="#adb">Uninstall Android system app with ADB.</a></li>
+      <li><a href="#adb">Uninstall Android system app with ADB</a></li>
+      <li><a href="#dual-boot">Dual-boot</a></li>
     </ol>
-
-    <h3 id="dual-boot">Dual-boot and sharing a drive between Linux and Windows.</h3>
-    <p>To share a drive between Linux and Windows (11?) on a dual-boot setup and ensure Microsoft's incompetence doesn't delete your files, disable Windows' enabled by default fast startup: Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span>.</p>
 
     <h3 id="shell">Shell.</h3>
     <h4>Bash/Zsh aliases.</h4>
@@ -260,7 +257,7 @@ alias gitp="git push -u origin main"
 sleep 1; xset dpms force off</pre></code>
 
     <h4>Zsh.</h4>
-    <p>To install Linux Manjaro's zsh config: <code>yay manjaro-zsh-config</code>, and copy-paste the following into your <i>.zshrc</i> file in the home directory.</p>
+    <p>To install <a href="https://github.com/Chrysostomus/manjaro-zsh-config">Linux Manjaro's zsh config</a>: <code>yay manjaro-zsh-config</code>, and copy-paste the following into your <i>.zshrc</i> file in the home directory.</p>
     <code><pre># Use powerline
 USE_POWERLINE="true"
 # Has weird character width
@@ -301,8 +298,14 @@ fi</pre></code>
     <code><pre>* * 3p-frame block
 * * 3p-script block</pre></code>
 
-    <h3 id="hblock">hBlock.</h3>
-    <p>Run <em>hblock</em> in commandline to activate it, and run <code>cat /etc/hosts</code> to <a href="https://github.com/hectorm/hblock#installation">verify</a>. I manually add other domains listed at <a href="https://github.com/StevenBlack/hosts">https://github.com/StevenBlack/hosts</a>.</p>
+    <h3 id="hosts">Hosts file.</h3>
+    <h4>sBlock.</h4>
+    <code><pre>mkdir /etc/sblock/ && sudo echo -e 'http://sbc.io/hosts/hosts\nhttp://sbc.io/hosts/alternates/porn-only/hosts' > /etc/sblock/sources.list
+sblock</pre>
+    </code>
+
+    <p>To whitelist a domain, add cynicusrex.com and www.cynicusrex.com to <code>/etc/sblock/allow.list</code> and run <code>sblock</code> again.</p>
+
 
     <h3 id="vscodium">VSCodium.</h3>
     <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click “Edit in settings.json”</p>
@@ -793,7 +796,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
   <p>To update bash execute: <code>. ~/.bashrc</code></p>
   <p>Now, within a terminal simply execute <code>am foo bar</code>, and it will open all websites searching for “foo bar”.</p>
  
-  <h2 id="misc">Miscellaneous.</h2>
+  <h2 id="misc">Miscellaneous commands.</h2>
   <ul>
     <li><a href="https://averagelinuxuser.com/clean-arch-linux/">Commands to clean Arch Linux</a>; respectively removes cache and orphaned packages: <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code></li>
     <li><a href="https://wiki.archlinux.org/title/Display_Power_Management_Signaling#Modify_DPMS_and_screensaver_settings_with_a_command">Command to manually turn off display/monitor/screen</a>. This is useful for certains laptops, or if your monitor only has one button to control everything; if that button breaks due to turning your monitor on and off frequently… <code>sleep 1; xset dpms force off</code></li>
@@ -802,13 +805,16 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     </code></li>
     <li><a href="https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/github-caching_password_in_git.pdf">Command to cache the <i>git</i> password</a>, for one hour: <code>git config --global credential.helper 'cache --timeout=3600'</code></li>
     <li><a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">Command to change the default browser</a> for <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595">Telegram</a>, Betterbird, etc. Even when choosing Vivaldi Browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (Telegram) still use Firefox/Chromium: <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code></li>
-    <li>Command to control media players: <code>playerctl play-pause/next/previous</code></li>
-    <li>Command to control volume: <code>amixer set Master n%+/n%-</code></li>
-    <li>Command to launch terminal with a command: <code>konsole -e btop</code></li>
-    <li>Command to activate XScreenSaver: <code>xscreensaver-command -activate</code></li>
-    <li>Command to lock screen: <code>xscreensaver-command -lock</code></li>
+    <li>Control media players: <code>playerctl play-pause/next/previous</code></li>
+    <li>Control volume: <code>amixer set Master n%+/n%-</code></li>
+    <li>Launch a terminal session including a command: <code>konsole -e btop</code></li>
+    <li>Activate XScreenSaver: <code>xscreensaver-command -activate</code></li>
+    <li>Lock screen: <code>xscreensaver-command -lock</code></li>
     <li><a href="https://askubuntu.com/a/20416">Find and replace text within a file using a command</a>: <code>sed -i 's/original/new/g' file.txt</code></li>
-    <li>To update download mirrors if EndeavourOS' reflector-simple fails to do so. 1. <code>yay rate-mirrors</code>, 2. <code>rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</code></li>
+    <li>To update EndeavourOS' download mirrors if <i>reflector-simple</i> fails to connect to the mirror URLs:
+      <code><pre>yay rate-mirrors
+rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</pre>
+      </code></li>
   </ul>
 
   <h2 id="adb">Uninstall an Android system app with ADB.</h2>
@@ -822,6 +828,9 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     <li>Uninstall the package: <code>pm uninstall -k --user 0 com.microsoft.appmanager</code></li>
     <li>Verify unistallation: <code>pm list packages -s | grep "microsoft"</code></li>
   </ol>
+
+  <h3 id="dual-boot">Dual-boot and sharing a drive between Linux and Windows.</h3>
+  <p>To share a drive between Linux and Windows (11?) on a dual-boot setup and ensure Microsoft's incompetence doesn't delete your files, disable Windows' enabled by default fast startup: Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span>.</p>
 
 <!-- ///////////////////// Legacy stuff ///////////////////// -->
 
