@@ -34,7 +34,7 @@
 <body>
   <div id="setup-page">
     <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software.</h1>
-    <p>Latest update: 4 March 2023.</p>
+    <p>Latest update: 5 March 2023.</p>
     
     <div><h2>Linux</h2>
       <ul>
@@ -832,7 +832,11 @@ rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</pre>
 
   <h3 id="windoze">Windoze nonsense.</h3>
   <h4>Dual-boot and sharing a drive between Linux and Windows.</h4>
-  <p>To share a drive between Linux and Windows (11?) on a dual-boot setup and ensure Microsoft's incompetence doesn't delete your files, disable Windows' enabled by default fast startup: Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span>.</p>
+  <p>To share a drive between Linux and Windows (11?) on a <a href="https://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation">dual-boot setup and ensure the drives' files don't get deleted</a>, disable Windows' enabled by default fast startup <em>and</em> hibernation: </p>
+  <ol>
+    <li>Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span></li>
+    <li><code>powercfg /H off</code></li>
+  </ol>
 
   <h4>Bypass Windows 11 Microsoft account prompt.</h4>
   <p>When prompted press <code>Shift + F10</code>, and in cmd.exe type <code><abbr title="out of box experience">oobe</abbr>\BypassNRO</code> and press enter to reboot. Then click “I don't have internet” → “Continue with limited setup”. When asked to enter your name type “Screw Microsoft”. Unethical bastards.</p>
