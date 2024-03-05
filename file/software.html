@@ -835,7 +835,7 @@ rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</pre>
   <p>To share a drive between Linux and Windows (11?) on a <a href="https://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation">dual-boot setup and ensure the drives' files don't get deleted</a>, disable Windows' enabled by default fast startup <em>and</em> hibernation: </p>
   <ol>
     <li>Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span></li>
-    <li><code>powercfg /H off</code></li>
+    <li>In cmd.exe: <code>powercfg /H off</code></li>
   </ol>
 
   <h4>Bypass Windows 11 Microsoft account prompt.</h4>
