@@ -33,7 +33,7 @@
 
 <body>
   <div id="setup-page">
-    <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software.</h1>
+    <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p>Latest update: 5 March 2023.</p>
     
     <div><h2>Linux</h2>
@@ -187,7 +187,7 @@
   <hr>
 
   <div class="readability">
-    <h1>Linux installation checklist.</h1>
+    <h1>Linux installation checklist</h1>
     <p class="sub-title">Installation checklist of my preferred Arch based Linux operating system (<abbr title="operating system">OS</abbr>) EndeavourOS (or Manjaro). Need help? Read the <a href="https://discovery.endeavouros.com">EndeavourOS wiki</a>, the <a href="https://wiki.manjaro.org/index.php/Main_Page">Manjaro wiki</a> or use the remarkably extensive <a href="https://archlinux.org"> ArchWiki</a>.</p>
     
     <ol>
@@ -200,7 +200,7 @@
 
     <p class="fleuron">❦</p>
 
-    <h2>Packages.</h2>
+    <h2>Packages</h2>
     <p>I have certain set of software I install on every new machine. Here follows a list I copy paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
@@ -222,7 +222,7 @@
 
     <p class="fleuron">❦</p>
 
-    <h2>To configure.</h2>
+    <h2>To configure</h2>
 
     <ol>
       <li><a href="#shell">Shell</a></li>
@@ -245,8 +245,8 @@
       <li><a href="#windoze">Windoze nonsense</a></li>
     </ol>
 
-    <h3 id="shell">Shell.</h3>
-    <h4>Bash/Zsh aliases.</h4>
+    <h3 id="shell">Shell</h3>
+    <h4>Bash/Zsh aliases</h4>
     <code><pre>alias xyz="xdg-open path/to/file.ods"
 alias xyz="cd path/to/folder/"
 alias xyz="cd /path/to/scripts/ && ./script-name.sh $1"
@@ -257,7 +257,7 @@ alias clean="sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -
 alias gitp="git push -u origin main"
 sleep 1; xset dpms force off</pre></code>
 
-    <h4>Zsh.</h4>
+    <h4>Zsh</h4>
     <p>To install Linux <a href="https://github.com/Chrysostomus/manjaro-zsh-config">Manjaro's zsh config</a>: <code>yay manjaro-zsh-config</code>, and copy-paste the following into your <i>.zshrc</i> file in the home directory.</p>
     <code><pre># Use powerline
 USE_POWERLINE="true"
@@ -274,7 +274,7 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi</pre></code>
 
-<!--     <h3>gvim.</h3>
+<!--     <h3>gvim</h3>
 
     <ol><li><a href="https://www.npmjs.com/package/live-server">Live Server</a></li>
     <li>gvim (<a href="https://vimawesome.com">plugins</a> installed with <a href="https://github.com/junegunn/vim-plug">vim-plug</a>: 
@@ -285,7 +285,7 @@ fi</pre></code>
       <a href="https://github.com/tpope/vim-commentary">commentary.vim</a>)
     </li></ol> -->
 	  
-    <h3 id="ubo">uBlock Origin.</h3>
+    <h3 id="ubo">uBlock Origin</h3>
     <ul>
       <li>☐ “Hide placeholders of blocked elements”.</li>
       <li>☑ “Enable cloud storage support”. And don't forget to import from cloud storage the “Filter lists” and “My rules”. Subsequently export to cloud storage all future additions.</li>
@@ -299,8 +299,8 @@ fi</pre></code>
     <code><pre>* * 3p-frame block
 * * 3p-script block</pre></code>
 
-    <h3 id="hosts">Hosts file.</h3>
-    <h4>sBlock.</h4>
+    <h3 id="hosts">Hosts file</h3>
+    <h4>sBlock</h4>
     <code><pre>mkdir /etc/sblock/ && sudo echo -e 'http://sbc.io/hosts/hosts\nhttp://sbc.io/hosts/alternates/porn-only/hosts' > /etc/sblock/sources.list
 sblock</pre>
     </code>
@@ -308,7 +308,7 @@ sblock</pre>
     <p>To whitelist a domain, add cynicusrex.com and www.cynicusrex.com to <code>/etc/sblock/allow.list</code> and run <code>sblock</code> again.</p>
 
 
-    <h3 id="vscodium">VSCodium.</h3>
+    <h3 id="vscodium">VSCodium</h3>
     <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click “Edit in settings.json”</p>
     <code><pre>{
     "editor.tabSize": 2,
@@ -346,7 +346,7 @@ sblock</pre>
       <li>Comment out an entire line: <code>control + /</code></li>
     </ul>
 
-    <h4>Automatically execute a Python script in VSCodium when it is updated.</h4>
+    <h4>Automatically execute a Python script in VSCodium when it is updated</h4>
     <ol>
       <li><code>sudo pacman -S inotify-tools
       </code></li>
@@ -361,15 +361,15 @@ done</pre></code>
 
     <p>Now, whenever you save <i>your_python_script.py</i>, it will instantly throw the output in the VSCodium terminal, or whatever terminal you executed the shell script in. Source: ChatGPT.</p>
 
-    <h3 id="lyx">LyX.</h3>
+    <h3 id="lyx">LyX</h3>
     <p>To build <cite>LyX</cite> one needs packages <code>make automake autoconf base-devel</code>, otherwise it throws the following error: </p>
 
     <blockquote>
       <p>“configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR”</p>
     </blockquote>
 
-    <h3 id="plasma">KDE Plasma.</h3>
-    <h4>Custom KRunner/Plasma browser search query.</h4>
+    <h3 id="plasma">KDE Plasma</h3>
+    <h4>Custom KRunner/Plasma browser search query</h4>
     <p>To configure Plasma search to open a browser with a query when entering “xyz example.com”, e.g., “viv example.com” that opens example.com in Vivaldi browser:</p>
 
     <blockquote>
@@ -383,12 +383,12 @@ done</pre></code>
     <h4>Web Search Keywords backup</h4>
     <p>To back up all your custom websites added to the <i>Web Search Keywords</i> KRunner plugin, navigate to “ ~/.local/share/kservices5/searchproviders/” and back up the containing files.</p>
 
-    <h3 id="vivaldi">Vivaldi.</h3>
+    <h3 id="vivaldi">Vivaldi</h3>
     <p>To remove Vivaldi's header / title bar, open Vivaldi's settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
       display: none;
       }</code></p>
 
-    <h3 id="remmina">Remmina.</h3>
+    <h3 id="remmina">Remmina</h3>
     <p>On the remote computer (server) to connect to:</p>
     <ol>
       <li>Install packages: libvncserver x11vnc</li>
@@ -404,7 +404,7 @@ done</pre></code>
 
     <p>The desktop environment of the remote computer should now be visible. Don't forget to set a password in <a href="https://wiki.archlinux.org/title/x11vnc#Setting_a_password">x11vnc</a> when leaving the connection open indefinitely.</p>
 
-    <h3 id="boinc">BOINC.</h3>
+    <h3 id="boinc">BOINC</h3>
     <p>Install package <i>boinc</i>. Add your username to the boinc user group: <code>gpasswd -a x boinc</code>. Start boinc: <code>systemctl start boinc-client.service</code>.</p>
 
     <p>Double-check if <a href="https://wiki.archlinux.org/index.php?title=BOINC&oldid=794657#Log_spam."><i>boinc</i> causes log spam</a>: <code>journalctl --grep='Authorization required, but no authorization protocol specified'</code></p>
@@ -416,7 +416,7 @@ done</pre></code>
 
     <p>To make sure the <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC:~:text=autostart%20that%20on%20Xorg%20startup">mouse input suspends the tasks</a> too—after startup/boot/login—and not only keyboard inputs: <code>echo 'xhost si:localuser:boinc' > ~/.xprofile</code>. Or just run <code>xhost si:localuser:boinc</code> in a terminal to not make it persistent.</p>
 
-    <h3 id="xscreensaver">XScreenSaver.</h3>
+    <h3 id="xscreensaver">XScreenSaver</h3>
     <p>To <a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">enable XScreenSaver in KDE Plasma</a>.</p>
     <details>
   <summary>Click to expand the .xscreensaver file content.</summary>
@@ -723,19 +723,19 @@ authWarningSlack:   20
     </code>
     </details>
 
-    <h3 id="yt">Enhancer for YouTube.</h3>
+    <h3 id="yt">Enhancer for YouTube</h3>
     <details>
       <summary>Click to expand the exported backup content.</summary>
       <code>{"version":"2.0.122.1","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":100,"blackbars":false,"blockautoplay":true,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":false,"cinemamodewideplayer":false,"controlbar":{"active":true,"autohide":false,"centered":true,"position":"absolute"},"controls":["loop","cinema-mode","size","pop-up-player","speed","screenshot","options"],"controlsvisible":false,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":true,"controlvolumemousebutton":false,"convertshorts":false,"customcolors":{"--dimmer-text":"#cccccc","--hover-background":"#232323","--main-background":"#111111","--main-color":"#00adee","--main-text":"#eff0f1","--second-background":"#181818","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":false,"date":1687771133142,"defaultvolume":true,"disableautoplay":true,"executescript":false,"expanddescription":true,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":true,"hideshorts":true,"ignoreplaylists":true,"ignorepopupplayer":false,"localecode":"en_GB","localedir":"ltr","message":false,"miniplayer":true,"miniplayerposition":"_top-left","miniplayersize":"_560x315","newestcomments":false,"overridespeeds":true,"pauseforegroundtab":true,"pausevideos":true,"popuplayersize":"960x540","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd720","qualityplaylistsfullscreen":"hd1440","qualityvideos":"hd1440","qualityvideosfullscreen":"hd1440","reload":false,"reversemousewheeldirection":false,"selectquality":true,"selectqualityfullscreenoff":true,"selectqualityfullscreenon":true,"speed":1,"speedvariation":0.25,"stopvideos":false,"theatermode":true,"theme":"default-dark","themevariant":"youtube-deep-dark.css","update":1706602006913,"volume":75,"volumemultiplier":3,"volumevariation":5,"wideplayer":false,"wideplayerviewport":false}}</code>
     </details>
     
-    <h3>Reddit Enhancement Suite.</h3>
+    <h3>Reddit Enhancement Suite</h3>
     <p>☑ “Hide All Child Comments”.</p>
 
-    <!-- <h3>LanguageTool.</h3>
+    <!-- <h3>LanguageTool</h3>
     <p>☐ “Enable rephrasing”.</p> -->
 
-    <h3 id="remap">Input Remapper.</h3>
+    <h3 id="remap">Input Remapper</h3>
 
     <code>sudo systemctl restart input-remapper && systemctl enable input-remapper</code>
 
@@ -779,13 +779,13 @@ authWarningSlack:   20
       <!-- <p>Input: keyboard → Output target: keyboard</p> -->
     </details>
 
-  <h2 id="tmux">tmux.</h2>
+  <h2 id="tmux">tmux</h2>
   <p><cite>tmux</cite> cheat sheet: <a href="https://tmuxcheatsheet.com">https://tmuxcheatsheet.com</a>.</p>
   <p>List tmux sessions: <code>tmux list-sessions</code></p>
   <p>Reopen/attach to a running tmux session (e.g., session 3): <code>tmux attach -t 3</code></p>
   <p>Exit/detach from a session: press <code>CTRL + b</code> and type <code>d</code>.<p>
 
-  <h2 id="multi-search">Opening multiple websites with multi-word queries with one command.</h2>
+  <h2 id="multi-search">Opening multiple websites with multi-word queries with one command</h2>
   <p>Insert in the <i>.bashrc</i> file: <code>alias am="cd /path/to/scripts/ && ./search-amazon.sh"</code></p>
   <p>Insert in a script, here <i>search-amazon.sh</i>:</p>
 
@@ -797,7 +797,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
   <p>To update bash execute: <code>. ~/.bashrc</code></p>
   <p>Now, within a terminal simply execute <code>am foo bar</code>, and it will open all websites searching for “foo bar”.</p>
  
-  <h2 id="misc">Miscellaneous commands.</h2>
+  <h2 id="misc">Miscellaneous commands</h2>
   <ul>
     <li><a href="https://averagelinuxuser.com/clean-arch-linux/">Commands to clean Arch Linux</a>; respectively removes cache and orphaned packages: <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code></li>
     <li><a href="https://wiki.archlinux.org/title/Display_Power_Management_Signaling#Modify_DPMS_and_screensaver_settings_with_a_command">Command to manually turn off display/monitor/screen</a>. This is useful for certains laptops, or if your monitor only has one button to control everything; if that button breaks due to turning your monitor on and off frequently… <code>sleep 1; xset dpms force off</code></li>
@@ -818,7 +818,7 @@ rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</pre>
       </code></li>
   </ul>
 
-  <h2 id="adb">Uninstall an Android system app with ADB.</h2>
+  <h2 id="adb">Uninstall an Android system app with ADB</h2>
   <p>How to uninstall a normally uninstallable Android system app, e.g. “Link to Windows”.</p>
   <ol>
     <li>Android settings → Developer options → enable “USB debugging”.</li>
@@ -830,20 +830,20 @@ rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</pre>
     <li>Verify unistallation: <code>pm list packages -s | grep "microsoft"</code></li>
   </ol>
 
-  <h3 id="windoze">Windoze nonsense.</h3>
-  <h4>Dual-boot and sharing a drive between Linux and Windows.</h4>
+  <h3 id="windoze">Windoze nonsense</h3>
+  <h4>Dual-boot and sharing a drive between Linux and Windows</h4>
   <p>To share a drive between Linux and Windows (11?) on a <a href="https://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation">dual-boot setup and ensure the drives' files don't get deleted</a>, disable Windows' enabled by default fast startup <em>and</em> hibernation: </p>
   <ol>
     <li>Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span></li>
     <li>In cmd.exe: <code>powercfg /H off</code></li>
   </ol>
 
-  <h4>Bypass Windows 11 Microsoft account prompt.</h4>
+  <h4>Bypass Windows 11 Microsoft account prompt</h4>
   <p>When prompted press <code>Shift + F10</code>, and in cmd.exe type <code><abbr title="out of box experience">oobe</abbr>\BypassNRO</code> and press enter to reboot. Then click “I don't have internet” → “Continue with limited setup”. When asked to enter your name type “Screw Microsoft”. Unethical bastards.</p>
 
 <!-- ///////////////////// Legacy stuff ///////////////////// -->
 
-<!--<h3>IMWheel.</h3>
+<!--<h3>IMWheel</h3>
     <p>Save the following config to “/home/x/.imwheelrc”:</p>
     <pre><code>"^vivaldi-bin$"
 None, Up, Button4, 2
@@ -853,7 +853,7 @@ None, Down, Button5, 2
 None, Up, Button4, 2
 None, Down, Button5, 2</code></pre> -->
 
-<!--     <h3>Whisker Menu search actions.</h3>
+<!--     <h3>Whisker Menu search actions</h3>
     <details>
   <summary>Click to expand the whiskermenu-...rc file content.</summary>
   <code>
@@ -1086,7 +1086,7 @@ regex=false</pre>
     </code>
     </details>
 
-    <h3>Redshift.</h3>
+    <h3>Redshift</h3>
     <p>Save the following config to “/.config/redshift.conf”:</p>
     <details>
     <summary>Click to expand the Redshift configuration file content.</summary>
@@ -1174,13 +1174,13 @@ screen=0
 
     <p>Auto power-on after boot/resume, and discoverable on startup: <code>sudo xed /etc/bluetooth/main.conf</code> <br> →  [Policy] → AutoEnable=true <br> → [General] → DiscoverableTimeout = 0</p> -->
 
-    <!-- <h2>ckb-next macros.</h2>
+    <!-- <h2>ckb-next macros</h2>
     <p><code>+lctrl,+c,-c,-lctrl</code>, <code>+lctrl,+v,-v,-lctrl</code></p> -->
 
-    <!-- <h2>Login commands.</h2>
+    <!-- <h2>Login commands</h2>
     <p>Add the following line to .profile in home directory [doesn't always work for some reason]: <code>sudo msi-keyboard -m normal -c left,off,low -c middle,off,low -c right,off,low</code></p> -->
 
-    <!-- <h3>Steps to reinitialize git folder after format.</h3>
+    <!-- <h3>Steps to reinitialize git folder after format</h3>
     <p>[Probably not the right way to do it any more.]</p>
     <code>cd &ltrepo-folder&gt</code>
     <code>git init</code>
@@ -1188,7 +1188,7 @@ screen=0
     <code> git fetch</code>
     <code>git reset origin/main</code>
 
-    <h3>…or create a new repository on the command line.</h3>
+    <h3>…or create a new repository on the command line</h3>
     <code>echo "# REPONAME" >> README.md</code>
     <code>git init</code>
     <code>git add README.md</code>
@@ -1197,14 +1197,14 @@ screen=0
     <code>git remote add origin https://codeberg.org/USERNAME/REPONAME</code>
     <code>git push -u origin main</code>
  
-    <h3>…or push an existing repository from the command line.</h3>
+    <h3>…or push an existing repository from the command line</h3>
     <code>git remote add origin https://codeberg.org/USERNAME/REPONAME</code>
     <code>git branch -M main</code>
     <code>git push -u origin main</code> -->
 
     <p class="fleuron">❦</p>
 
-    <!-- <h2>Extensions in VSCodium.</h2>
+    <!-- <h2>Extensions in VSCodium</h2>
     <p>Create <a href="https://github.com/VSCodium/vscodium/blob/master/DOCS.md#extensions-marketplace">project.json</a> at ~/.config/VSCodium containing:<br>
       <code>{
         "extensionsGallery": {
@@ -1216,7 +1216,7 @@ screen=0
         }
       }</code></p> -->
 
-    <h2>Comments.</h2>
+    <h2>Comments</h2>
 
     <div id="mastodon-comments">
       <p>Search for <a id="mastodon-url" href="https://fosstodon.org/@stardust/111603722034691744">https://fosstodon.org/@stardust/111603722034691744</a> (<a id="fosstodon-invite" href="https://fosstodon.org/invite/vPxAFrYb">fosstodon invite</a>) on your preferred <cite>Mastodon</cite> server while logged in, comments appear below.</p>

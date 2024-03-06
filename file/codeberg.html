@@ -38,12 +38,12 @@
 
 <body>
   <div class="readability">
-    <h1>How to migrate multiple static websites from <del>GitHub</del> pages to <a href="https://codeberg.org">Codeberg</a>.</h1>
+    <h1>How to migrate multiple static websites from <del>GitHub</del> pages to <a href="https://codeberg.org">Codeberg</a></h1>
     <p class="sub-title">The official documentation can be found on <a href="https://codeberg.page">https://codeberg.page</a>, but I think it is confusing and incomplete if you want multiple pages and are using a custom domain name.</p>
 
     <hr>
 
-    <h2>Getting your repository on Codeberg.</h2>
+    <h2>Getting your repository on Codeberg</h2>
     <p>So, on the official documentation they say one has to create a repository named “pages” for the static website, but then what if one has multiple websites? It's also plain annoying to have such a name for a repository. Anyway, the following steps allow you to have multiple static pages on Codeberg without having to name them “pages”, ugh.</p>
 
     <ol>
@@ -51,7 +51,7 @@
       <li>Go to the directory on your local machine of which you want the content into your newly created Codeberg repository. For me that was “/home/…/quitfacebook.org/public/”</li>
     </ol>
 
-    <h3>Option 1: keep git history.</h3>
+    <h3>Option 1: keep git history</h3>
     <p>This will save the nice graph that shows all the contributions you made, and all the file versioning history of course.</p>
 
       <code>git remote rename origin old-origin-github</code>
@@ -60,7 +60,7 @@
       <code>git push --set-upstream origin --all</code>
       <code>git push --set-upstream origin --tags</code>
 
-    <h3>Option 2: remove git history.</h3>
+    <h3>Option 2: remove git history</h3>
     <ol>
       <li>Assuming you still have the hidden .git folder, rename it to .git_BAK or whatever, or delete it.</li>
       <li>Open the terminal in that directory and run: <code>git init</code> It will probably show you the following message: “hint: Using 'master' as the name for the initial branch. This default branch name […] The just-created branch can be renamed via this command: git branch -m &lt;name&gt;”</li>
@@ -76,7 +76,7 @@
     <p class="footnote">– – – – –</p>
     <p class="footnote">* <a href="https://matrix.to/#/!wkyjxWeAOBpKMvHbno:matrix.org/$geAD9QFJhURrQ57ov4GvOPh3wuTmZLC28MB5uTv6mY8?via=freeyourgadget.org&via=matrix.org&via=tchncs.de">This typo is intentional, apparently</a>.</p>
 
-    <h2>Domain configurations*.</h2>
+    <h2>Domain configurations*</h2>
     <p>Assuming you have a custom domain name, do the following. If you don't, then the official documentation probably suffices.</p>
 
     <ol>
@@ -106,7 +106,7 @@
 
     <p class="end-crown">♔</p>
 
-    <h2>Comments.</h2>
+    <h2>Comments</h2>
 
     <div id="mastodon-comments">
       <p>Search for <a id="mastodon-url" href="https://fosstodon.org/@stardust/110202336827539450">https://fosstodon.org/@stardust/110202336827539450</a> (<a id="fosstodon-invite" href="https://fosstodon.org/invite/vPxAFrYb">fosstodon invite</a>) on your preferred <cite>Mastodon</cite> server while logged in, comments appear below.</p>
