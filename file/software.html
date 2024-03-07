@@ -34,7 +34,7 @@
 <body>
   <div id="setup-page">
     <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
-    <p>Latest update: 5 March 2023.</p>
+    <p>Latest update: 7 March 2023.</p>
     
     <div><h2>Linux</h2>
       <ul>
@@ -274,6 +274,8 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi</pre></code>
 
+<p>If the font renders incorrectly after a KDE Plasma 6 upgrade, then use the following font in your Konsole profile: <code>NotoSansM Nerd Font Mono</code></p>
+
 <!--     <h3>gvim</h3>
 
     <ol><li><a href="https://www.npmjs.com/package/live-server">Live Server</a></li>
@@ -381,7 +383,10 @@ done</pre></code>
     <p>Or go to the directory containing the <i>vivaldi</i> binary, in my case “/opt/vivaldi/”, and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
 
     <h4>Web Search Keywords backup</h4>
-    <p>To back up all your custom websites added to the <i>Web Search Keywords</i> KRunner plugin, navigate to “ ~/.local/share/kservices5/searchproviders/” and back up the containing files.</p>
+    <p>To back up all your custom websites added to the <i>Web Search Keywords</i> KRunner plugin, navigate to <code>~/.local/share/kf6/searchproviders/</code> and back up the containing files.</p>
+
+    <h4>Revert to X11 from Wayland</h4>
+    <p>The upgrade from KDE Plasma 5 to 6 enables Wayland by default despite using X11 before, and it breaks tons of stuff, e.g., Vivaldi browser became unusable, XScreenSaver does not work, et cetera. To revert to X11 open <abbr title="The Simple Desktop Display Manager">SDDM</abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
 
     <h3 id="vivaldi">Vivaldi</h3>
     <p>To remove Vivaldi's header / title bar, open Vivaldi's settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
