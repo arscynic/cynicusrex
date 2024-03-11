@@ -206,7 +206,7 @@
     <h3>Default:</h3>
     <code><pre>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool qt5-imageformats xournalpp</pre></code>
 
-    <code><pre>yay autokey-gtk && yay sblock-git<!--  && yay hblock --> && yay input-remapper-git && yay megasync-bin && yay vscodium-bin && yay betterbird-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin</pre></code> <!-- if qalculate doesn't install, add -S -->
+    <code><pre>yay autokey-gtk && yay sblock-git<!--  && yay hblock --> && yay input-remapper-git && yay megasync-bin && yay vscodium-bin && yay betterbird-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin && yay rate-mirrors</pre></code> <!-- if qalculate doesn't install, add -S -->
 
     <code><pre>npm install -g live-server</pre></code>
     
@@ -833,10 +833,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     <li>Activate XScreenSaver: <code>xscreensaver-command -activate</code></li>
     <li>Lock screen: <code>xscreensaver-command -lock</code></li>
     <li><a href="https://askubuntu.com/a/20416">Find and replace text within a file using a command</a>: <code>sed -i 's/original/new/g' file.txt</code></li>
-    <li>To update EndeavourOS' download mirrors if <i>reflector-simple</i> fails to connect to the mirror URLs:
-      <code><pre>yay rate-mirrors
-rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</pre>
-      </code></li>
+    <li>To update EndeavourOS' download mirrors if <i>reflector-simple</i> fails to connect to the mirror URLs: <code>rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</code></li>
   </ul>
 
   <h2 id="adb">Uninstall an Android system app with ADB</h2>
