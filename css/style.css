@@ -112,6 +112,26 @@ figure {
   text-align: center;
 }
 
+#for-linux {
+  width: 39rem;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+#for-linux span {
+  font-size: normal;
+  color: papayawhip;
+  background-color: rgba(0, 0, 0, 0.042);
+  padding: 0rem 0.188rem 0rem 0.188rem;
+}
+
+#for-linux span:hover {
+  background-color: lightgreen;
+}
+
 /* Removed vertical middle align because it reduces flow when navigating to other pages. */
 /* #index-page {
   position: absolute;
