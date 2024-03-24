@@ -129,7 +129,7 @@ figure {
 }
 
 #for-linux span:hover {
-  background-color: lightgreen;
+  color: black;
 }
 
 /* Removed vertical middle align because it reduces flow when navigating to other pages. */
