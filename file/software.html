@@ -34,7 +34,7 @@
 <body>
   <div id="setup-page">
     <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
-    <p>Latest update: 24 March 2023.</p>
+    <p class="sub-title">Latest update: 24 March 2023.</p>
     
     <div><h2>Linux</h2>
       <ul>
@@ -189,14 +189,14 @@
 
   <div class="readability">
     <h1>Linux installation checklist</h1>
-    <p class="sub-title">Installation checklist of my preferred Arch based Linux operating system (<abbr title="operating system">OS</abbr>) EndeavourOS (or Manjaro). Need help? Read the <a href="https://discovery.endeavouros.com">EndeavourOS wiki</a>, the <a href="https://wiki.manjaro.org/index.php/Main_Page">Manjaro wiki</a> or use the remarkably extensive <a href="https://archlinux.org"> ArchWiki</a>.</p>
+    <p class="sub-title">Installation checklist of my preferred Arch based Linux operating system (<abbr title="operating system">OS</abbr>) EndeavourOS (or Manjaro). Need help? Read the <a href="https://discovery.endeavouros.com">EndeavourOS wiki</a>, the <a href="https://wiki.manjaro.org/index.php/Main_Page">Manjaro wiki</a>, or use the remarkably extensive <a href="https://archlinux.org"> ArchWiki</a>.</p>
     
     <ol>
       <li>Backup what you don’t want to lose on a separate medium. It brings peace of mind to have a second personal computer (<abbr title="personal computer">PC</abbr>) in case something breaks and renders your current PC temporarily unusable.</li>
       <li>Download the OS and create the install medium with <a href="https://www.ventoy.net">Ventoy</a>.</li>
       <li>To launch the OS from the <abbr title="Universal Serial Bus">USB</abbr> key: reboot and press <i>F12</i> / some other <i>F-key</i> / <i>delete</i> during the startup to pick/edit the drive to boot from. During the start up process it usually mentions which button to push to change boot device.</li>
       <li>Install the OS</a>.</li>
-      <li><strong><a href="#:~:text=Dual%2Dboot%20and%20sharing%20a%20drive%20between%20Linux%20and%20Windows.">Disable fast startup</a> when dual-booting Windows!</strong></li>
+      <li><strong><a href="#windoze">Disable fast startup</a> when dual-booting Windows!</strong></li>
     </ol>
 
     <p class="fleuron">❦</p>
@@ -205,14 +205,14 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular make automake base-devel bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool qt5-imageformats xournalpp grsync</pre></code>
+    <code><pre>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool qt5-imageformats xournalpp grsync libreoffice-fresh calibre spotify-launcher npm make automake base-devel texlive-basic texlive-latex texlive-latexextra remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils baobab peek</pre></code>
 
     <code><pre>yay autokey-gtk && yay sblock-git<!--  && yay hblock --> && yay input-remapper-git && yay megasync-bin && yay vscodium-bin && yay betterbird-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin && yay rate-mirrors</pre></code> <!-- if qalculate doesn't install, add -S -->
 
     <code><pre>npm install -g live-server</pre></code>
     
     <h3>Optional/legacy:</h3>
-    <code><pre>sudo pacman -Syu --needed element-desktop shotcut libreoffice-fresh calibre rssguard spotify-launcher npm discord bluez bluez-utils texlive-basic texlive-latex texlive-latexextra<!--  texstudio sagemath sagemath-doc --> xsane boinc opencl-nvidia seahorse noto-fonts-emoji remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils redshift playerctl xfce4-systemload-plugin xfce4-sensors-plugin baobab gst-plugins-good peek geany-plugins</pre></code> <!-- thunderbird birdtray clementine torbrowser-launcher audio-recorder-->
+    <code><pre>sudo pacman -Syu --needed element-desktop shotcut rssguard discord bluez bluez-utils<!--  texstudio sagemath sagemath-doc --> xsane boinc opencl-nvidia seahorse noto-fonts-emoji redshift playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins</pre></code> <!-- thunderbird birdtray clementine torbrowser-launcher audio-recorder-->
 
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
       
@@ -226,7 +226,7 @@
     <h2>To configure</h2>
 
     <ol>
-      <li><a href="#shell">Shell</a></li>
+      <li><a href="#shell">Shell</a> (Bash, Zsh)</li>
       <li><a href="#ubo">uBlock Origin</a></li>
       <li><a href="#hosts">Hosts file</a></li>
       <li><a href="#vscodium">VSCodium</a></li>
@@ -241,7 +241,7 @@
       <li><a href="#remap">Input Remapper</a></li>
       <li><a href="#tmux">Tmux</a></li>
       <li><a href="#search">Web search</a></li>
-      <li><a href="#misc">Miscellaneous</a></li>
+      <li><a href="#misc">Miscellaneous commands</a></li>
       <li><a href="#adb">Uninstall Android system app with ADB</a></li>
       <li><a href="#windoze">Windoze nonsense</a></li>
     </ol>

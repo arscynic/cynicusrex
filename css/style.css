@@ -274,8 +274,8 @@ figure {
   text-align: left;
 }
 
-#setup-page li {
-  text-align: left;
+#setup-page .sub-title {
+  text-align: center;
 }
 
 #setup-page div {
