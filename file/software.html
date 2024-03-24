@@ -853,7 +853,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     <li>To update EndeavourOS' download mirrors if <i>reflector-simple</i> fails to connect to the mirror URLs: <code>rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</code></li>
   </ul>
 
-  <h2 id="adb">Uninstall an Android system app with ADB</h2>
+  <h2 id="adb">Uninstall an Android system app with <abbr title="Android debug bridge">ADB</abbr></h2>
   <p>How to uninstall a normally uninstallable Android system app, e.g. “Link to Windows”.</p>
   <ol>
     <li>Android settings → Developer options → enable “USB debugging”.</li>
@@ -866,6 +866,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
   </ol>
 
   <h3 id="windoze">Windoze nonsense</h3>
+
   <h4>Dual-boot and sharing a drive between Linux and Windows</h4>
   <p>To share a drive between Linux and Windows (11?) on a <a href="https://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation">dual-boot setup and ensure the drives' files don't get deleted</a>, disable Windows' enabled by default fast startup <em>and</em> hibernation: </p>
   <ol>
@@ -876,6 +877,20 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
   <h4>Bypass Windows 11 Microsoft account prompt</h4>
   <p>When prompted press <code>Shift + F10</code>, and in cmd.exe type <code><abbr title="out of box experience">oobe</abbr>\BypassNRO</code> and press enter to reboot. Then click “I don't have internet” → “Continue with limited setup”. When asked to enter your name type “Screw Microsoft”. Unethical bastards.</p>
 
+  <h4>Disable trending/suggested/Bing/Edge searches from the Windows search box</h4>
+
+  <blockquote>
+    <ol>
+      <li>Launch the registry editor <code>regedit</code></li>
+      <li>Navigate to <code>HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows</code></li>
+      <li>Create a new key called <code>Explorer</code> by right clicking “Windows” → “New” → “Key”</li>
+      <li>Create a DWORD value called <code>DisableSearchBoxSuggestions</code> by right clicking “Explorer” → “New” → “DWORD (32 bit) Value”</li>
+      <li>Assign the <em>hexadecimal</em> value of <code>1</code> to this newly created DWORD and click “OK”</li>
+    </ol>
+  </blockquote>
+
+  <p>Sources: (1) <a href="https://superuser.com/questions/1751366/how-to-remove-trending-searches-in-windows-10-search/1755604#1755604">How to remove "Trending searches" in Windows 10 search?</a> (2) <a href="https://youtu.be/2c4HPDAO_-k">How to: Disable search box suggestions in Windows 11</a>.</p>
+  
     <p class="fleuron">❦</p>
 
     <h2>Comments</h2>
