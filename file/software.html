@@ -423,9 +423,17 @@ done</pre></code>
     <p>To make sure the <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC:~:text=autostart%20that%20on%20Xorg%20startup">mouse input suspends the tasks</a> too—after startup/boot/login—and not only keyboard inputs: <code>echo 'xhost si:localuser:boinc' > ~/.xprofile</code>. Or just run <code>xhost si:localuser:boinc</code> in a terminal to not make it persistent.</p>
 
     <h3 id="xscreensaver">XScreenSaver</h3>
-    <p>To <a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">enable XScreenSaver in KDE Plasma</a>.</p>
+    <p><a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">Enable XScreenSaver in KDE Plasma</a>.</p>
+
+    <h4>Commands</h4>
+    <ul>
+      <li>XScreenSaver settings: <code>xscreensaver-settings</code></li>
+      <li>Manually activate XScreenSaver: <code>xscreensaver-command -activate</code></li>
+      <li>Manually lock screen with XScreenSaver: <code>xscreensaver-command -lock</code></li>
+    </ul>
+    
     <details>
-  <summary>Click to expand the .xscreensaver file content.</summary>
+  <summary>Click to expand my .xscreensaver configuration file content.</summary>
   <code>
 <pre># XScreenSaver Preferences File
 # Written by xscreensaver-settings 6.08 for x on Thu Feb 22 23:23:45 2024.
@@ -743,12 +751,14 @@ authWarningSlack:   20
 
     <h3 id="remap">Input Remapper</h3>
 
-    <code>sudo systemctl restart input-remapper && systemctl enable input-remapper</code>
-
     <p>MOBA “gaming” mice with lots of buttons might be preconfigured to output letters, numbers, etc. These preconfigurations need to be removed first so you can properly remap them with <cite>Input Remapper</cite>. Otherwise, let's say a button is preconfigured to output number 5, when trying to remap that button, it will remap number 5 on the keyboard is well.</p>
 
+    <p>Unfortunately, for my EVGA X15 mouse the Windows-only <a href="https://www.evga.com/support/download/showdlinfo.aspx?id=19386">EVGA Unleash RGB Software</a> is needed to undo the aforementioned default configurations.</p>
+
+    <p>To start and indefinitely enable Input Remapper: <code>sudo systemctl restart input-remapper && systemctl enable input-remapper</code></p>
+
     <details>
-      <summary>Click to see new mouse configuration.</summary>
+      <summary>Click to see my configuration.</summary>
       <p>Input: mouse → Output target: keyboard</p>
       <ul>
         <li>XF86Launch5 → <code>KEY_LEFTCTRL + c</code></li>
@@ -761,6 +771,12 @@ authWarningSlack:   20
       <p>Input: mouse → Output target: keyboard + mouse</p>
       <ul>
         <li>XF86Tools → <code>Shift_L + BTN_MIDDLE</code></li>
+      </ul>
+
+      <p>Input: keyboard → Output target: keyboard</p>
+      <ul>
+        <li>Caps Lock → <code>BackSpace</code></li>
+        <li>Shift L + Caps Lock → <code>Caps_Lock</code></li>
       </ul>
     </details>
 
@@ -786,10 +802,12 @@ authWarningSlack:   20
     </details>
 
   <h2 id="tmux">tmux</h2>
-  <p><cite>tmux</cite> cheat sheet: <a href="https://tmuxcheatsheet.com">https://tmuxcheatsheet.com</a>.</p>
-  <p>List tmux sessions: <code>tmux list-sessions</code></p>
-  <p>Reopen/attach to a running tmux session (e.g., session 3): <code>tmux attach -t 3</code></p>
-  <p>Exit/detach from a session: press <code>CTRL + b</code> and type <code>d</code>.<p>
+  <ul>
+    <li><cite>tmux</cite> cheat sheet: <a href="https://tmuxcheatsheet.com">https://tmuxcheatsheet.com</a>.</li>
+    <li>List tmux sessions: <code>tmux list-sessions</code></li>
+    <li>Reopen/attach to a running tmux session (e.g., session 3): <code>tmux attach -t 3</code></li>
+    <li>Exit/detach from a session: press <code>CTRL + b</code> and type <code>d</code>.</li>
+  </ul>
 
   <h2 id="search">Web search</h2>
   <h3>Removing Pinterest and Quora from the search results</h3>
@@ -831,8 +849,6 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     <li>Control media players: <code>playerctl play-pause/next/previous</code></li>
     <li>Control volume: <code>amixer set Master n%+/n%-</code></li>
     <li>Launch a terminal session including a command: <code>konsole -e btop</code></li>
-    <li>Activate XScreenSaver: <code>xscreensaver-command -activate</code></li>
-    <li>Lock screen: <code>xscreensaver-command -lock</code></li>
     <li><a href="https://askubuntu.com/a/20416">Find and replace text within a file using a command</a>: <code>sed -i 's/original/new/g' file.txt</code></li>
     <li>To update EndeavourOS' download mirrors if <i>reflector-simple</i> fails to connect to the mirror URLs: <code>rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</code></li>
   </ul>
@@ -860,380 +876,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
   <h4>Bypass Windows 11 Microsoft account prompt</h4>
   <p>When prompted press <code>Shift + F10</code>, and in cmd.exe type <code><abbr title="out of box experience">oobe</abbr>\BypassNRO</code> and press enter to reboot. Then click “I don't have internet” → “Continue with limited setup”. When asked to enter your name type “Screw Microsoft”. Unethical bastards.</p>
 
-<!-- ///////////////////// Legacy stuff ///////////////////// -->
-
-<!--<h3>IMWheel</h3>
-    <p>Save the following config to “/home/x/.imwheelrc”:</p>
-    <pre><code>"^vivaldi-bin$"
-None, Up, Button4, 2
-None, Down, Button5, 2
-
-"^vivaldi-stable$"
-None, Up, Button4, 2
-None, Down, Button5, 2</code></pre> -->
-
-<!--     <h3>Whisker Menu search actions</h3>
-    <details>
-  <summary>Click to expand the whiskermenu-...rc file content.</summary>
-  <code>
-<pre>//LOCATION: /home/x/.config/xfce4/panel/whiskermenu-….rc
-//Add xfce4-popup-whiskermenu to application shortcuts in Keyboard settings (Arch)
-
-search-actions=37
-
-[action0]
-name=Man Pages
-pattern=#
-command=exo-open --launch TerminalEmulator man %s
-regex=false
-
-[action1]
-name=Run in Terminal
-pattern=!
-command=exo-open --launch TerminalEmulator %s
-regex=false
-
-[action2]
-name=Open URI
-pattern=^(file|http|https):\\/\\/(.*)$
-command=exo-open \\0
-regex=true
-
-[action3]
-name=Search for files
-pattern=-
-command=catfish --path=~ --start %s
-regex=false
-
-[action4]
-name=Deepl & Google (EN > NL)
-pattern=?tr
-command=/home/x/MEGA/configuration/linux/scripts/search-translate-en.sh %u
-regex=false
-
-[action5]
-name=Deepl & Google (NL > EN)
-pattern=?trnl
-command=/home/x/MEGA/configuration/linux/scripts/search-translate-nl.sh %u
-regex=false
-
-[action6]
-name=Taaladvies, definities, synoniemen
-pattern=?def
-command=/home/x/MEGA/configuration/linux/scripts/search-definities.sh %u
-regex=false
-
-[action7]
-name=Search DDG
-pattern=?d
-command=/home/x/MEGA/configuration/linux/scripts/search-duck.sh %u
-regex=false
-
-[action8]
-name=WolframAlpha & Symbolab
-pattern=?math
-command=/home/x/MEGA/configuration/linux/scripts/search-math.sh %u
-regex=false
-
-[action9]
-name=YouTube
-pattern=?yt
-command=exo-open --launch WebBrowser https://www.youtube.com/results?search_query=%u
-regex=false
-
-[action10]
-name=Definition & thesaurus
-pattern=?dic
-command=/home/x/MEGA/configuration/linux/scripts/search-dictionaries.sh %u
-regex=false
-
-[action11]
-name=ytprivate
-pattern=?yp
-command=exo-open --launch WebBrowser https://invidious.namazso.eu/search?q=%u
-regex=false
-
-[action12]
-name=Wiki and E. Britannica
-pattern=?wibr
-command=bash -c "exo-open https://www.britannica.com/search?query=%u && exo-open https://en.wikipedia.org/w/index.php?search=%u"
-regex=false
-
-[action13]
-name=Goodreads
-pattern=?gr
-command=exo-open --launch WebBrowser https://www.goodreads.com/search?q=%u
-regex=false
-
-[action14]
-name=Google Maps
-pattern=?gm
-command=exo-open --launch WebBrowser https://www.google.com/maps/search/%u
-regex=false
-
-[action15]
-name=Bypass paywall
-pattern=?12
-command=exo-open --launch WebBrowser https://12ft.io/proxy?q=%u
-regex=false
-
-[action16]
-name=Reddit
-pattern=?red
-command=bash -c exo-open https://www.reddit.com/search?q=%u
-regex=false
-
-[action17]
-name=unicode, emojipedia
-pattern=?un
-command=exo-open --launch WebBrowser https://emojipedia.org/search/?q=%u
-regex=false
-
-[action18]
-name=Movie info
-pattern=?mov
-command=/home/x/MEGA/configuration/linux/scripts/search-movie.sh %u
-regex=false
-
-[action19]
-name=Amazon (all)
-pattern=?am
-command=/home/x/MEGA/configuration/linux/scripts/search-amazon.sh %u
-regex=false
-
-[action20]
-name=Search All
-pattern=?sa
-command=/home/x/MEGA/configuration/linux/scripts/search-all.sh %u
-regex=false
-
-[action21]
-name=Ebay
-pattern=?eb
-command=exo-open --launch WebBrowser https://www.ebay.com/sch/i.html?_nkw=%u&_sacat=0
-regex=false
-
-[action22]
-name=Idioms
-pattern=?id
-command=exo-open --launch WebBrowser https://idioms.thefreedictionary.com/%u
-regex=false
-
-[action23]
-name=Unsplash: freely-usable images
-pattern=?u
-command=exo-open --launch WebBrowser https://unsplash.com/s/photos/%u
-regex=false
-
-[action24]
-name=Images (all)
-pattern=?img
-command=/home/x/MEGA/configuration/linux/scripts/search-images.sh %u
-regex=false
-
-[action25]
-name=The Pirate Bay
-pattern=?pb
-command=exo-open --launch WebBrowser https://pirateproxy.live/search/%u/
-regex=false
-
-[action26]
-name=Startpage
-pattern=?s
-command=/home/x/MEGA/configuration/linux/scripts/search-startpage.sh %u
-regex=false
-
-[action27]
-name=Urban Dictionary
-pattern=?ud
-command=exo-open --launch WebBrowser https://www.urbandictionary.com/define.php?term=%u
-regex=false
-
-[action28]
-name=Alternative To
-pattern=?at
-command=exo-open --launch WebBrowser https://alternativeto.net/browse/search/?q=%u
-regex=false
-
-[action29]
-name=Wolfram Alpha
-pattern=?wa
-command=exo-open --launch WebBrowser https://www.wolframalpha.com/input/?i=%u
-regex=false
-
-[action30]
-name=Symbolab
-pattern=?sl
-command=exo-open --launch WebBrowser https://www.symbolab.com/solver/step-by-step/%u
-regex=false
-
-[action31]
-name=Wikipedia
-pattern=?w
-command=exo-open --launch WebBrowser https://en.wikipedia.org/w/index.php?search=%u
-regex=false
-
-[action32]
-name=Merriam-Webster
-pattern=?mw
-command=exo-open --launch WebBrowser https://www.merriam-webster.com/dictionary/%u
-regex=false
-
-[action33]
-name=Rotten Tomatoes
-pattern=?rt
-command=exo-open --launch WebBrowser https://www.rottentomatoes.com/search?search=%u
-regex=false
-
-[action34]
-name=Encyclopedia Britannica
-pattern=?br
-command=exo-open --launch WebBrowser https://www.britannica.com/search?query=%u
-regex=false
-
-[action35]
-name=Badass Torrents
-pattern=?bt
-command=exo-open --launch WebBrowser https://badasstorrents.com/torrents/search/%u
-regex=false
-
-[action36]
-name=Yandex
-pattern=?y
-command=exo-open --launch WebBrowser https://yandex.com/search/?text=%u
-regex=false</pre>
-    </code>
-    </details>
-
-    <h3>Redshift</h3>
-    <p>Save the following config to “/.config/redshift.conf”:</p>
-    <details>
-    <summary>Click to expand the Redshift configuration file content.</summary>
-    <code>
-<pre>[redshift]
-; Set the day and night screen temperatures
-;temp-day=6500
-temp-night=4000
-
-; Disable the smooth fade between temperatures when Redshift starts and stops.
-; 0 will cause an immediate change between screen temperatures.
-; 1 will gradually apply the new screen temperature over a couple of seconds.
-fade=1
-
-; Solar elevation thresholds.
-; By default, Redshift will use the current elevation of the sun to determine
-; whether it is daytime, night or in transition (dawn/dusk). When the sun is
-; above the degrees specified with elevation-high it is considered daytime and
-; below elevation-low it is considered night.
-;elevation-high=3
-;elevation-low=-6
-
-; Custom dawn/dusk intervals.
-; Instead of using the solar elevation, the time intervals of dawn and dusk
-; can be specified manually. The times must be specified as HH:MM in 24-hour
-; format.
-;dawn-time=6:00-7:45
-;dusk-time=18:35-20:15
-
-; Set the screen brightness. Default is 1.0.
-;brightness=0.9
-; It is also possible to use different settings for day and night
-; since version 1.8.
-;brightness-day=0.7
-brightness-night=0.37
-; Set the screen gamma (for all colors, or each color channel
-; individually)
-;gamma=0.8
-;gamma=0.8:0.7:0.8
-; This can also be set individually for day and night since
-; version 1.10.
-;gamma-day=0.8:0.7:0.8
-;gamma-night=0.6
-
-; Set the location-provider: 'geoclue2', 'manual'
-; type 'redshift -l list' to see possible values.
-; The location provider settings are in a different section.
-location-provider=manual
-
-; Set the adjustment-method: 'randr', 'vidmode'
-; type 'redshift -m list' to see all possible values.
-; 'randr' is the preferred method, 'vidmode' is an older API.
-; but works in some cases when 'randr' does not.
-; The adjustment method settings are in a different section.
-adjustment-method=randr
-
-; Configuration of the location-provider:
-; type 'redshift -l PROVIDER:help' to see the settings.
-; ex: 'redshift -l manual:help'
-; Keep in mind that longitudes west of Greenwich (e.g. the Americas)
-; are negative numbers.
-[manual]
-lat=50.846667
-lon=4.3525
-
-; Configuration of the adjustment-method
-; type 'redshift -m METHOD:help' to see the settings.
-; ex: 'redshift -m randr:help'
-; In this example, randr is configured to adjust only screen 0.
-; Note that the numbering starts from 0, so this is actually the first screen.
-; If this option is not specified, Redshift will try to adjust _all_ screens.
-[randr]
-screen=0
-
-; --- I'm not using the below settings any more, but handy to know
-; Global settings for redshift
-; Place this file in .config/redshift/redshift.conf. Use the line below as startup command
-; redshift-gtk -c ./.config/redshift/redshift.conf</pre>
-    </code>
-    </details> -->
-
-<!--     <h2>Bluetooth</h2>
-    <p>From <a href="https://wiki.archlinux.org/title/Bluetooth">wiki.archlinux.org/title/Bluetooth</a>.</p>
-    <p>Run bluetooth instantly, for a single session: <code>sudo systemctl start bluetooth</code> <br> run bluetooth permanently (after rebooting): <code>sudo systemctl enable bluetooth</code> <br> run bluetooth instantly, permanently: <code>sudo systemctl enable --now bluetooth</code></p>
-
-    <p>Auto power-on after boot/resume, and discoverable on startup: <code>sudo xed /etc/bluetooth/main.conf</code> <br> →  [Policy] → AutoEnable=true <br> → [General] → DiscoverableTimeout = 0</p> -->
-
-    <!-- <h2>ckb-next macros</h2>
-    <p><code>+lctrl,+c,-c,-lctrl</code>, <code>+lctrl,+v,-v,-lctrl</code></p> -->
-
-    <!-- <h2>Login commands</h2>
-    <p>Add the following line to .profile in home directory [doesn't always work for some reason]: <code>sudo msi-keyboard -m normal -c left,off,low -c middle,off,low -c right,off,low</code></p> -->
-
-    <!-- <h3>Steps to reinitialize git folder after format</h3>
-    <p>[Probably not the right way to do it any more.]</p>
-    <code>cd &ltrepo-folder&gt</code>
-    <code>git init</code>
-    <code> git remote add origin &lturl&gt</code>
-    <code> git fetch</code>
-    <code>git reset origin/main</code>
-
-    <h3>…or create a new repository on the command line</h3>
-    <code>echo "# REPONAME" >> README.md</code>
-    <code>git init</code>
-    <code>git add README.md</code>
-    <code>git commit -m "first commit"</code>
-    <code> git branch -M main</code>
-    <code>git remote add origin https://codeberg.org/USERNAME/REPONAME</code>
-    <code>git push -u origin main</code>
- 
-    <h3>…or push an existing repository from the command line</h3>
-    <code>git remote add origin https://codeberg.org/USERNAME/REPONAME</code>
-    <code>git branch -M main</code>
-    <code>git push -u origin main</code> -->
-
     <p class="fleuron">❦</p>
-
-    <!-- <h2>Extensions in VSCodium</h2>
-    <p>Create <a href="https://github.com/VSCodium/vscodium/blob/master/DOCS.md#extensions-marketplace">project.json</a> at ~/.config/VSCodium containing:<br>
-      <code>{
-        "extensionsGallery": {
-          "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
-          "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
-          "itemUrl": "https://marketplace.visualstudio.com/items",
-          "controlUrl": "",
-          "recommendationsUrl": ""
-        }
-      }</code></p> -->
 
     <h2>Comments</h2>
 
