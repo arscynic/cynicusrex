@@ -113,22 +113,18 @@ figure {
 }
 
 #for-linux {
-  width: 39rem;
   text-align: center;
-  position: fixed;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
 }
 
-#for-linux span {
+#for-linux a {
   font-size: normal;
   color: papayawhip;
   background-color: rgba(0, 0, 0, 0.042);
   padding: 0rem 0.188rem 0rem 0.188rem;
+  text-decoration: none;
 }
 
-#for-linux span:hover {
+#for-linux a:hover {
   color: black;
 }
 
