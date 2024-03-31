@@ -836,6 +836,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     <li>Launch a terminal session including a command: <code>konsole -e btop</code></li>
     <li><a href="https://askubuntu.com/a/20416">Find and replace text within a file using a command</a>: <code>sed -i 's/original/new/g' file.txt</code></li>
     <li>To update EndeavourOS' download mirrors if <i>reflector-simple</i> fails to connect to the mirror URLs: <code>rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</code></li>
+    <li>Command to backup a folder and only copy files that are updated in the source directory and ignore identical files already at the destination: <code>rsync <a href="https://linux.die.net/man/1/rsync">-auhP</a> source destination</code></li>
   </ul>
 
   <h2 id="adb">Uninstall an Android system app with <abbr title="Android debug bridge">ADB</abbr></h2>
