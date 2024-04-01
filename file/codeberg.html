@@ -39,21 +39,23 @@
     <h3>Option 1: keep git history</h3>
     <p>This will save the nice graph that shows all the contributions you made, and all the file versioning history of course.</p>
 
+    <pre>
       <code>git remote rename origin old-origin-github</code>
       <code>git remote add origin https://codeberg.org/CynicusRex/quitfacebook.git</code>
       <code>git branch -M pages</code>
       <code>git push --set-upstream origin --all</code>
       <code>git push --set-upstream origin --tags</code>
+    </pre>
 
     <h3>Option 2: remove git history</h3>
     <ol>
       <li>Assuming you still have the hidden .git folder, rename it to .git_BAK or whatever, or delete it.</li>
       <li>Open the terminal in that directory and run: <code>git init</code> It will probably show you the following message: “hint: Using 'master' as the name for the initial branch. This default branch name […] The just-created branch can be renamed via this command: git branch -m &lt;name&gt;”</li>
       <li>Run: <code>git branch -m pages</code> You see, the repository needn't be named pages, but the branch does. Which is great because now we can have multiple pages with distinct names. The official documentation makes it seem as if one is limited to one page.</li>
-      <li>Run:
-        <code>git add .</code>
-        <code>git commit -m "first commit"</code>
-        <code>git remote add origin https://codeberg.org/CynicusRex/quitfacebook.git</code>
+      <li>Run: <br>
+        <code>git add .</code><br>
+        <code>git commit -m "first commit"</code><br>
+        <code>git remote add origin https://codeberg.org/CynicusRex/quitfacebook.git</code><br>
         <code>git push -u origin pages</code>
       </li>
     </ol>
@@ -65,11 +67,14 @@
     <p>Assuming you have a custom domain name, do the following. If you don't, then the official documentation probably suffices.</p>
 
     <ol>
-      <li>Add the file “.domains” to your local repository with the following content, obviously adjusted to your own domain name, and push it to Codeberg: <code>quitfacebook.org</code><code>www.quitfacebook.org</code><code>pages.quitfacebook.cynicusrex.codeberg.page</code></li>
-      <li>Go to your registrar website, and configure the “Advanced DNS” “host records” as follows:
-        <code>Type: A Record, Host: @, Value: 217.197.91.145, TTL: Automatic</code>
-        <code>Type: AAAA Record, Host: @, Value: 2001:67c:1401:20f0::1, TTL: Automatic</code>
-        <code>Type: CNAME Record, Host: www, Value: quitfacebook.cynicusrex.codeberg.page., TTL: Automatic</code>
+      <li>Add the file “.domains” to your local repository with the following content, obviously adjusted to your own domain name, and push it to Codeberg: <br>
+        <code>quitfacebook.org</code><br>
+        <code>www.quitfacebook.org</code><br>
+        <code>pages.quitfacebook.cynicusrex.codeberg.page</code></li>
+      <li>Go to your registrar website, and configure the “Advanced DNS” “host records” as follows: <br>
+        <code>Type: A Record, Host: @, Value: 217.197.91.145, TTL: Automatic</code><br>
+        <code>Type: AAAA Record, Host: @, Value: 2001:67c:1401:20f0::1, TTL: Automatic</code><br>
+        <code>Type: CNAME Record, Host: www, Value: quitfacebook.cynicusrex.codeberg.page., TTL: Automatic</code><br>
         <code>Type: TXT Record, Host: @, Value: quitfacebook.cynicusrex.codeberg.page., TTL: Automatic</code>
       </li>
     </ol>

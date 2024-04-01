@@ -740,8 +740,6 @@ authWarningSlack:   20
 
     <p>Unfortunately, for my EVGA X15 mouse the Windows-only <a href="https://www.evga.com/support/download/showdlinfo.aspx?id=19386">EVGA Unleash RGB Software</a> is needed to undo the aforementioned default configurations.</p>
 
-    <p>To start and indefinitely enable Input Remapper: <code>sudo systemctl restart input-remapper && systemctl enable input-remapper</code></p>
-
     <details>
       <summary>Click to see my configuration.</summary>
       <p>Input: mouse → Output target: keyboard</p>
@@ -785,6 +783,8 @@ authWarningSlack:   20
       
       <!-- <p>Input: keyboard → Output target: keyboard</p> -->
     </details>
+
+    <p>To start and indefinitely enable Input Remapper: <code>systemctl enable input-remapper && systemctl restart input-remapper</code></p>
 
   <h2 id="tmux">tmux</h2>
   <ul>
