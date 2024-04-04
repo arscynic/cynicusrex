@@ -71,6 +71,10 @@ code, code pre {
   word-break: break-all;
 }
 
+code:hover {
+  user-select: all;
+}
+
 summary {
   cursor: pointer;
 }
