@@ -19,7 +19,7 @@
 <body>
   <div id="setup-page">
     <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
-    <p class="sub-title">Latest update: 2 April 2023.</p>
+    <p class="sub-title">Latest update: 4 April 2023.</p>
     
     <div><h2>Linux</h2>
       <ul>
@@ -57,22 +57,22 @@
       <details>
         <summary>Click to see my hardware.</summary>
         <ul>
-          <li>PSU: Corsair HX1000i (2022).</li>
-          <li>MOBO: Gigabyte Z790 Gaming X AX, ATX.</li>
-          <li>CPU: Intel Core i5-13600K.</li>
+          <li><abbr title="power supply unit">PSU</abbr>: Corsair HX1000i (2022).</li>
+          <li><abbr title="motherboard">MOBO</abbr>: Gigabyte Z790 Gaming X AX, ATX.</li>
+          <li><abbr title="central processing unit">CPU</abbr>: Intel Core i5-13600K.</li>
           <li>Thermal paste: ARCTIC MX-6.</li>
           <li>CPU fan: Noctua NH-D15.</li>
-          <li>RAM: 2 x 16 ㎇ Corsair DDR5 Vengeance 5600.</li>
-          <li>GPU: MSI GeForce RTX 3060 Ti Gaming Z Trio 8G LHR.</li>
-          <li>NVMe SSD: 2 x 500 ㎇ WD_BLACK SN850.</li>
+          <li><abbr title="random access memory">RAM</abbr>: 2 x 16 ㎇ Corsair DDR5 Vengeance 5600.</li>
+          <li><abbr title="graphics processing unit">GPU</abbr>: MSI GeForce RTX 3060 Ti Gaming Z Trio 8G <abbr title="lite hash rate">LHR</abbr>.</li>
+          <li><abbr title="non-volatile memory express">NVMe</abbr> <abbr title="solid-state drive">SSD</abbr>: 2 x 500 ㎇ WD_BLACK SN850.</li>
           <li>SSD: 128 ㎇ Samsung 840 PRO & 250 ㎇ Samsung 850 EVO.</li>
-          <li>HDD: 500 ㎇ Seagate Momentus 7200.4 ST9500420AS.</li>
+          <li><abbr title="hard disk drive">HDD</abbr>: 500 ㎇ Seagate Momentus 7200.4 ST9500420AS.</li>
           <li>Case: Thermaltake Core V71.</li>
           <li>Monitor: 27" QHD 165 ㎐ LG UltraGear 27GP850-B.</li>
           <li>Keyboard: Keychron K3 (V2); (RGB, hot swappable, switch: Low Profile Keychron Optical Brown (ERGO-KCK3E3;K3V2)).</li>
           <li>Numerical keyboard: Logilink ID0184.</li>
           <li>Mouse: EVGA X15.</li>
-          <li>USB flash drive: 256 ㎇ Kingston DataTraveler USB 3.2 Gen 2.</li>
+          <li><abbr title="universal serial bus">USB</abbr> flash drive: 256 ㎇ Kingston DataTraveler USB 3.2 Gen 2.</li>
         </ul>
 
       </details>
@@ -190,14 +190,17 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy-paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>sudo pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool qt5-imageformats xournalpp grsync libreoffice-fresh calibre spotify-launcher npm make automake base-devel texlive-basic texlive-latex texlive-latexextra remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils baobab peek</pre></code>
+    <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool qt5-imageformats xournalpp grsync libreoffice-fresh calibre spotify-launcher npm make automake base-devel texlive-basic texlive-latex texlive-latexextra remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils baobab peek</pre></code>
 
-    <code><pre>yay autokey-gtk && yay sblock-git<!--  && yay hblock --> && yay input-remapper-git && yay megasync-bin && yay vscodium-bin && yay betterbird-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin && yay rate-mirrors</pre></code> <!-- if qalculate doesn't install, add -S -->
+    <code><pre>yay autokey-gtk && yay sblock-git<!--  && yay hblock --> && yay input-remapper-git && yay megasync-bin && yay vscodium-bin && yay betterbird-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin && yay rate-mirrors && yay schildichat-desktop-bin</pre></code> <!-- if qalculate doesn't install, add -S -->
 
     <code><pre>npm install -g live-server</pre></code>
+
+    <h3>Number crunching</h3>
+    <code><pre>boinc opencl-nvidia python-requests</pre></code>
     
     <h3>Optional/legacy:</h3>
-    <code><pre>sudo pacman -Syu --needed element-desktop shotcut rssguard discord bluez bluez-utils<!--  texstudio sagemath sagemath-doc --> xsane boinc opencl-nvidia seahorse noto-fonts-emoji redshift playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins</pre></code> <!-- thunderbird birdtray clementine torbrowser-launcher audio-recorder-->
+    <code><pre>pacman -Syu --needed element-desktop shotcut rssguard discord bluez bluez-utils<!--  texstudio sagemath sagemath-doc --> xsane  seahorse noto-fonts-emoji redshift playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins</pre></code> <!-- thunderbird birdtray clementine torbrowser-launcher audio-recorder-->
 
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
       
@@ -220,6 +223,7 @@
       <li><a href="#vivaldi">Vivaldi</a></li>
       <li><a href="#remmina">Remmina</a></li>
       <li><a href="#boinc">BOINC</a></li>
+      <li><a href="#gpuowl">GpuOwl</a></li>
       <li><a href="#xscreensaver">XScreenSaver</a></li>
       <li><a href="#yt">Enhancer for YouTube</a></li>
       <li><a href="#res">Reddit Enhancement Suite</a></li>
@@ -406,6 +410,12 @@ done</pre></code>
     <p>To <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC">use BOINC via the GUI</a>, click the previous link. When creating the <i>gui_rpc_auth.cfg</i> file and launching boincmgr via commandline it will probably work, but when launching BOINC Manager via an application launcher I recall it throwing an “gui_rpc_auth.cfg exists but can't be read. Check the File permissions.” error message. <a href="https://boinc.berkeley.edu/forum_thread.php?id=14013&postid=101192">Changing the file's permissions fixed this</a>: <code>chmod 640 ~/gui_rpc_auth.cfg</code>.</p>
 
     <p>To make sure the <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC:~:text=autostart%20that%20on%20Xorg%20startup">mouse input suspends the tasks</a> too—after startup/boot/login—and not only keyboard inputs: <code>echo 'xhost si:localuser:boinc' > ~/.xprofile</code>. Or just run <code>xhost si:localuser:boinc</code> in a terminal to not make it persistent.</p>
+
+    <h3 id="gpuowl">GpuOwl</h3>
+    <p>It's possible to run <a href="https://www.mersenne.org">GIMPS</a> on the <abbr title="central processing unit">CPU</abbr> (mprime) and <abbr title="graphics processing unit">GPU</abbr> (GpuOwl) simultaneously. [<a href="https://www.mersenneforum.org/showthread.php?p=652812#post652812:~:text=multiple%20GIMPS%20apps%20on%20the%20same%20machine%20simultaneously">Thanks to kriesel for the tip</a>.]</p>
+    <code>git clone https://github.com/preda/gpuowl.git</code><br>
+    <code>python3 ~/gpuowl/tools/primenet.py -u GIMPSusername</code><br>
+    <code>~/gpuowl/build-release/gpuowl</code>
 
     <h3 id="xscreensaver">XScreenSaver</h3>
     <p><a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">Enable XScreenSaver in KDE Plasma</a>.</p>
