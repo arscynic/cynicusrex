@@ -309,6 +309,26 @@ figure {
   font-size: small;
 }
 
+/* https://stackoverflow.com/questions/38157007/how-do-i-achieve-automatic-numbering-for-headings-using-css */
+
+/* .readability {
+  counter-reset: heading;
+}
+
+.readability h1:before {
+  content: counter(heading)") ";
+  counter-increment: heading;
+}
+
+.readability  h1 {
+  counter-reset: subheading;
+}
+
+.readability  h2:before {
+	content: counter(heading)"." counter(subheading)") ";
+	counter-increment: subheading;
+} */
+
 /*———————————————————————————————————————————————————————————————*/
 /* Portfolio */
 
