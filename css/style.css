@@ -654,8 +654,11 @@ Credits to Michael Coker https://stackoverflow.com/a/42497946/13963944 */
   font-style: italic;
 }
 
-.end-crown {
+.pitchfork, .end-symbol {
   font-family: sans-serif;
+}
+
+.end-symbol {
   font-size: 2rem;
   text-align: center;
   margin: 2rem;
