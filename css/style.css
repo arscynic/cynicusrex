@@ -655,6 +655,7 @@ Credits to Michael Coker https://stackoverflow.com/a/42497946/13963944 */
 }
 
 .end-crown {
+  font-family: sans-serif;
   font-size: 2rem;
   text-align: center;
   margin: 2rem;
