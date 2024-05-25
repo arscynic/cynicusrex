@@ -19,7 +19,7 @@
 <body>
   <div id="setup-page">
     <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
-    <p class="sub-title">Latest update: 2 May 2024.</p>
+    <p class="sub-title">Latest update: 25 May 2024.</p>
     
     <div><h2>Linux</h2>
       <ul>
@@ -43,7 +43,6 @@
         <li>PDF reader: <a href="https://okular.kde.org/en-gb/">Okular</a></li>
         <li>Process viewer: <a href="https://github.com/aristocratos/btop">btop</a></li>
         <li>Scanner: <a href="https://wiki.ubuntuusers.de/XSane/">XSane</a></li>
-        <!-- <li>Spotify downloader: <a href="https://spotdl.readthedocs.io/en/latest/">spotDL</a></li> -->
         <li>Screensaver: <a href="https://www.jwz.org/xscreensaver/">XScreenSaver</a></li>
         <li>Screen recorder: <a href="https://www.maartenbaert.be/simplescreenrecorder/">SimpleScreenRecorder</a></li>
         <li>Spreadsheet: <a href="https://www.libreoffice.org/download/">LibreOffice</a></li>
@@ -95,7 +94,7 @@
         <li>P2P: <a href="https://transmissionbt.com">Transmission</a>, <a href="https://nicotine-plus.org">Nicotine+</a> (<a href="https://www.slsknet.org">Soulseek</a>)</li>
         <li>Remote control/desktop: <a href="https://kdeconnect.kde.org">KDE Connect</a>, <a href="https://remmina.org">Remmina</a>, <a href="https://rustdesk.com">RustDesk</a></li>
         <!-- <li>RSS: <a href="https://github.com/martinrotter/rssguard">RSS Guard</a></li> -->
-        <li>Search: <a href="https://duckduckgo.com">DuckDuckGo</a><br>
+        <li>Search: <a href="https://metager.org/">metaGer</a><br>
           ↳&#xFE0E; non-free: <a href="https://kagi.com">Kagi Search</a></li>
         <li>Translate: <a href="https://www.deepl.com/translator">Deepl Translate</a>, <a href="https://translate.google.com">Google Translate</a></li>
         <!-- <li>YouTube: <a href="https://invidio.us">invidio.us</a></li> -->
@@ -191,9 +190,9 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy-paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool qt5-imageformats xournalpp grsync libreoffice-fresh calibre spotify-launcher npm make automake base-devel texlive-basic texlive-latex texlive-latexextra remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils baobab peek</pre></code>
+    <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs xscreensaver geany gnome-disk-utility yakuake btop catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular bash-completion fwupd qalculate-gtk tmux thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman zsh xdotool qt5-imageformats xournalpp grsync libreoffice-fresh calibre npm make automake base-devel texlive-basic texlive-latex texlive-latexextra remmina libvncserver x11vnc transmission-qt inotify-tools kdeconnect gparted dnsutils baobab peek</pre></code>
 
-    <code><pre>yay autokey-gtk && yay sblock-git<!--  && yay hblock --> && yay input-remapper-git && yay megasync-bin && yay vscodium-bin && yay betterbird-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin && yay rate-mirrors && yay schildichat-desktop-bin</pre></code> <!-- if qalculate doesn't install, add -S -->
+    <code><pre>yay autokey-gtk && yay sblock-git<!--  && yay hblock --> && yay input-remapper-git && yay megasync-bin && yay vscodium-bin && yay betterbird-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin && yay rate-mirrors && yay schildichat-desktop-bin && yay deezer</pre></code> <!-- if qalculate doesn't install, add -S -->
 
     <code><pre>npm install -g live-server</pre></code>
 
@@ -814,18 +813,6 @@ authWarningSlack:   20
   <h2 id="search">Web search</h2>
   <h3>Removing <cite>Pinterest</cite> and <cite>Quora</cite> from the search results</h3>
   <p>To remove websites from the search results, append the query with <code>-site:pinterest.com -site:quora.com</code>.</p>
-  <p><cite>KDE Plasma search</cite> (<cite>KRunner</cite>) → Web Search Keywords → Shortcut URLs:</p>
-  <ul>
-    <li>Text: <code>https://duckduckgo.com/?q=\{@}+-site%3Apinterest.com+-site%3Aquora.com&t=kde</code></li>
-    <li>Images: <code>https://duckduckgo.com/?q=\{@}+-site%3Apinterest.com+-site%3Aquora.com&iax=images&ia=images&t=kde</code></li>
-  </ul>
-
-  <p><cite>Vivaldi</cite> browser search URLs:</p>
-  <ul>
-    <li>Text: <code>https://duckduckgo.com/?q=%s+-site%3Apinterest.com+-site%3Aquora.com</code></li>
-    <li>Images: <code>https://duckduckgo.com/?q=%s+-site%3Apinterest.com+-site%3Aquora.com&iax=images&ia=images</code></li>
-  </ul>
-
 
   <h3>Opening multiple websites with multi-word queries with one command</h3>
   <p>Insert in the <code>.bashrc</code> file: <code>alias am="cd /path/to/scripts/ && ./search-amazon.sh"</code></p>
