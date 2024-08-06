@@ -19,7 +19,7 @@
 <body>
   <div id="setup-page">
     <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
-    <p class="sub-title">Latest update: 3 August 2024.</p>
+    <p class="sub-title">Latest update: 6 August 2024.</p>
     
     <div><h2>Linux</h2>
       <ul>
@@ -78,7 +78,7 @@
     <div>
       <h2>Internet</h2>
       <ul>
-        <li>Browser: <a href="https://vivaldi.com">Vivaldi</a><br>
+        <li>Browser: <a href="https://vivaldi.com">Vivaldi</a>, <a href="https://librewolf.net">LibreWolf</a><br>
           ↳&#xFE0E; <strong>Ad blocking</strong>, privacy: <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a>, <a href="https://decentraleyes.org">Decentraleyes</a><br>
           ↳&#xFE0E; Convenience: <a href="https://www.mrfdev.com/enhancer-for-youtube">Enhancer for YouTube</a>, 
           <a href="https://chrome.google.com/webstore/detail/transover/aggiiclaiamajehmlfpkjmlbadmkledi">TransOver</a>, <a href="https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm">Web Scrobbler</a></li>
@@ -225,6 +225,7 @@
       <li><a href="#lyx">LyX</a></li>
       <li><a href="#plasma">KDE Plasma</a></li>
       <li><a href="#vivaldi">Vivaldi</a></li>
+      <li><a href="#librewolf">LibreWolf</a></li>
       <li><a href="#remmina">Remmina</a></li>
       <li><a href="#boinc">BOINC</a></li>
       <li><a href="#gpuowl">GpuOwl</a></li>
@@ -391,6 +392,57 @@ done</pre></code>
     <p>To remove <cite>Vivaldi</cite>'s header / title bar, open <cite>Vivaldi</cite>'s settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
       display: none;
       }</code></p>
+
+    <h3 id="librewolf">LibreWolf</h3>
+    <h4>Favicon-only bookmarks</h4>
+    <p>To hide the names of individual bookmarks and keep the names of folders but remove their folder icons, and to move the bookmarks bar to the bottom of the window, in <cite>FireFox</cite> or derivatives like <cite>LibreWolf</cite> or <cite>Waterfox</cite>:</p>
+    <ol>
+      <li>Create a <i>userChrome.css</i> file in the browser's <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile">profile directory</a>, in a folder named “chrome”, e.g., <code>~/.librewolf/rqp0p3up.default-default/chrome/</code></li>
+      <li>Place the following lines of code within that file:
+<pre><code>/* Hide the names of individual bookmarks */
+#personal-bookmarks .bookmark-item:not([type="menu"]) .toolbarbutton-text {
+    display: none !important;
+}
+
+/* Keep the names of bookmark folders visible */
+#personal-bookmarks .bookmark-item[type="menu"] .toolbarbutton-text {
+    display: inline !important;
+}
+
+/* Remove the folder icon of bookmark folders */
+#personal-bookmarks .bookmark-item[type="menu"] .toolbarbutton-icon {
+    display: none !important;
+}
+
+/* Moves the bookmarks bar to the bottom of the window. Source: https://www.reddit.com/r/FirefoxCSS/comments/pgtkx4/possible_to_move_bookmark_bar_to_bottom_of_window/ */
+@-moz-document url(chrome://browser/content/browser.xhtml){
+
+  :root:not([inFullscreen]){ --uc-bottom-toolbar-height: calc(20px + 2 * var(--bookmark-block-padding) ) }
+
+  #browser,
+  #customization-container{ margin-bottom: var(--uc-bottom-toolbar-height,0px) }
+
+  #PersonalToolbar{
+    position: fixed !important;
+    bottom: 0px;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+  }
+  #personal-bookmarks{ flex-grow: 1; }
+}</code></pre>
+      </li>
+      <li>Restart the browser.</li>
+    </ol>
+
+    <h4>KeePassXC in LibreWolf</h4>
+    <p>To enable <cite>KeePassXC</cite> browser integration in <cite>LibreWolf</cite>:</p>
+    <ol>
+      <li>Create a folder named “native-messaging-hosts” in <code>~/.librewolf/</code></li>
+      <li>In <cite>KeePassXC</cite> go to “Tools” → “Settings” → “Browser Integration” → “Advanced” → Enable “☑ Use a custom browser configuration location:”</li>
+      <li>“Config Location:” <code>~/.librewolf/native-messaging-hosts</code></li>
+      <li>Open <cite>LibreWolf</cite>, assuming the extension <cite><a href="https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser">KeePassXC-Browser</a></cite> is already installed, and open the extension's settings → “Connected Databases” → “🔗 Connect”</li>
+    </ol>
 
     <h3 id="remmina">Remmina</h3>
     <p>On the remote computer (server) to connect to:</p>
