@@ -395,7 +395,7 @@ done</pre></code>
 
     <h3 id="librewolf">LibreWolf</h3>
     <h4>Favicon-only bookmarks</h4>
-    <p>To hide the names of individual bookmarks and keep the names of folders but remove their folder icons in <cite>FireFox</cite> or derivatives like <cite>LibreWolf</cite> or <cite>Waterfox</cite>:</p>
+    <p>To hide the names of individual bookmarks and keep the names of folders while removing the folder icons in <cite>FireFox</cite> or derivatives like <cite>LibreWolf</cite> or <cite>Waterfox</cite> [<a href="https://chatgpt.com/share/b7f2fc60-358c-4765-912e-3e8ec753d09f">I used ChatGPT for this</a>, sorry]:</p>
     <ol>
       <li>Create a <i>userChrome.css</i> file in the browser's <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile">profile directory</a>, in a folder named “chrome”, e.g., <code>~/.librewolf/rqp0p3up.default-default/chrome/</code></li>
       <li>Place the following lines of code within that file:
@@ -417,13 +417,11 @@ done</pre></code>
       <li>Restart the browser.</li>
     </ol>
 
-    <p>PS <a href="https://chatgpt.com/share/b7f2fc60-358c-4765-912e-3e8ec753d09f">I used ChatGPT for this</a>, sorry.</p>
-
-    <p>To <a href="https://support.mozilla.org/en-US/questions/827629#answer-191123">hide the names of everything in the bookmarks bar</a>, use: <code>#personal-bookmarks .toolbarbutton-text {display:none!important}</code></p>
+    <p>To simply <a href="https://support.mozilla.org/en-US/questions/827629#answer-191123">hide the names of everything in the bookmarks bar</a>, use: <code>#personal-bookmarks .toolbarbutton-text {display:none!important}</code></p>
 
     <h4>Bottom bookmarks bar</h4>
-    <p>To move the bookmarks bar to the bottom of the window in LibreWolf, place in the aforementioned <i>userChrome.css</i> file the following:</p>
-<pre><code>/* Moves the bookmarks bar to the bottom of the window. Source: https://www.reddit.com/r/FirefoxCSS/comments/pgtkx4/possible_to_move_bookmark_bar_to_bottom_of_window/ */
+    <p>To <a href="https://www.reddit.com/r/FirefoxCSS/comments/pgtkx4/possible_to_move_bookmark_bar_to_bottom_of_window/">move the bookmarks bar to the bottom of the window in LibreWolf</a>, place in the aforementioned <i>userChrome.css</i> file the following:</p>
+<pre><code>/* Moves the bookmarks bar to the bottom of the window.*/
 @-moz-document url(chrome://browser/content/browser.xhtml){
 
   :root:not([inFullscreen]){ --uc-bottom-toolbar-height: calc(20px + 2 * var(--bookmark-block-padding) ) }
