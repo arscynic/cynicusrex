@@ -393,7 +393,7 @@ done</pre></code>
 
     <h3 id="librewolf">LibreWolf</h3>
     <h4>Favicon-only bookmarks</h4>
-    <p>To hide the names of individual bookmarks and keep the names of folders while removing the folder icons in <cite>FireFox</cite> or derivatives like <cite>LibreWolf</cite> or <cite>Waterfox</cite> [<a href="https://chatgpt.com/share/b7f2fc60-358c-4765-912e-3e8ec753d09f">I used ChatGPT for this</a>, sorry]:</p>
+    <p>To hide the names of individual bookmarks and keep the names of folders while removing the folder icons in <cite>FireFox</cite> or derivatives like <cite>LibreWolf</cite> or <cite>Waterfox</cite> [<a href="https://chatgpt.com/share/b74ef416-3a60-4fc7-a56a-d43fb976838e">I used ChatGPT for this</a>, sorry]:</p>
     <ol>
       <li>Create a <i>userChrome.css</i> file in the browser's <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile">profile directory</a>, in a folder named “chrome”, e.g., <code>~/.librewolf/rqp0p3up.default-default/chrome/</code></li>
       <li>Place the following lines of code within that file:
@@ -418,26 +418,49 @@ done</pre></code>
     <p>To simply <a href="https://support.mozilla.org/en-US/questions/827629#answer-191123">hide the names of everything in the bookmarks bar</a>, use: <code>#personal-bookmarks .toolbarbutton-text {display:none!important}</code></p>
 
     <h4>Bottom bookmarks bar</h4>
-    <p>To <a href="https://www.reddit.com/r/FirefoxCSS/comments/pgtkx4/possible_to_move_bookmark_bar_to_bottom_of_window/">move the bookmarks bar to the bottom of the window in LibreWolf</a>, place in the aforementioned <i>userChrome.css</i> file the following:</p>
-<pre><code>/* Moves the bookmarks bar to the bottom of the window.*/
-@-moz-document url(chrome://browser/content/browser.xhtml){
-
-  :root:not([inFullscreen]){ --uc-bottom-toolbar-height: calc(20px + 2 * var(--bookmark-block-padding) ) }
-
-  #browser,
-  #customization-container{ margin-bottom: var(--uc-bottom-toolbar-height,0px) }
-
-  #PersonalToolbar{
-    position: fixed !important;
-    bottom: 0px;
-    display: flex;
-    width: 100%;
-    z-index: 1;
+    <p>To move the bookmarks and navigation bar to the bottom of the window in LibreWolf, place in the aforementioned <i>userChrome.css</i> file the following:</p>
+    <details>
+      <summary>Click to expand the code.</summary>
+<pre><code>/* Move the bookmarks bar and navigation bar to the bottom of the window */
+  @-moz-document url(chrome://browser/content/browser.xhtml) {
+    :root:not([inFullscreen]) {
+      --uc-nav-bar-height: 36px; /* Adjust this value based on your navigation bar height */
+      --uc-bookmarks-bar-height: 30px; /* Adjust this value based on your bookmarks bar height */
+    }
+  
+    /* Adjust the main browser layout to create space at the bottom */
+    #browser, #customization-container {
+      margin-bottom: calc(var(--uc-nav-bar-height) + var(--uc-bookmarks-bar-height));
+    }
+  
+    /* Move the navigation bar to the bottom */
+    #nav-bar {
+      position: fixed !important;
+      bottom: 0 !important;
+      width: 100%;
+      z-index: 2;
+    }
+  
+    /* Move the bookmarks bar above the navigation bar */
+    #PersonalToolbar {
+      position: fixed !important;
+      bottom: var(--uc-nav-bar-height) !important;
+      width: 100%;
+      z-index: 1;
+    }
+  
+    /* Ensure each toolbar element grows appropriately */
+    #personal-bookmarks, #nav-bar {
+      display: flex;
+      flex-grow: 1;
+    }
   }
-  #personal-bookmarks{ flex-grow: 1; }
-}</code></pre>
+  </code></pre>
+  </details>
 
     <h4><a href="https://support.mozilla.org/en-US/questions/1284841">Autohide every UI when not hovered over browser</a></h4>
+    <details>
+      <summary>Click to expand the code.</summary>
 <pre><code>#navigator-toolbox {
   max-height: 0;
   overflow: hidden;
@@ -455,6 +478,7 @@ done</pre></code>
   from {overflow: hidden}
   to {overflow: unset}
 }</code></pre>
+    </details>
 
     <h4>KeePassXC in LibreWolf</h4>
     <p>To <a href="https://github.com/keepassxreboot/keepassxc/issues/6907">enable <cite>KeePassXC</cite> browser integration in <cite>LibreWolf</cite></a>:</p>
