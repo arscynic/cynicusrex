@@ -437,6 +437,25 @@ done</pre></code>
   #personal-bookmarks{ flex-grow: 1; }
 }</code></pre>
 
+    <h4><a href="https://support.mozilla.org/en-US/questions/1284841">Autohide every UI when not hovered over browser</a></h4>
+<pre><code>#navigator-toolbox {
+  max-height: 0;
+  overflow: hidden;
+  transition: ease all 5s;
+}
+
+#main-window:hover #navigator-toolbox {
+  max-height: 100vh;
+  animation: 0s pop-in;
+  animation-fill-mode: both;
+  animation-delay: 5s;
+}
+
+@keyframes pop-in {
+  from {overflow: hidden}
+  to {overflow: unset}
+}</code></pre>
+
     <h4>KeePassXC in LibreWolf</h4>
     <p>To <a href="https://github.com/keepassxreboot/keepassxc/issues/6907">enable <cite>KeePassXC</cite> browser integration in <cite>LibreWolf</cite></a>:</p>
     <ol>
