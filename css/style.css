@@ -286,26 +286,26 @@ figure {
 /*———————————————————————————————————————————————————————————————*/
 /* Software */
 
-#setup-page {
+#software-page {
   text-align: left;
 }
 
-#setup-page .sub-title {
+#software-page .sub-title {
   text-align: center;
 }
 
-#setup-page div {
+#software-page div {
   display: inline-block;
   vertical-align: text-top;
   margin-right: 0.5rem;
   max-width: 29rem;
 }
 
-#setup-page h2 {
+#software-page h2 {
   border-bottom: 0.06rem solid grey;
 }
 
-#setup-page h1 sup {
+#software-page h1 sup {
   font-size: small;
 }
 

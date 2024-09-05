@@ -835,22 +835,22 @@ font-size: 0.8rem;
 /*———————————————————————————————————————————————————————————————*/
 /* software */
 
-#setup-page {
+#software-page {
   text-align: center;
 }
 
-#setup-page li {
+#software-page li {
   text-align: left;
 }
 
-#setup-page div {
+#software-page div {
   display: inline-block;
   vertical-align: text-top;
   margin-right: 0.5rem;
   max-width: 29rem;
 }
 
-#setup-page h2 {
+#software-page h2 {
   border-bottom: 0.06rem dashed var(--border-color);
 }
 
