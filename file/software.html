@@ -234,6 +234,7 @@
       <li><a href="#vscodium">VSCodium</a></li>
       <li><a href="#lyx">LyX</a></li>
       <li><a href="#plasma">KDE Plasma</a></li>
+      <li><a href="#kmail">KMail</a></li>
       <li><a href="#vivaldi">Vivaldi</a></li>
       <li><a href="#librewolf">LibreWolf</a></li>
       <li><a href="#yt">Enhancer for YouTube</a></li>
@@ -398,6 +399,13 @@ done</pre></code>
 
     <h4>Revert to X11 from Wayland</h4>
     <p>The upgrade from <cite>KDE Plasma 5</cite> to 6 enables <cite>Wayland</cite> by default despite using <cite>X11</cite> before, and it breaks tons of stuff, e.g., <cite>Vivaldi</cite> browser became unusable, <cite>XScreenSaver</cite> does not work, et cetera. To revert to <cite>X11</cite> open <abbr title="The Simple Desktop Display Manager"><cite>SDDM</cite></abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
+
+    <h3 id="kmail">KMail</h3>
+    <h4>How to reauthorise a Gmail account in KMail</h4>
+    <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete “akonadi_imap_resource_…” in “Contents” > “imap” > “Passwords”.</p>
+
+    <h4>How to make a unified folder in KMail.</h4>
+    <p>Go to “Settings” > “Plugins” > “Akonadi Agents”, and click the slider icon 🎚️ next to “Unified Mailbox Agent”.</p>
 
     <h3 id="vivaldi">Vivaldi</h3>
     <p>To remove <cite>Vivaldi</cite>'s header / title bar, first enable “☑ Allow CSS modifications” at <a href="vivaldi://experiments/">vivaldi://experiments/</a>, then open <cite>Vivaldi</cite>'s settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
