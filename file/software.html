@@ -21,7 +21,7 @@
     <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 28 September 2024.</p>
+    <p class="sub-title">Latest update: 4 October 2024.</p>
 
     <p class="fleuron">❦</p>
 
@@ -542,7 +542,7 @@ done</pre></code>
 
     <p>To <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC">use BOINC via the GUI</a>, click the previous link. When creating the <i>gui_rpc_auth.cfg</i> file and launching <cite>boincmgr</cite> via commandline it will probably work, but when launching <cite>BOINC Manager</cite> via an application launcher I recall it throwing an “gui_rpc_auth.cfg exists but can't be read. Check the File permissions.” error message. <a href="https://boinc.berkeley.edu/forum_thread.php?id=14013&postid=101192">Changing the file's permissions fixed this</a>: <code>chmod 640 ~/gui_rpc_auth.cfg</code>.</p>
 
-    <p>To make sure the <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC:~:text=autostart%20that%20on%20Xorg%20startup">mouse input suspends the tasks</a> too—after startup/boot/login—and not only keyboard inputs: <code>echo 'xhost si:localuser:boinc' > ~/.xprofile</code>. Or just run <code>xhost si:localuser:boinc</code> in a terminal to not make it persistent.</p>
+    <p>To make sure the <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC:~:text=autostart%20that%20on%20Xorg%20startup">mouse input suspends the tasks</a> too—after startup/boot/login—and not only keyboard inputs: install “xorg-xhost” and run <code>echo 'xhost si:localuser:boinc' > ~/.xprofile</code>. Or just run <code>xhost si:localuser:boinc</code> in a terminal to not make it persistent.</p>
 
     <h3 id="gpuowl">GpuOwl</h3>
     <p>It's possible to run <a href="https://www.mersenne.org">GIMPS</a> on the <abbr title="central processing unit">CPU</abbr> (<cite>mprime</cite>) and <abbr title="graphics processing unit">GPU</abbr> (<cite>GpuOwl</cite>) simultaneously. [<a href="https://www.mersenneforum.org/showthread.php?p=652812#post652812:~:text=multiple%20GIMPS%20apps%20on%20the%20same%20machine%20simultaneously">Thanks to kriesel for the tip</a>.]</p>
