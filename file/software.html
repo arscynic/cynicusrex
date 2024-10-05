@@ -21,7 +21,7 @@
     <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 4 October 2024.</p>
+    <p class="sub-title">Latest update: 5 October 2024.</p>
 
     <p class="fleuron">❦</p>
 
@@ -874,51 +874,31 @@ authWarningSlack:   20
 
     <p>Unfortunately, for my EVGA X15 mouse the <cite>Windows</cite>-only <a href="https://www.evga.com/support/download/showdlinfo.aspx?id=19386">EVGA Unleash RGB Software</a> is needed to undo the aforementioned default configurations.</p>
 
-    <details>
-      <summary>Click to see my configuration.</summary>
-      <p>Input: mouse → Output target: keyboard</p>
-      <ul>
-        <li>XF86Launch5 → <code>KEY_LEFTCTRL + c</code></li>
-        <li>XF86Launch6 → <code>KEY_LEFTCTRL + v</code></li>
-        <li>XF86Launch7 → <code>KEY_LEFTCTRL + x</code></li>
-        <li>XF86Launch8 → <code>KEY_LEFTCTRL + Shift_L + v</code></li>
-        <li>F24 → <code>Alt_L + d</code></li>
-      </ul>
-
-      <p>Input: mouse → Output target: keyboard + mouse</p>
-      <ul>
-        <li>XF86Tools → <code>Shift_L + BTN_MIDDLE</code></li>
-      </ul>
-
-      <p>Input: keyboard → Output target: keyboard</p>
-      <ul>
-        <li>Caps Lock → <code>BackSpace</code></li>
-        <li>Shift L + Caps Lock → <code>Caps_Lock</code></li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>Click to see old mice configuration.</summary>
-      <p>Input: mouse → Output target: keyboard</p>
-      <ul>
-        <li>Button EXTRA → <code>Control_L + c</code></li>
-        <li>Button EXTRA + Button LEFT → <code>Prior</code></li>
-        <li>Button EXTRA + Button MIDDLE → <code>Home</code></li>
-        <li>Button SIDE → <code>Control_L + v</code></li>
-        <li>Button SIDE + Button LEFT → <code>Next</code></li>
-        <li>Button SIDE + Button MIDDLE → <code>End</code></li>
-      </ul>
-  
-      <p>Input: mouse → Output target: keyboard + mouse</p>
-  
-      <ul>
-        <li>Button MIDDLE → <code>Shift_L + BTN_MIDDLE</code></li>
-      </ul>
-      
-      <!-- <p>Input: keyboard → Output target: keyboard</p> -->
-    </details>
-
     <p>To start and indefinitely enable Input Remapper: <code>systemctl enable input-remapper && systemctl restart input-remapper</code></p>
+
+    <details>
+      <summary>Click to see my EVGA X15 configuration.</summary>
+      <p>Functions after “|” apply when the mouse's shift button is pressed as well.</p>
+<pre>left mouse extra top: copy (F13 = XF86Tools) | cut (F15 = XF86Launch6)
+left mouse extra bottom: paste (F14 = XF86Launch5) | unformatted paste (F16 = XF86Launch7)
+scroll button: default | shift + middle mouse click (F17 = XF86Launch8)
+scroll button left: left  | shift + left (F18 = XF86Launch9)
+scroll button right: right | shift + right (F19)
+DPI up: page up | home
+DPI down: page down | end
+
+1: backspace | CTRL + backspace (F23 = XF86TouchpadOff)
+2: backward | undo (F20 = XF86AudioMicMute)
+3: forward | redo (F21 = XF86TouchpadToggle)
+4: esc | Alt + F4 (F22 = XF86TouchpadOn)
+5: enter | screenshot
+6: F8 | F5
+7: F12 | tab
+8: delete | CTRL + delete (F24)
+
+9: volume up | DPI+
+10: volume down | pause/play</pre>
+    </details>
 
   <h2 id="tmux">tmux</h2>
   <ul>
