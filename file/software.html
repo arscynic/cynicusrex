@@ -21,7 +21,7 @@
     <h1>Mostly excellent <a href="./takemymoney.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 10 October 2024.</p>
+    <p class="sub-title">Latest update: 13 October 2024.</p>
 
     <p class="fleuron">❦</p>
 
@@ -85,7 +85,7 @@
     <div>
       <h2>Internet</h2>
       <ul>
-        <li>Browser: <a href="https://vivaldi.com">Vivaldi</a>, <a href="https://librewolf.net">LibreWolf</a><br>
+        <li>Browser: <a href="https://zen-browser.app/">Zen Browser</a>, <a href="https://librewolf.net">LibreWolf</a>, <a href="https://vivaldi.com">Vivaldi</a> <br>
           ↳&#xFE0E; <strong>Ad blocking</strong>/privacy: <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a>, <a href="https://decentraleyes.org">Decentraleyes</a>, <a href="https://github.com/Cookie-AutoDelete/Cookie-AutoDelete">Cookie AutoDelete</a>, <a href="https://github.com/cavi-au/Consent-O-Matic">Consent-O-Matic</a>, <a href="https://sponsor.ajay.app">SponsorBlock</a><br>
           ↳&#xFE0E; Convenience: <a href="https://www.mrfdev.com/enhancer-for-youtube">Enhancer for YouTube</a>, <a href="https://readaloud.app">Read Aloud</a> (Voice: <a href="https://github.com/rhasspy/piper">Piper</a> jenny_dioco[medium]),
           <a href="https://github.com/artemave/translate_onhover">TransOver</a>, <a href="https://github.com/web-scrobbler/web-scrobbler/">Web Scrobbler</a>, <a href="https://github.com/Robbendebiene/Gesturefy">Gesturefy</a> (FireFox-only)</li>
@@ -413,13 +413,21 @@ done</pre></code>
       display: none;
       }</code></p>
 
-    <h3 id="librewolf">LibreWolf</h3>
-    <h4>Favicon-only bookmarks</h4>
-    <p>To hide the names of individual bookmarks and keep the names of folders while removing the folder icons in <cite>FireFox</cite> or derivatives like <cite>LibreWolf</cite> or <cite>Waterfox</cite> [<a href="https://chatgpt.com/share/b74ef416-3a60-4fc7-a56a-d43fb976838e">I used ChatGPT for this</a>, sorry]:</p>
+    <h3 id="librewolf">Zen Browser / LibreWolf</h3>
+    <h4>Enable userChrome.css customisation</h4>
+    <ul>
+      <li><cite>Zen Browser</cite>: type <code>about:config</code> in the URL entry field → set <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> to <code>true</code></li>
+      <li><cite>LibreWolf</cite>: settings → LibreWolf → “☑ Allow userChrome.css customization”</li>
+    </ul>
     <ol>
-      <li>Open <cite>LibreWolf</cite> → Settings → LibreWolf → “☑ Allow userChrome.css customization”</li>
       <li>Create a <i>userChrome.css</i> file in the browser's <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile">profile directory</a>, in a folder named “chrome”, e.g., <code>~/.librewolf/rqp0p3up.default-default/chrome/</code></li>
-      <li>Place the following lines of code within that file:
+      <li>Add your preferred CSS tweaks in this file.</li>
+    </ol>
+
+    <h4>Favicon-only bookmarks</h4>
+    <p>To hide the names of individual bookmarks and keep the names of folders while removing the folder icons in <cite>FireFox</cite> or derivatives such as <cite>LibreWolf</cite>, <cite>Zen Browser</cite>, or <cite>Waterfox</cite>:</p>
+    <ol>
+      <li>Save the following code* within the aforementioned userChrome.css file:
 <pre><code>/* Hide the names of individual bookmarks */
 #personal-bookmarks .bookmark-item:not([type="menu"]) .toolbarbutton-text {
     display: none !important;
@@ -440,8 +448,11 @@ done</pre></code>
 
     <p>To simply <a href="https://support.mozilla.org/en-US/questions/827629#answer-191123">hide the names of everything in the bookmarks bar</a>, use: <code>#personal-bookmarks .toolbarbutton-text {display:none!important}</code></p>
 
+    <p class="footnote">– – – – –</p>
+    <p class="footnote">* <a href="https://chatgpt.com/share/b74ef416-3a60-4fc7-a56a-d43fb976838e">I used ChatGPT for this</a>, sorry.</p>
+    
     <h4>Bottom bookmarks and navigation bar</h4>
-    <p>To move the bookmarks and navigation bar to the bottom of the window in LibreWolf, place in the aforementioned <i>userChrome.css</i> file the following:</p>
+    <p>To move the bookmarks and navigation bar to the bottom of the window in LibreWolf, save in the aforementioned <i>userChrome.css</i> file the following:</p>
 <pre><code>/* Move the bookmarks bar and navigation bar to the bottom of the window */
   @-moz-document url(chrome://browser/content/browser.xhtml) {
     :root:not([inFullscreen]) {
