@@ -1,1 +1,1 @@
-# [https://www.arscyni.cc](https://www.arscyni.cc)
+# [arscyni.cc](https://www.arscyni.cc)
